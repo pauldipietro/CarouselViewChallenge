@@ -1,13 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<!-- I am using an old WPF trick to get intellisense for my viewmodels (blend datacontext), this is becaus there is no good way of getting it when you have a viewmodel with
+            a non-empty constructor. Using d:BindingContext is a hassle, because of having to new up everything. -->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+             xmlns:ViewModels="clr-namespace:CarouselViewChallenge.ViewModels;assembly=CarouselViewChallenge"
+             mc:Ignorable="d dblend"
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             x:DataType="ViewModels:PlantsViewModel"
+             xmlns:dblend="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Views="clr-namespace:CarouselViewChallenge.Views;assembly=CarouselViewChallenge"
+             dblend:DataContext="{dblend:DesignInstance ViewModels:PlantsViewModel}"
+             BackgroundColor="{StaticResource MainAppColor}">
+    <CarouselView ItemsSource="{Binding Plants}"
+                  PeekAreaInsets="115">
+        <CarouselView.ItemTemplate>
+            <DataTemplate x:DataType="ViewModels:PlantViewModel">
+                <Views:PlantView BindingContext="{Binding .}" />
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 </ContentPage>

@@ -6,5 +6,8 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.App">
     <Application.Resources>
+        <Color x:Key="MainAppColor">#6B734F</Color>
+        <Color x:Key="LightAppColor">#B4BFA3</Color>
+        <Color x:Key="RedAppColor">#814131</Color>
     </Application.Resources>
 </Application>
