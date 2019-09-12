@@ -40,7 +40,7 @@ namespace CarouselViewChallenge.Views
                     new Category
                     {
                         Color = Color.FromHex("#5d6dff"),
-                        Name = "Art &amp; Cultures",
+                        Name = "Art & Cultures",
                         Icon = " "
                     },
                     new Category
