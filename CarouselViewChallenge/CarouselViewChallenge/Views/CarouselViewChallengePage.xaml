@@ -80,7 +80,7 @@
                     <Label HorizontalOptions="Start" VerticalOptions="Center" Text="Hot places" FontFamily="{StaticResource LatoBold}" FontSize="20" Margin="20,20,20,0" />
                     <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" TextColor="#2687ee" Text="SEE ALL" FontSize="12" FontFamily="{StaticResource LatoBold}" Margin="20,20,20,0" />
                 </StackLayout>
-                <CarouselView ItemsSource="{Binding Destinations}" PeekAreaInsets="20,0,40,0" HeightRequest="120">
+                <CarouselView HorizontalScrollBarVisibility="Never" ItemsSource="{Binding Destinations}" PeekAreaInsets="20,0,40,0" HeightRequest="120">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <custom:PancakeView Margin="0,0,10,0" HeightRequest="120" WidthRequest="200" CornerRadius="12">
@@ -100,7 +100,7 @@
                     <Label HorizontalOptions="Start" VerticalOptions="Center" Text="Categories" FontFamily="{StaticResource LatoBold}" FontSize="20" Margin="20,20,20,0" />
                     <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" TextColor="#2687ee" Text="SEE ALL" FontSize="12" FontFamily="{StaticResource LatoBold}" Margin="20,20,20,0" />
                 </StackLayout>
-                <CarouselView ItemsSource="{Binding Categories}" PeekAreaInsets="20,0,40,0" HeightRequest="120">
+                <CarouselView HorizontalScrollBarVisibility="Never" ItemsSource="{Binding Categories}" PeekAreaInsets="20,0,40,0" HeightRequest="120">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <custom:PancakeView Margin="0,0,10,0" BackgroundColor="{Binding Color}" VerticalOptions="Center" HeightRequest="60" WidthRequest="100" CornerRadius="12">
