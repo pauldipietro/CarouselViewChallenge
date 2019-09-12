@@ -4,10 +4,55 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <CarouselView
+                HorizontalScrollBarVisibility="Never"
+                BackgroundColor="White"
+                CurrentItemChanged="OnItemChanged"
+                ItemsSource="{Binding Items}">
+                <CarouselView.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS"
+                            Value="0,0,0,50" />
+                    </OnPlatform>
+                </CarouselView.Margin>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="150" />
+                            </Grid.RowDefinitions>
+
+                            <forms:AnimationView
+                                x:Name="animationView"
+                                Grid.Row="0"
+                                Animation="{Binding Lottie}"
+                                Loop="false"
+                                AutoPlay="true"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand" />
+
+                            <Label Grid.Row="1"
+                                   FontSize="22"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   Margin="20,10"
+                                   Text="{Binding Title}" />
+
+                            <Label Grid.Row="2"
+                                   FontSize="14"
+                                   HorizontalTextAlignment="Center"
+                                   Margin="20,10"
+                                   Text="{Binding Subtitle}" />
+                        </Grid>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

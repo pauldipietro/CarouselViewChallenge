@@ -131,12 +131,22 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>3.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CarouselViewChallenge\CarouselViewChallenge.csproj">
-      <Project>{1AD32EAF-CE1F-497F-8598-87F19CDA3D10}</Project>
+      <Project>{A9F8B9B3-719F-4F40-9044-924E7B921409}</Project>
       <Name>CarouselViewChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\folder.json" />
+    <AndroidAsset Include="Resources\lock.json" />
+    <AndroidAsset Include="Resources\money.json" />
+    <AndroidAsset Include="Resources\pin.json" />
+    <AndroidAsset Include="Resources\truck.json" />
   </ItemGroup>
 </Project>
