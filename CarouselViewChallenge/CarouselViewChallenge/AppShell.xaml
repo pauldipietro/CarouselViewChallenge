@@ -22,7 +22,7 @@
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource PrimaryLavendarDarkAlpha50}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -40,5 +40,9 @@
             <ShellContent ContentTemplate="{DataTemplate local:CarouselViewChallengePage}" />
         </Tab>
     </TabBar>
+    
+    <!--<FlyoutItem Route="video" IsEnabled="false">
+        <local:VideoPage x:Name="VideoPage" />
+    </FlyoutItem>-->
 
 </Shell>

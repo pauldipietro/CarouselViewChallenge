@@ -34,5 +34,12 @@
     <string>CarouselViewChallenge</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>WorkSans-SemiBold.ttf</string>
+      <string>WorkSans-Regular.ttf</string>
+      <string>WorkSans-Medium.ttf</string>
+      <string>WorkSans-Bold.ttf</string>
+    </array>
 </dict>
 </plist>

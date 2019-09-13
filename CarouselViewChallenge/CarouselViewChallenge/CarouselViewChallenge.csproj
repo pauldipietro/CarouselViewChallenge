@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,12 +6,42 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <None Remove="Resources\bg_stay_informed.png" />
+    <None Remove="Resources\bg_swoosh_aqua.svg" />
+    <None Remove="Resources\breaking_down_big_government.jpg" />
+    <None Remove="Resources\breaking_down_bills.jpg" />
+    <None Remove="Resources\breaking_down_cannabis.jpg" />
+    <None Remove="Resources\breaking_down_caucus.jpg" />
+    <None Remove="Resources\breaking_down_impeachment.jpg" />
+    <None Remove="Resources\breaking_down_incumbent.jpg" />
+    <None Remove="Resources\breaking_down_primaries.jpg" />
+    <None Remove="Resources\breaking_down_reproductive_rights.jpg" />
+    <None Remove="Resources\breaking_down_supreme_court.jpg" />
+    <None Remove="Resources\breaking_down_tariffs.jpg" />
+    <None Remove="Resources\breaking_down_voter_registration.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <EmbeddedResource Include="Resources\bg_stay_informed.png" />
+    <EmbeddedResource Include="Resources\bg_swoosh_aqua.svg" />
+    <EmbeddedResource Include="Resources\breaking_down_big_government.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_bills.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_cannabis.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_caucus.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_impeachment.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_incumbent.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_primaries.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_reproductive_rights.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_supreme_court.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_tariffs.jpg" />
+    <EmbeddedResource Include="Resources\breaking_down_voter_registration.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />  
+    <PackageReference Include="Xamarin.Forms.DebugRainbows" Version="1.0.16" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +52,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Views\CarouselViewChallengePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VideoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

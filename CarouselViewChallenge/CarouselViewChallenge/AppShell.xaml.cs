@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarouselViewChallenge.Views;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -10,6 +11,8 @@ namespace CarouselViewChallenge
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute("video", typeof(VideoPage));
         }
     }
 }
