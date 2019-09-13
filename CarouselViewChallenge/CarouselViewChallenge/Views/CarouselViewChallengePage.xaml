@@ -4,9 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Visual="Material"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+
     <ContentPage.Content>
         <StackLayout BackgroundColor="#cfd8dc">
+            <Entry Text="{Binding PodcastFeed}"></Entry>
+            <Button Text="Add" Command="{Binding AddFeedCommand}"></Button>
             <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
