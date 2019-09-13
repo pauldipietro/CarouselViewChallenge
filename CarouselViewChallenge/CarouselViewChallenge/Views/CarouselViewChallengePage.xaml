@@ -4,10 +4,39 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             Visual="Material">
+    
     <ContentPage.Content>
         <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <CarouselView ItemsSource="{Binding Monkeys}" HeightRequest="125" NumberOfSideItems="1">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Black">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="1"
+                            Text="{Binding Name}"
+                            FontAttributes="Bold"
+                            FontSize="14"/>
+                                <Label Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding Location}"
+                            FontAttributes="Italic"
+                            FontSize="12"
+                            VerticalOptions="End" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
