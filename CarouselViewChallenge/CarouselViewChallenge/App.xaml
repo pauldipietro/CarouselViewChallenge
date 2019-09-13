@@ -6,5 +6,24 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.App">
     <Application.Resources>
+
+        <Color x:Key="PrimaryLavendarDarkAlpha50">#808E88FF</Color>
+        <!-- Fonts -->
+        <OnPlatform x:TypeArguments="x:String" x:Key="RegularFont">
+            <On Platform="Android" Value="WorkSans-Regular.ttf#Work Sans" />
+            <On Platform="iOS" Value="WorkSans-Regular" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="MediumFont">
+            <On Platform="Android" Value="WorkSans-Medium.ttf#Work Sans Medium" />
+            <On Platform="iOS" Value="WorkSans-Medium" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="SemiBoldFont">
+            <On Platform="Android" Value="WorkSans-SemiBold.ttf#Work Sans SemiBold" />
+            <On Platform="iOS" Value="WorkSans-SemiBold" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+            <On Platform="Android" Value="WorkSans-Bold.ttf#Work Sans Bold" />
+            <On Platform="iOS" Value="WorkSans-Bold" />
+        </OnPlatform>
     </Application.Resources>
 </Application>
