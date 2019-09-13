@@ -20,7 +20,6 @@
                            Placeholder="Search special"
                            Margin="20"/>
                  <CarouselView ItemsSource="{Binding Places}"
-                               HeightRequest="700"
                                VerticalOptions="FillAndExpand"
                                PeekAreaInsets="0">
                         <CarouselView.ItemTemplate>
