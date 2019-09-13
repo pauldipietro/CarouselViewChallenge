@@ -3,11 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CarouselViewChallenge.Views"
+             BackgroundColor="#2196F3"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+       <ScrollView VerticalOptions="FillAndExpand">
+           <StackLayout VerticalOptions="FillAndExpand">
+               <Label Text="My Specials app"
+                      HorizontalOptions="CenterAndExpand"
+                      FontSize="30"
+                      TextColor="White"
+                      Margin="40"/>
+                <SearchBar HorizontalOptions="FillAndExpand"
+                           BackgroundColor="Transparent"
+                           Placeholder="Search special"
+                           Margin="20"/>
+                 <CarouselView ItemsSource="{Binding Places}"
+                               HeightRequest="700"
+                               VerticalOptions="FillAndExpand"
+                               PeekAreaInsets="0">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                               <local:SpecialCarrouselView/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+           </StackLayout>
+       </ScrollView>
     </ContentPage.Content>
 </ContentPage>
