@@ -3,11 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:CarouselViewChallenge.ViewModels;assembly=CarouselViewChallenge"
+             xmlns:models="clr-namespace:CarouselViewChallenge.Models;assembly=CarouselViewChallenge"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
+             BackgroundColor="Black"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+    <d:ContentPage.BindingContext>
+        <viewModels:MoviesViewModel/>
+    </d:ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid BackgroundColor="Black">
+            <ListView ItemsSource="{Binding Cinemas}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0" Text="{Binding Name}" TextColor="Red" Margin="10,50,0,0"/>
+
+                                <CarouselView Grid.Row="1" ItemsSource="{Binding Movies}" 
+                                              HorizontalOptions="Start"
+                                              VerticalOptions="Start">
+                                    <CarouselView.Margin>
+                                        <OnPlatform x:TypeArguments="Thickness">
+                                            <On Platform="iOS" Value="12, -48, 0, 0" />
+                                            <On Platform="Android" Value="12, -150, 0, 0" />
+                                        </OnPlatform>
+                                    </CarouselView.Margin>
+                                    <CarouselView.PeekAreaInsets>
+                                        <OnPlatform x:TypeArguments="Thickness">
+                                            <On Platform="iOS" Value="0, 0, 200, 0" />
+                                            <On Platform="Android" Value="0, 0, 700, 0" />
+                                        </OnPlatform>
+                                    </CarouselView.PeekAreaInsets>
+                                    <CarouselView.ItemsLayout>
+                                        <ListItemsLayout
+                                    Orientation="Horizontal"
+                                    SnapPointsType="Mandatory"
+                                    SnapPointsAlignment="Start"
+                                    ItemSpacing="15"/>
+                                    </CarouselView.ItemsLayout>
+                                    <CarouselView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid  BackgroundColor="Transparent">
+                                                <yummy:PancakeView
+                                            BackgroundColor="Transparent"
+                                            CornerRadius="30">
+                                                    <Grid RowSpacing="0">
+
+                                                        <Image 
+                                                    Aspect="AspectFit"
+                                                    Source="{Binding ImageSource}"/>
+                                                    </Grid>
+                                                </yummy:PancakeView>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </CarouselView.ItemTemplate>
+                                </CarouselView>
+                            </Grid>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
