@@ -3,11 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             x:DataType="vm:CarouselViewChallengeViewModel"
+             BackgroundColor="{StaticResource pageBackground}">
+
+    <ContentPage.Resources>
+
+        <DataTemplate x:Key="galnetTemplate" x:DataType="x:String">
+            <ContentView>
+                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10">
+                    <Label Text="{Binding }" TextColor="{StaticResource textColor}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Frame>
+            </ContentView>
+        </DataTemplate>
+
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Vertical" Spacing="10">
+
+        <ContentView BackgroundColor="{StaticResource brandColor}">
+            <Label Text="GalNet News" HorizontalOptions="Start" TextColor="{StaticResource altTextColor}" Margin="10, 0"/>
+        </ContentView>
+
+        <CarouselView ItemsSource="{Binding GalNetNewsList, Mode=OneWay}" ItemTemplate="{StaticResource galnetTemplate}" PeekAreaInsets="100" VerticalOptions="StartAndExpand">
+            <CarouselView.ItemsLayout>
+                <ListItemsLayout SnapPointsType="MandatorySingle" SnapPointsAlignment="Center">
+                    <x:Arguments>
+                        <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
+                    </x:Arguments>
+                </ListItemsLayout>
+            </CarouselView.ItemsLayout>
+        </CarouselView>
+
+        <ContentView BackgroundColor="{StaticResource brandColor}">
+            <Label Text="{Binding Path=GalNetLastUpdated, StringFormat='Updated: {0}', Mode=OneWay}" HorizontalOptions="End" TextColor="{StaticResource altTextColor}" Margin="10, 0"/>
+        </ContentView>
+
+    </StackLayout>
+
 </ContentPage>

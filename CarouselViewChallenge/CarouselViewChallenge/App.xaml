@@ -6,5 +6,12 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.App">
     <Application.Resources>
+
+        <Color x:Key="pageBackground">#2F3136</Color>
+        <Color x:Key="contentBackground">#484B51</Color>
+        <Color x:Key="textColor">LightGray</Color>
+        <Color x:Key="altTextColor">White</Color>
+        <Color x:Key="brandColor">#2196F3</Color>
+
     </Application.Resources>
 </Application>
