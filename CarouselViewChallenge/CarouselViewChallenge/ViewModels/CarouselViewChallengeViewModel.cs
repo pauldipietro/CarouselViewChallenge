@@ -1,9 +1,14 @@
-﻿using System;
+﻿using CarouselViewChallenge.Converters;
+using CarouselViewChallenge.Models;
+using CarouselViewChallenge.Services;
+using MonkeyCache.FileStore;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Text;
-using System.Windows.Input;
+using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace CarouselViewChallenge.ViewModels
@@ -20,7 +25,7 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
-        public ObservableCollection<string> GalNetNewsList { get; set; }
+        public ObservableCollection<NewsItem> GalNetNewsList { get; set; }
 
         private DateTime _galnetLastUpdated;
         public DateTime GalNetLastUpdated
@@ -36,15 +41,52 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
+        private string _message;
+        public string Message
+        {
+            get { return _message; }
+            set
+            {
+                if (_message != value)
+                {
+                    _message = value;
+                    OnPropertyChanged(nameof(Message));
+                }
+            }
+        }
+
         public CarouselViewChallengeViewModel()
         {
-            GalNetNewsList = new ObservableCollection<string>
+            Barrel.ApplicationId = "com.carouselchallenge.galnet";
+            GalNetNewsList = new ObservableCollection<NewsItem>();
+            GetGalNetNewsAsync();
+        }
+
+        private async void GetGalNetNewsAsync(bool ignoreCache = false)
+        {
+            try
             {
-                "First Item",
-                "Second Item",
-                "Third Item"
-            };
-            GalNetLastUpdated = DateTime.Now;
+                // get the news feed
+                string json = String.Empty;
+                GalNetService news = new GalNetService();
+                (json, GalNetLastUpdated) = await news.GetData(ignoreCache).ConfigureAwait(false);
+
+                // parse the json data
+                GalNetNewsList.Clear();
+                await Task.Run(() =>
+                {
+                    List<NewsItem> fullNews = JsonConvert.DeserializeObject<List<NewsItem>>(json, NewsItemConverter.Instance);
+                    foreach (NewsItem item in fullNews.Where(o => !String.IsNullOrEmpty(o.Body)).OrderByDescending(o => o.PublishDateTime).Take(20))
+                    {
+                        item.ClassifyArticle();
+                        Device.BeginInvokeOnMainThread(() => GalNetNewsList.Add(item));
+                    }
+                }).ConfigureAwait(false);
+            }
+            catch (Exception ex)
+            {
+                Message = String.Format("Error: {0}", ex.Message);
+            }
         }
     }
 }

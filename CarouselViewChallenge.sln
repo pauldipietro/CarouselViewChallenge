@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselViewChallenge.Andro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselViewChallenge.iOS", "CarouselViewChallenge\CarouselViewChallenge.iOS\CarouselViewChallenge.iOS.csproj", "{E981DF49-12EE-46EC-9F08-D3FC5F4FF693}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselViewChallenge", "CarouselViewChallenge\CarouselViewChallenge\CarouselViewChallenge.csproj", "{A9F8B9B3-719F-4F40-9044-924E7B921409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarouselViewChallenge", "CarouselViewChallenge\CarouselViewChallenge\CarouselViewChallenge.csproj", "{A9F8B9B3-719F-4F40-9044-924E7B921409}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
