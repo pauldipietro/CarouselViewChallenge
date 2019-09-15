@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,10 +8,6 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
