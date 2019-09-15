@@ -1,15 +1,15 @@
 ﻿Aliens,alien,thargoid,guardian,aegis,meta-alloy,incursion,xenological
 Crime,crime,criminal,illegal,theft,steal,stole,murder,homicide,assassin,arrest,hijack,blackmail,hack,kidnap,corrupt,prosecution,guilt,unlicensed,regulation,police,cartel,narcotic,autopsy,black market
 Combat,combat,conflict,battle,navy,naval,armada,military,bounty,bounties,insurrection,kill order,hostilities,mercenar,violent,raid,attack,defence
-Culture,culture,fine art,sculpture,painting,literature,artist,author,festival
-Economy,economy,economic,trade,deliver,construct,investor,supplier,logistics,merger,conglomerate,commodities,business analyst,investment,wealth,fortune,ambrose foundation,industry,industrial,manufacture,engineering,bank of zaonce,megaship,resources,homeless,immigra
+Culture,fine art,artwork,sculpture,painting,literature,masterpiece,artist,author,theatre,theatrical,festival,exhibition,culinary,cuisine,delicacy,delicacies,connoisseur,orchestra
+Economy,economy,economic,trade,deliver,construct,investor,supplier,logistics,merger,conglomerate,commodities,consumer,business analyst,investment,wealth,fortune,ambrose foundation,industry,industrial,manufacture,engineering,bank of zaonce,megaship,resources,homeless,immigra,agricultur,crop yield,harvest
 Exploration,exploration,explorers,distant worlds,mapping,cartographics,unexplored,sagittarius,a*,beagle point,galactic core,codex
-Health,health,medical,medicine,meds,pharmaceutical,outbreak,disease,illness,injury,injuries,clinic,immune,patient,addict,narcotic
+Health,health,medical,medicine,meds,pharmaceutical,outbreak,disease,illness,injury,injuries,clinic,immune,patient,addict,narcotic,fertility
 Mining,mining,miner,mineral,prospector
 Mystery,mystery,mysteri,vanish,phenomenon,missing,disappear,anomaly,inexplicabl,dream journal,visions,gan romero,halsey,starship one,raxxla,dark wheel,omphalos rift,salomé,salome,metadrive
 Politics,politic,election,senate,senator,congress,president,rebellion,diplomacy,corrupt,emancipat,homeless,immigra,activist,anti-slavery
 Religion,religion,god,church,worship,faith,theology,thelogian
-Science,scientific,technolog,professor,engineer,hyperspace,research,canonn,anomaly,codex
+Science,scientific,technolog,professor,engineer,hyperspace,research,canonn,anomaly,codex,synthetic treatment,fertility,sustainability
 Alliance,alliance,mahon,yamamoto,kincaid,interpol,bank of zaonce
 Empire,empire,imperial,emperor,arissa,lavigny,duval,patreus,torval,senate,senator,chancellor,blaine,slave,achenar,capitol,imperium
 Federation,federation,federal,hudson,winters,halsey,congress,olympus village
