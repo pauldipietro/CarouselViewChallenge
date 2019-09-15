@@ -112,7 +112,7 @@ namespace CarouselViewChallenge.Models
             {
                 Topic = tempTopic.Name;
             }
-            foreach (Topic topic in topicsList.Topics.OrderByDescending(o => o.Count).Take(5))
+            foreach (Topic topic in topicsList.Topics.OrderByDescending(o => o.Count).Take(4))
             {
                 if (topic.Count > 0)
                 {

@@ -16,14 +16,23 @@
 
         <c:NewsTopicToImage x:Key="topicImage"/>
 
+        <DataTemplate x:Key="tagsTemplate" x:DataType="x:String">
+            <ContentView BackgroundColor="{StaticResource brandColor}" Padding="5, 2" Margin="0, 5, 0, 0">
+                <Label Text="{Binding }" 
+                       LineBreakMode="NoWrap" 
+                       TextColor="{StaticResource altTextColor}"/>
+            </ContentView>
+        </DataTemplate>
+
         <DataTemplate x:Key="galnetTemplate" x:DataType="m:NewsItem">
             <ContentView>
-                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10" Padding="15">
+                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10" Padding="15, 10">
                     <Grid ColumnSpacing="5" RowSpacing="0" HorizontalOptions="Fill">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="13"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="19"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -34,7 +43,10 @@
                                               HeightRequest="60" 
                                               HorizontalOptions="Center"
                                               VerticalOptions="Center"/>
-                        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" Spacing="0" VerticalOptions="Center">
+                        <StackLayout Grid.Row="0" Grid.Column="1" 
+                                     Orientation="Vertical" 
+                                     Spacing="0" 
+                                     VerticalOptions="Center">
                             <Label Text="{Binding Title, Mode=OneWay}" 
                                    LineBreakMode="TailTruncation" 
                                    MaxLines="2" 
@@ -44,12 +56,17 @@
                             <Label Text="{Binding PublishDate, Mode=OneWay}" 
                                    TextColor="{DynamicResource textColor}"/>
                         </StackLayout>
-                        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                     BindableLayout.ItemTemplate="{StaticResource tagsTemplate}" 
+                                     BindableLayout.ItemsSource="{Binding Tags, Mode=OneWay}" 
+                                     Orientation="Horizontal"
+                                     Spacing="10"/>
+                        <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
                                  Color="{StaticResource brandColor}" 
                                  HeightRequest="1" 
                                  HorizontalOptions="Fill" 
-                                 Margin="0, 8, 0, 4"/>
-                        <ScrollView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                                 Margin="0, 8, 0, 10"/>
+                        <ScrollView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
                             <Label Text="{Binding Body, Mode=OneWay}" 
                                    TextColor="{DynamicResource textColor}"/>
                         </ScrollView>
