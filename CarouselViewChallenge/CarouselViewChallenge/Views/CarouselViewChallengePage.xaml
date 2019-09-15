@@ -4,10 +4,26 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+             xmlns:viewModel="clr-namespace:CarouselViewChallenge.ViewModels"
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             x:DataType="viewModel:CarouselViewChallengePageViewModel"
+             xmlns:views="clr-namespace:CarouselViewChallenge.Views">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid BackgroundColor="#cfd8dc">
+            <StackLayout  IsVisible="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Double tap a comic for explanation" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" />
+            </StackLayout>
+            
+            <CarouselView PeekAreaInsets="0" ItemsSource="{Binding ComicList}" 
+                          CurrentItemChangedCommand="{Binding CurrentItemChangedCommand}"
+                          CurrentItem="{Binding CurrentComic, Mode=TwoWay}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <views:Comic />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
