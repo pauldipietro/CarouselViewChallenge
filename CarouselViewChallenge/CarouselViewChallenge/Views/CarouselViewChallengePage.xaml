@@ -60,7 +60,7 @@
                                      BindableLayout.ItemTemplate="{StaticResource tagsTemplate}" 
                                      BindableLayout.ItemsSource="{Binding Tags, Mode=OneWay}" 
                                      Orientation="Horizontal"
-                                     Spacing="10"/>
+                                     Spacing="8"/>
                         <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
                                  Color="{StaticResource brandColor}" 
                                  HeightRequest="1" 
