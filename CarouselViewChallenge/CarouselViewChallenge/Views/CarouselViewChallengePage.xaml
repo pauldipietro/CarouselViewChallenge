@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:c="clr-namespace:CarouselViewChallenge.Converters"
              xmlns:m="clr-namespace:CarouselViewChallenge.Models"
              xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
              mc:Ignorable="d"
@@ -12,10 +14,46 @@
 
     <ContentPage.Resources>
 
+        <c:NewsTopicToImage x:Key="topicImage"/>
+
         <DataTemplate x:Key="galnetTemplate" x:DataType="m:NewsItem">
             <ContentView>
-                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10">
-                    <Label Text="{Binding Title}" TextColor="{StaticResource textColor}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10" Padding="15">
+                    <Grid ColumnSpacing="5" RowSpacing="0" HorizontalOptions="Fill">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="13"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <ffsvg:SvgCachedImage Grid.Row="0" Grid.Column="0" 
+                                              Source="{Binding Path=Topic, Converter={StaticResource topicImage}, Mode=OneWay}" 
+                                              HeightRequest="60" 
+                                              HorizontalOptions="Center"
+                                              VerticalOptions="Center"/>
+                        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" Spacing="0" VerticalOptions="Center">
+                            <Label Text="{Binding Title, Mode=OneWay}" 
+                                   LineBreakMode="TailTruncation" 
+                                   MaxLines="2" 
+                                   TextColor="{DynamicResource textColor}" 
+                                   FontAttributes="Bold"
+                                   FontSize="Medium"/>
+                            <Label Text="{Binding PublishDate, Mode=OneWay}" 
+                                   TextColor="{DynamicResource textColor}"/>
+                        </StackLayout>
+                        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                                 Color="{StaticResource brandColor}" 
+                                 HeightRequest="1" 
+                                 HorizontalOptions="Fill" 
+                                 Margin="0, 8, 0, 4"/>
+                        <ScrollView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                            <Label Text="{Binding Body, Mode=OneWay}" 
+                                   TextColor="{DynamicResource textColor}"/>
+                        </ScrollView>
+                    </Grid>
                 </Frame>
             </ContentView>
         </DataTemplate>
@@ -30,7 +68,7 @@
 
         <CarouselView ItemsSource="{Binding GalNetNewsList, Mode=OneWay}" 
                       ItemTemplate="{StaticResource galnetTemplate}" 
-                      PeekAreaInsets="100" 
+                      PeekAreaInsets="80" 
                       VerticalOptions="StartAndExpand">
             <CarouselView.ItemsLayout>
                 <ListItemsLayout SnapPointsType="MandatorySingle" SnapPointsAlignment="Center">
