@@ -24,7 +24,7 @@ namespace CarouselViewChallenge.ViewModels
         [Reactive] public XkcdComic CurrentComic { get; set; }
 
         public ObservableCollection<XkcdComic> ComicList { get; private set; }
-        public ICommand CurrentItemChangedCommand { get; }
+        [Reactive] public ICommand CurrentItemChangedCommand { get; private set; }
 
         private IFlurlClient _flurlClient;
 
@@ -33,7 +33,6 @@ namespace CarouselViewChallenge.ViewModels
             IsBusy = true;
             ComicList = new ObservableCollection<XkcdComic>();
             _flurlClient = new FlurlClient(_apiBaseUrl);
-            CurrentItemChangedCommand = ReactiveCommand.CreateFromTask(CurrentItemChanged);
 
             Task.Factory.StartNew(InitAsync, TaskCreationOptions.LongRunning);
         }
@@ -42,6 +41,9 @@ namespace CarouselViewChallenge.ViewModels
         {
             try
             {
+                // I don't know why this statement is slow (2 or 3 sec)...
+                // So I moved it in my async init task.
+                CurrentItemChangedCommand = ReactiveCommand.CreateFromTask(CurrentItemChanged);
                 var firstModel = await DownloadComicAsync();
                 var tasksList = new List<Task<XkcdComic>>();
 
