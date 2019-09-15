@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FFImageLoading.Forms;
+using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +12,16 @@ namespace CarouselViewChallenge.Views
         public Comic()
         {
             InitializeComponent();
+        }
+
+        private void CachedImage_Success(object sender, CachedImageEvents.SuccessEventArgs e)
+        {
+            if (!(sender is CachedImage cachedImage))
+                return;
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                cachedImage.HeightRequest = e.ImageInformation.OriginalHeight;
+            });
         }
     }
 }

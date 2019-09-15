@@ -10,16 +10,14 @@
              x:Class="CarouselViewChallenge.Views.Comic">
   <ContentView.Content>
         <ScrollView>
-            <Grid HorizontalOptions="Fill"
-                  Padding="10">
+            <Grid HorizontalOptions="Fill" Padding="10" x:Name="Stack" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Text="{Binding Title}" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Start" />
-                <ff:CachedImage Grid.Row="1" Source="{Binding Img}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand"
-                                Aspect="AspectFit" />
+                <ff:CachedImage Grid.Row="1" Source="{Binding Img}" Aspect="AspectFit" CacheType="Disk" Success="CachedImage_Success" />
                 <Label Grid.Row="2" Text="{Binding Num}" FontSize="Caption" HorizontalOptions="Center" VerticalOptions="End" HorizontalTextAlignment="Center" />
             </Grid>
         </ScrollView>

@@ -18,7 +18,7 @@ namespace CarouselViewChallenge.Droid
 
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            CachedImageRenderer.Init(true);
+            CachedImageRenderer.Init(false);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
