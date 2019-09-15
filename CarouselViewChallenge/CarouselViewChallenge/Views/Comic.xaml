@@ -17,7 +17,11 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Text="{Binding Title}" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Start" />
-                <ff:CachedImage Grid.Row="1" Source="{Binding Img}" Aspect="AspectFit" CacheType="Disk" Success="CachedImage_Success" />
+                <ff:CachedImage Grid.Row="1" Source="{Binding Img}" Aspect="AspectFit" CacheType="Disk" Success="CachedImage_Success">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="TapGestureRecognizer_Tapped" />
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
                 <Label Grid.Row="2" Text="{Binding Num}" FontSize="Caption" HorizontalOptions="Center" VerticalOptions="End" HorizontalTextAlignment="Center" />
             </Grid>
         </ScrollView>

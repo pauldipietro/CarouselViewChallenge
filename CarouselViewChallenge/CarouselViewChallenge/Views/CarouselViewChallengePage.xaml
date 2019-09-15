@@ -10,7 +10,11 @@
              xmlns:views="clr-namespace:CarouselViewChallenge.Views">
     <ContentPage.Content>
         <Grid BackgroundColor="#cfd8dc">
-            <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" />
+            <StackLayout  IsVisible="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Double tap a comic for explanation" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" />
+            </StackLayout>
+            
             <CarouselView PeekAreaInsets="0" ItemsSource="{Binding ComicList}" 
                           CurrentItemChangedCommand="{Binding CurrentItemChangedCommand}"
                           CurrentItem="{Binding CurrentComic, Mode=TwoWay}">

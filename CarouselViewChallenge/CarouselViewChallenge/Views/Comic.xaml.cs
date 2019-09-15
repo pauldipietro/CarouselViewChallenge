@@ -1,4 +1,5 @@
-﻿using FFImageLoading.Forms;
+﻿using CarouselViewChallenge.Models;
+using FFImageLoading.Forms;
 using System;
 
 using Xamarin.Forms;
@@ -22,6 +23,16 @@ namespace CarouselViewChallenge.Views
             {
                 cachedImage.HeightRequest = e.ImageInformation.OriginalHeight;
             });
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            if (!(BindingContext is XkcdComic comic))
+                return;
+            if (string.IsNullOrEmpty(comic.Alt))
+                return;
+
+            await App.Current.MainPage.DisplayAlert(comic.Title, comic.Alt, "Close");
         }
     }
 }
