@@ -139,4 +139,13 @@
       <Name>CarouselViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PetrolCard.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RewardCard.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\WishCard.PNG" />
+  </ItemGroup>
 </Project>
