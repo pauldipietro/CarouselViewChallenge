@@ -6,11 +6,67 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\aisling.logo.svg" />
+    <None Remove="Resources\ald.logo.svg" />
+    <None Remove="Resources\aliens-ufo1.svg" />
+    <None Remove="Resources\alliance.green.svg" />
+    <None Remove="Resources\antal.logo.svg" />
+    <None Remove="Resources\combat-fighter2.svg" />
+    <None Remove="Resources\crime.svg" />
+    <None Remove="Resources\delaine.logo.svg" />
+    <None Remove="Resources\economy-chart.svg" />
+    <None Remove="Resources\empire.blue.svg" />
+    <None Remove="Resources\engineer.orange.svg" />
+    <None Remove="Resources\exploration-planet.svg" />
+    <None Remove="Resources\federation.red.svg" />
+    <None Remove="Resources\galnet.orange.svg" />
+    <None Remove="Resources\grom.logo.svg" />
+    <None Remove="Resources\health.svg" />
+    <None Remove="Resources\hudson.logo.svg" />
+    <None Remove="Resources\lyr.logo.svg" />
+    <None Remove="Resources\mahon.logo.svg" />
+    <None Remove="Resources\mining-pick.svg" />
+    <None Remove="Resources\mystery.svg" />
     <None Remove="Resources\NewsBoW.csv" />
+    <None Remove="Resources\patreus.logo.svg" />
+    <None Remove="Resources\politics.svg" />
+    <None Remove="Resources\religion-ankh.svg" />
+    <None Remove="Resources\science-atom.svg" />
+    <None Remove="Resources\theatre.svg" />
+    <None Remove="Resources\torval.logo.svg" />
+    <None Remove="Resources\winters.logo.svg" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\aisling.logo.svg" />
+    <EmbeddedResource Include="Resources\ald.logo.svg" />
+    <EmbeddedResource Include="Resources\aliens-ufo1.svg" />
+    <EmbeddedResource Include="Resources\alliance.green.svg" />
+    <EmbeddedResource Include="Resources\antal.logo.svg" />
+    <EmbeddedResource Include="Resources\combat-fighter2.svg" />
+    <EmbeddedResource Include="Resources\crime.svg" />
+    <EmbeddedResource Include="Resources\delaine.logo.svg" />
+    <EmbeddedResource Include="Resources\economy-chart.svg" />
+    <EmbeddedResource Include="Resources\empire.blue.svg" />
+    <EmbeddedResource Include="Resources\engineer.orange.svg" />
+    <EmbeddedResource Include="Resources\exploration-planet.svg" />
+    <EmbeddedResource Include="Resources\federation.red.svg" />
+    <EmbeddedResource Include="Resources\galnet.orange.svg" />
+    <EmbeddedResource Include="Resources\grom.logo.svg" />
+    <EmbeddedResource Include="Resources\health.svg" />
+    <EmbeddedResource Include="Resources\hudson.logo.svg" />
+    <EmbeddedResource Include="Resources\lyr.logo.svg" />
+    <EmbeddedResource Include="Resources\mahon.logo.svg" />
+    <EmbeddedResource Include="Resources\mining-pick.svg" />
+    <EmbeddedResource Include="Resources\mystery.svg" />
     <EmbeddedResource Include="Resources\NewsBoW.csv" />
+    <EmbeddedResource Include="Resources\patreus.logo.svg" />
+    <EmbeddedResource Include="Resources\politics.svg" />
+    <EmbeddedResource Include="Resources\religion-ankh.svg" />
+    <EmbeddedResource Include="Resources\science-atom.svg" />
+    <EmbeddedResource Include="Resources\theatre.svg" />
+    <EmbeddedResource Include="Resources\torval.logo.svg" />
+    <EmbeddedResource Include="Resources\winters.logo.svg" />
   </ItemGroup>
 
   <ItemGroup>
