@@ -64,6 +64,7 @@ namespace CarouselViewChallenge.ViewModels
 
         private async void GetGalNetNewsAsync(bool ignoreCache = false)
         {
+            Message = "Loading...";
             try
             {
                 // get the news feed
@@ -82,6 +83,7 @@ namespace CarouselViewChallenge.ViewModels
                         Device.BeginInvokeOnMainThread(() => GalNetNewsList.Add(item));
                     }
                 }).ConfigureAwait(false);
+                Message = null;
             }
             catch (Exception ex)
             {
