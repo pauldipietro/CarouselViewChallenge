@@ -1,7 +1,5 @@
-﻿using System;
+﻿using CarouselViewChallenge.Services;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using CarouselViewChallenge.Views;
 
 namespace CarouselViewChallenge
 {
@@ -10,6 +8,7 @@ namespace CarouselViewChallenge
 
         public App()
         {
+            DependencyService.Register<MockDataStore>();
             InitializeComponent();
 
             MainPage = new AppShell();
