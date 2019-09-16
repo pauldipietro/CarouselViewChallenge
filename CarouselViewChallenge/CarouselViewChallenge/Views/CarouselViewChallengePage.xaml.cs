@@ -12,5 +12,14 @@ namespace CarouselViewChallenge.Views
             InitializeComponent();
             BindingContext = new MoviesViewModel();
         }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (!(BindingContext is MoviesViewModel viewModel)) return;
+
+            await viewModel.InitializeAsync();
+        }
     }
 }

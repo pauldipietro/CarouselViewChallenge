@@ -13,65 +13,91 @@
         <viewModels:MoviesViewModel/>
     </d:ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid BackgroundColor="Black">
+        <Grid BackgroundColor="DimGray">
             <ListView ItemsSource="{Binding Cinemas}"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell >
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
+                        <ViewCell>
+                            <yummy:PancakeView BackgroundColor="Gray"
+                                               CornerRadius="30"
+                                               Margin="5,10,5,10">
+                                <Grid HeightRequest="300">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
 
-                                <Label Grid.Row="0" Text="{Binding Name}" TextColor="Red" Margin="10,50,0,0"/>
+                                    <StackLayout Grid.Row="0"
+                                                 Margin="20,10,0,0">
+                                        <Label Margin="20,10,0,0"
+                                               Text="{Binding Name}" 
+                                               TextColor="Red" />
+                                        <Label Margin="20,0,0,0"
+                                               Text="{Binding Address}" 
+                                               TextColor="White" />
 
-                                <CarouselView Grid.Row="1" ItemsSource="{Binding Movies}" 
-                                              HorizontalOptions="Start"
-                                              VerticalOptions="Start">
-                                    <CarouselView.Margin>
-                                        <OnPlatform x:TypeArguments="Thickness">
-                                            <On Platform="iOS" Value="12, -48, 0, 0" />
-                                            <On Platform="Android" Value="12, -150, 0, 0" />
-                                        </OnPlatform>
-                                    </CarouselView.Margin>
-                                    <CarouselView.PeekAreaInsets>
-                                        <OnPlatform x:TypeArguments="Thickness">
-                                            <On Platform="iOS" Value="0, 0, 200, 0" />
-                                            <On Platform="Android" Value="0, 0, 700, 0" />
-                                        </OnPlatform>
-                                    </CarouselView.PeekAreaInsets>
-                                    <CarouselView.ItemsLayout>
-                                        <ListItemsLayout
-                                    Orientation="Horizontal"
-                                    SnapPointsType="Mandatory"
-                                    SnapPointsAlignment="Start"
-                                    ItemSpacing="15"/>
-                                    </CarouselView.ItemsLayout>
-                                    <CarouselView.ItemTemplate>
-                                        <DataTemplate>
-                                            <Grid  BackgroundColor="Transparent">
-                                                <yummy:PancakeView
-                                            BackgroundColor="Transparent"
-                                            CornerRadius="30">
-                                                    <Grid RowSpacing="0">
+                                    </StackLayout>
+                                    
 
-                                                        <Image 
-                                                    Aspect="AspectFit"
-                                                    Source="{Binding ImageSource}"/>
-                                                    </Grid>
-                                                </yummy:PancakeView>
-                                            </Grid>
-                                        </DataTemplate>
-                                    </CarouselView.ItemTemplate>
-                                </CarouselView>
-                            </Grid>
+                                    <CarouselView Grid.Row="2" 
+                                                  ItemsSource="{Binding Movies}" 
+                                                  HeightRequest="20">
+                                        <CarouselView.Margin>
+                                            <OnPlatform x:TypeArguments="Thickness">
+                                                <On Platform="iOS" Value="12, -48, 0, 0" />
+                                                <On Platform="Android" Value="12, -150, 0, 0" />
+                                            </OnPlatform>
+                                        </CarouselView.Margin>
+                                        <CarouselView.PeekAreaInsets>
+                                            <OnPlatform x:TypeArguments="Thickness">
+                                                <On Platform="iOS" Value="0, 0, 200, 0" />
+                                                <On Platform="Android" Value="0, 0, 700, 0" />
+                                            </OnPlatform>
+                                        </CarouselView.PeekAreaInsets>
+                                        <CarouselView.ItemsLayout>
+                                            <ListItemsLayout
+                                        Orientation="Horizontal"
+                                        SnapPointsType="Mandatory"
+                                        SnapPointsAlignment="Start"
+                                        ItemSpacing="15"/>
+                                        </CarouselView.ItemsLayout>
+                                        <CarouselView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid  BackgroundColor="Transparent">
+                                                    <StackLayout Margin="0,40,0,0">
+                                                            <Image Aspect="AspectFit" HeightRequest="200"
+                                                                   Source="{Binding ImageSource}"/>
+                                                        </StackLayout>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </CarouselView.ItemTemplate>
+                                    </CarouselView>
+                                </Grid>
+                            </yummy:PancakeView>
                         </ViewCell>
                         
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <!--activity indicator-->
+            <StackLayout
+                x:Name="StackLayout"
+                Grid.Row="0"
+                Padding="30"
+                BackgroundColor="Black"
+                HorizontalOptions="Center"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.8"
+                VerticalOptions="Center">
+                <ActivityIndicator IsRunning="True" 
+                                   Color="White" />
+                <Label
+                    FontAttributes="Bold"
+                    Text="Loading..."
+                    TextColor="White" />
+            </StackLayout>
             
         </Grid>
     </ContentPage.Content>

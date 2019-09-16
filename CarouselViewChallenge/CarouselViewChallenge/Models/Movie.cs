@@ -19,7 +19,9 @@ namespace CarouselViewChallenge.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
-        
+        public string Address { get; set; }
+
+
         public bool IsFavorite { get; set; }
 
         public ObservableCollection<Movie> Movies { get; set; }
