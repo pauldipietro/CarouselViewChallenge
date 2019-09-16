@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CarouselViewChallenge.CustomView.FoodBannerCartViewCell">
+     <Frame Padding="0"
+           CornerRadius="5"
+           VerticalOptions="FillAndExpand">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*" />
+                <ColumnDefinition Width=".5*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"
+                   Source="{Binding Image}"
+                   Aspect="AspectFill" />
+            <Label Text="{Binding PromoPrice}"
+                   TextColor="White"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   BackgroundColor="Green"
+                   Margin="10,20"
+                   Padding="10,0" />
+            <StackLayout Orientation="Vertical"
+                         Grid.Column="1"
+                         Padding="10"
+                         BackgroundColor="White">
+                <Label Text="{Binding Name}"
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       TextColor="Black" />
+                <Label Text="{Binding Description}"
+                       TextColor="Black"
+                       FontSize="Micro" />
+            </StackLayout>
+        </Grid>
+    </Frame>
+</StackLayout>

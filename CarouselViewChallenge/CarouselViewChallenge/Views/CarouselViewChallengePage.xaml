@@ -3,11 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CarouselViewChallenge.CustomView"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+   <ContentPage.Content>
+        <Grid RowSpacing="0"
+              VerticalOptions="Fill">
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS"
+                        Value="0,20,0,0" />
+                </OnPlatform>
+            </Grid.Margin>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".35*" />
+                <RowDefinition Height=".08*" />
+                <RowDefinition Height=".6*" />
+            </Grid.RowDefinitions>
+            <CarouselView ItemsSource="{Binding FoodBanners}">
+                <CarouselView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal"
+                                     Span="1"
+                                     SnapPointsAlignment="Start"
+                                     SnapPointsType="Mandatory" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <local:FoodBannerCartViewCell />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <Label Grid.Row="1"
+                   HorizontalTextAlignment="Center"
+                   Text="CATEGORIES"
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   VerticalTextAlignment="Center"
+                   FontSize="Medium" />
+            <ScrollView Grid.Row="2">
+                <FlexLayout x:Name="category"
+                            Wrap="Wrap"
+                            Direction="Row"
+                            JustifyContent="Start"
+                            AlignItems="Start"
+                            AlignContent="Start"
+                            BindableLayout.ItemsSource="{Binding FoodCategory}"
+                            HorizontalOptions="CenterAndExpand">
+
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <local:FrameCategoryViewCell />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
