@@ -33,12 +33,11 @@
 
     <!-- Your Pages -->
     <TabBar>
-        <Tab Title="Welcome" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:WelcomePage}" />
-        </Tab>
         <Tab Title="Challenge" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:CarouselViewChallengePage}" />
         </Tab>
+        
+        
     </TabBar>
 
 </Shell>

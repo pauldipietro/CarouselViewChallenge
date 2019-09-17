@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
         <Grid BackgroundColor="#cfd8dc">
@@ -12,7 +13,8 @@
                 <RowDefinition Height="240" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <CarouselView Grid.Row="1"
+            <BoxView BackgroundColor="black" Grid.Row="0"/>
+            <CarouselView Grid.Row="1" 
                           HeightRequest="240"
                           PositionChanged="OnPositionChanged"
                           Position="1"
@@ -40,7 +42,12 @@
                          Grid.Row="2"
                          Padding="15">
                 <Label TextColor="white"
-                       Text="{Binding Position, Source={x:Reference carousel}}" />
+                       FontSize="Header"
+                       Text="Debugging:"/>
+                <Label TextColor="white"
+                       Text="{Binding Position,
+                                Source={x:Reference carousel},
+                                StringFormat='Position: {0}'}" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
