@@ -1,0 +1,143 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge.iOS\\CarouselViewChallenge.iOS.csproj": {}
+  },
+  "projects": {
+    "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge.iOS\\CarouselViewChallenge.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge.iOS\\CarouselViewChallenge.iOS.csproj",
+        "projectName": "CarouselViewChallenge.iOS",
+        "projectPath": "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge.iOS\\CarouselViewChallenge.iOS.csproj",
+        "packagesPath": "C:\\Users\\ISRAEL\\.nuget\\packages\\",
+        "outputPath": "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ISRAEL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge\\CarouselViewChallenge.csproj": {
+                "projectPath": "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge\\CarouselViewChallenge.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.3.0.778476-pre1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge\\CarouselViewChallenge.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge\\CarouselViewChallenge.csproj",
+        "projectName": "CarouselViewChallenge",
+        "projectPath": "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge\\CarouselViewChallenge.csproj",
+        "packagesPath": "C:\\Users\\ISRAEL\\.nuget\\packages\\",
+        "outputPath": "D:\\IPSDev\\cv\\CarouselViewChallenge\\CarouselViewChallenge\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ISRAEL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.3.0.778476-pre1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

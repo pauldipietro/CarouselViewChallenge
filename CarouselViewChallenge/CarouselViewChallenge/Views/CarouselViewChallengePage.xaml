@@ -6,8 +6,47 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <StackLayout BackgroundColor="#cfd8dc" Spacing="10">
+            <Frame HasShadow="True"
+                   Padding="10"
+                   Margin="10">
+                <StackLayout>
+                    <Label Text="Unsplash image searcher" FontSize="19"></Label>
+                    <Label Text="Israel Pérez / iHouseMX87" FontSize="19"></Label>
+                </StackLayout>
+            </Frame>
+            
+            <Frame HasShadow="True"
+                   Padding="10"
+                   Margin="10">
+                <StackLayout>
+                    <Entry Text="{Binding SearchValue}" Placeholder="Search..." 
+                           HorizontalOptions="FillAndExpand" 
+                           ReturnCommand="{Binding CmdSearch}"></Entry>
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="True"
+                   Padding="10"
+                   Margin="10">
+                <StackLayout>
+                    <CarouselView ItemsSource="{Binding Photos}" 
+                                  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand"
+                                             Padding="10">
+                                    <Image Source="{Binding urls.regular}"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="FillAndExpand"
+                                           Aspect="AspectFill"></Image>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

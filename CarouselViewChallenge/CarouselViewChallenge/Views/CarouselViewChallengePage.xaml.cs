@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarouselViewChallenge.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace CarouselViewChallenge.Views
         public CarouselViewChallengePage()
         {
             InitializeComponent();
+            BindingContext = new ImageSearchViewModel();
         }
     }
 }
