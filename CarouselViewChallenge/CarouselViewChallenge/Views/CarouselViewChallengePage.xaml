@@ -7,11 +7,28 @@
              Visual="Material"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
 
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Picker Title="Monsters starting with..." ItemsSource="{Binding LetterList}"></Picker>
-
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Picker x:Name="StartingLetterPicker" ItemsSource="{Binding StartingLetters}"></Picker>
+        <CarouselView ItemsSource="{Binding StartingLetters}" PeekAreaInsets="50">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="CornflowerBlue">
+                        <Frame BorderColor="Black" 
+                               Margin="8" 
+                               HasShadow="True" 
+                               HeightRequest="50" 
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding StartingLetters.Value}" 
+                                       FontSize="14" 
+                                       FontAttributes="Bold" 
+                                       TextColor="White"
+                                       HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
 </ContentPage>
