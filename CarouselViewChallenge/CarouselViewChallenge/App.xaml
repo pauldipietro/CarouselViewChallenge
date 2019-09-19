@@ -3,8 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:styles="clr-namespace:CarouselViewChallenge.Styles"
+             xmlns:converter="clr-namespace:CarouselViewChallenge.Converters"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.App">
     <Application.Resources>
+         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <styles:FontSize/>
+            </ResourceDictionary.MergedDictionaries>
+            <converter:IntoToFloatConverter x:Key="intoToFloatConverter" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
