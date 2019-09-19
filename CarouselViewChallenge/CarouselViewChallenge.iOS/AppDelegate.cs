@@ -24,6 +24,8 @@ namespace CarouselViewChallenge.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
+
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

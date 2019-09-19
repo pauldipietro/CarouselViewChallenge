@@ -3,11 +3,128 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:local="clr-namespace:CarouselViewChallenge">
+  <ContentPage.Resources>
+        <Style x:Key="TitleStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="#FFFFFF" />
+            <Setter Property="FontSize" Value="{StaticResource FontSize36}" />
+            <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="FontFamily" Value="{StaticResource RobotoSlabBold}" />
+        </Style>
+        <Style x:Key="NumberStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="#FFFFFF" />
+            <Setter Property="FontSize" Value="{StaticResource FontSize28}" />
+            <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="FontFamily" Value="{StaticResource RobotoSlabBold}" />
+        </Style>
+        <Style x:Key="InfoStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="{StaticResource FontSize16}" />
+            <Setter Property="FontFamily" Value="{StaticResource RobotoSlabRegular}" />
+        </Style>
+  </ContentPage.Resources>
+  <CarouselView ItemsSource="{Binding Pokedex}">
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+               <Grid BackgroundColor="{Binding TypeBackgroudColor}" >
+                   <Grid.RowDefinitions>
+                       <RowDefinition Height="2*"/>
+                       <RowDefinition Height="2*"/>
+                       <RowDefinition Height="2*"/>
+                       <RowDefinition Height="4*"/>
+                   </Grid.RowDefinitions>
+                   <Grid.ColumnDefinitions>
+                       <ColumnDefinition Width="7*"/>
+                       <ColumnDefinition Width="3*"/>
+                   </Grid.ColumnDefinitions>
+                   <Label Text="{Binding Name}"
+                          Style="{StaticResource TitleStyle}" />
+                   <Label Grid.Column="1"
+                          Text="{Binding Number}"
+                          Style="{StaticResource NumberStyle}"
+                          HorizontalTextAlignment="End" />
+                   <yummy:PancakeView Grid.Row="2"
+                                      Grid.ColumnSpan="2"
+                                      Grid.RowSpan="2"
+                                      BackgroundColor="White"
+                                      CornerRadius="60,60,0,0"
+                                      IsClippedToBounds="true"
+                                      HorizontalOptions="FillAndExpand">
+                       <ScrollView>
+                           <Grid Padding="30,150,30,30" RowSpacing="20">
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                               </Grid.RowDefinitions>
+                               <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="6*"/>
+                               </Grid.ColumnDefinitions>
+                                 <Label Text="HP" Style="{StaticResource InfoStyle}"/>
+                                 <Label Grid.Column="1" Text="{Binding HP}"/>
+                                 <ProgressBar Grid.Column="2"
+                                              Progress="{Binding HP, Converter={StaticResource intoToFloatConverter}}"
+                                              VerticalOptions="Center" ProgressColor="{Binding TypeBackgroudColor}"/>
+
+                                 <Label Grid.Row="1" Text="Attack" Style="{StaticResource InfoStyle}"/>
+                                 <Label Grid.Row="1" Grid.Column="1" Text="{Binding Attack}"/>
+                                 <ProgressBar Grid.Row="1" Grid.Column="2"
+                                              Progress="{Binding Attack, Converter={StaticResource intoToFloatConverter}}"
+                                              VerticalOptions="Center" ProgressColor="{Binding TypeBackgroudColor}"/>
+
+                                 <Label Grid.Row="2" Text="Defense" Style="{StaticResource InfoStyle}"/>
+                                 <Label Grid.Row="2" Grid.Column="1" Text="{Binding Defense}" />
+                                 <ProgressBar Grid.Row="2" Grid.Column="2"
+                                              Progress="{Binding Defense, Converter={StaticResource intoToFloatConverter}}"
+                                              VerticalOptions="Center" ProgressColor="{Binding TypeBackgroudColor}"/>
+
+                                 <Label Grid.Row="3" Text="Sp. Attack" Style="{StaticResource InfoStyle}"/>
+                                 <Label Grid.Row="3" Grid.Column="1" Text="{Binding SpAttack}"/>
+                                 <ProgressBar Grid.Row="3" Grid.Column="2" 
+                                              Progress="{Binding SpAttack, Converter={StaticResource intoToFloatConverter}}"
+                                              VerticalOptions="Center" ProgressColor="{Binding TypeBackgroudColor}"/>
+
+                                 <Label Grid.Row="4" Text="Sp. Defense" Style="{StaticResource InfoStyle}"/>
+                                 <Label Grid.Row="4" Grid.Column="1" Text="{Binding SpDefense}"/>
+                                 <ProgressBar Grid.Row="4" Grid.Column="2" 
+                                              Progress="{Binding SpDefense, Converter={StaticResource intoToFloatConverter}}"
+                                              VerticalOptions="Center" ProgressColor="{Binding TypeBackgroudColor}"/>
+
+                                 <Label Grid.Row="5" Text="Speed" Style="{StaticResource InfoStyle}"/>
+                                 <Label Grid.Row="5" Grid.Column="1" Text="{Binding Speed}"/>
+                                 <ProgressBar Grid.Row="5" Grid.Column="2"  
+                                              Progress="{Binding SpDefense, Converter={StaticResource intoToFloatConverter}}"
+                                              VerticalOptions="Center" ProgressColor="{Binding TypeBackgroudColor}"/>
+                           </Grid>
+                       </ScrollView>
+                   </yummy:PancakeView>
+                  <Image Grid.Row="1"
+                         Grid.ColumnSpan="2"
+                         Grid.RowSpan="2"
+                         Source="pokeball.png"
+                         HorizontalOptions="Center"
+                         Opacity="0.5">
+                       <Image.Behaviors>
+                           <local:Behaviors.ImageRotateBehavior/>
+                       </Image.Behaviors>
+                   </Image>
+                   <ffimageloading:CachedImage Grid.Row="1"
+                                               Grid.ColumnSpan="2"
+                                               Grid.RowSpan="2"
+                                               Source="{Binding ImagePokemon}"
+                                               VerticalOptions="Center"/>
+               </Grid>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 </ContentPage>
