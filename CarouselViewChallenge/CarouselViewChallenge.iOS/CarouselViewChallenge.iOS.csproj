@@ -119,6 +119,14 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Asian-Paradise-Flycatcher.jpg" />
+    <BundleResource Include="Resources\Himalayan-Monal.jpg" />
+    <BundleResource Include="Resources\Indian-Peafowl.jpg" />
+    <BundleResource Include="Resources\Mrs.-Gould’s-Sunbird.jpg" />
+    <BundleResource Include="Resources\Oriental-Dwarf-Kingfisher.jpg" />
+    <BundleResource Include="Resources\Red-Headed-Trogon.jpg" />
+    <BundleResource Include="Resources\Sarus-Crane.jpg" />
+    <BundleResource Include="Resources\Satyr-Tragopan.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,7 +143,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CarouselViewChallenge\CarouselViewChallenge.csproj">
-      <Project>{1AD32EAF-CE1F-497F-8598-87F19CDA3D10}</Project>
+      <Project>{A9F8B9B3-719F-4F40-9044-924E7B921409}</Project>
       <Name>CarouselViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>
