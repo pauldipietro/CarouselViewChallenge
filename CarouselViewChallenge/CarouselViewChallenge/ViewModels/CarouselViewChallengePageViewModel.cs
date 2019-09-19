@@ -1,38 +1,31 @@
-﻿using System.ComponentModel;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Xamarin.Forms;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using CarouselViewChallenge.Models;
+using CarouselViewChallenge.Services;
 
 namespace CarouselViewChallenge.ViewModels
 {
     public class CarouselViewChallengePageViewModel : INotifyPropertyChanged
     {
-        private string _podcastFeed;
-        // TODO: have a look at https://github.com/jamesmontemagno/Hanselman.Forms
-        // to see how to get podcasts
+        public FakeMonsterService _monsterService;
 
         public CarouselViewChallengePageViewModel()
         {
-            AddFeedCommand = new Command(async () => await AddFeedExecute());
+            LetterList = new List<string>()
+            {
+                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
+                "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+            };
 
+            _monsterService = new FakeMonsterService();
+            Monsters = _monsterService.GetMonsters();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public ICommand AddFeedCommand { get; }
-        public string PodcastFeed
-        {
-            get => _podcastFeed;
-            set
-            {
-                _podcastFeed = value;
-                OnPropertyChanged(new PropertyChangedEventArgs("PodcastFeed"));
-            }
-        }
 
-        private async Task AddFeedExecute()
-        {
 
-        }
+        public List<string> LetterList { get; }
+        public List<Monster> Monsters { get; }
 
         private void OnPropertyChanged(PropertyChangedEventArgs eventArgs)
         {

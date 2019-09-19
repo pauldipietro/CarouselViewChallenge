@@ -9,8 +9,8 @@
 
     <ContentPage.Content>
         <StackLayout BackgroundColor="#cfd8dc">
-            <Entry Text="{Binding PodcastFeed}"></Entry>
-            <Button Text="Add" Command="{Binding AddFeedCommand}"></Button>
+            <Picker Title="Monsters starting with..." ItemsSource="{Binding LetterList}"></Picker>
+
             <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
