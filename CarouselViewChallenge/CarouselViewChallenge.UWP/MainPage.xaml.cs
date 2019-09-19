@@ -21,7 +21,7 @@ namespace CarouselViewChallenge.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new CarouselViewChallenge.AppUWP());
+            LoadApplication(new CarouselViewChallenge.App());
         }
     }
 }
