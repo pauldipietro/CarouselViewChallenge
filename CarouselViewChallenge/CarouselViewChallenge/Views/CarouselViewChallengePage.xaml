@@ -4,10 +4,60 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
+             Title="{Binding Title}">
+    <CarouselView ItemsSource="{Binding Characters}" PeekAreaInsets="50">
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout BackgroundColor="#cfd8dc">
+                    <Frame BorderColor="Gray" 
+                           Margin="5" 
+                           HasShadow="True" 
+                           HeightRequest="450" 
+                           VerticalOptions="CenterAndExpand"
+                           CornerRadius="25">
+                        <StackLayout>
+                            <Label Text="{Binding name}" FontSize="24" FontAttributes="Bold" 
+                                   HorizontalTextAlignment="Center"/>
+                            <Image Source="{Binding image}" Aspect="Fill" HeightRequest="200"/>
+                            <!--<BoxView HeightRequest="5" BackgroundColor="DarkSlateGray"/>-->
+                            <Grid BackgroundColor="Azure">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label FormattedText="Status |" FontSize="18" Margin="16"
+                                       VerticalOptions="CenterAndExpand"
+                                       Grid.Row="0" 
+                                       Grid.Column="1"/>
+                                <Label FormattedText="{Binding status}" FontSize="18" Margin="16"
+                                       VerticalOptions="CenterAndExpand"
+                                       Grid.Row="0" 
+                                       Grid.Column="2"/>
+                                <Label FormattedText="Species |" FontSize="18" Margin="16"
+                                       VerticalOptions="CenterAndExpand"
+                                       Grid.Row="1" 
+                                       Grid.Column="1"/>
+                                <Label FormattedText="{Binding species}" FontSize="18" Margin="16"
+                                       VerticalOptions="CenterAndExpand"
+                                       Grid.Row="1" 
+                                       Grid.Column="2"/>
+                                <Label FormattedText="Gender |" FontSize="18" Margin="16" 
+                                       VerticalOptions="CenterAndExpand"
+                                       Grid.Row="2" 
+                                       Grid.Column="1"/>
+                                <Label FormattedText="{Binding gender}" FontSize="18" Margin="16" 
+                                       VerticalOptions="CenterAndExpand"
+                                       Grid.Row="2" 
+                                       Grid.Column="2"/>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 </ContentPage>

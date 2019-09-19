@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CarouselViewChallenge.Models;
+using CarouselViewChallenge.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +15,58 @@ namespace CarouselViewChallenge.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CarouselViewChallengePage : ContentPage
     {
+        public RickAndMorthyViewModel VM { get; set; }
         public CarouselViewChallengePage()
         {
             InitializeComponent();
+            VM = new RickAndMorthyViewModel();
+            VM.Characters = new ObservableCollection<Character>
+            {
+                new Character
+                {
+                    image = "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+                    name = "Rick Sanchez",
+                    species = "Human",
+                    status = "Alive",
+                    gender = "Male"
+                },
+                new Character
+                {
+                    image = "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+                    name = "Morty Smith",
+                    species = "Human",
+                    status = "Alive",
+                    gender = "Male"
+                },
+                new Character
+                {
+                    image = "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+                    name = "Summer Smith",
+                    species = "Human",
+                    status = "Alive",
+                    gender = "Female"
+                },
+                new Character
+                {
+                    image = "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
+                    name = "Beth Smith",
+                    species = "Human",
+                    status = "Alive",
+                    gender = "Female"
+                },
+                new Character
+                {
+                    image = "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
+                    name = "Jerry Smith",
+                    species = "Human",
+                    status = "Alive",
+                    gender = "Male"
+                }
+
+
+            };
+            BindingContext = VM;
+
         }
     }
 }
