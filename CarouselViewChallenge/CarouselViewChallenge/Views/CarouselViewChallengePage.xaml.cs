@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
 using CarouselViewChallenge.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,6 +14,17 @@ namespace CarouselViewChallenge.Views
         {
             InitializeComponent();
             vm = new CarouselViewChallengePageViewModel();
+            SetupData();
+        }
+
+        private void SetupData()
+        {
+            vm.StartingLetters = new ObservableCollection<string>()
+            {
+                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
+                "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+            };
+            vm.SelectedLetter = "H";
         }
     }
 }

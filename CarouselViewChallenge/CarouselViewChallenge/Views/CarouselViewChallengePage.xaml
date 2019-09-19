@@ -5,21 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Visual="Material"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels">
 
     <StackLayout>
-        <Picker x:Name="StartingLetterPicker" ItemsSource="{Binding StartingLetters}"></Picker>
-        <CarouselView ItemsSource="{Binding StartingLetters}" PeekAreaInsets="50">
+        <Picker ItemsSource="{Binding StartingLetters}" Title="Select a starting letter" SelectedItem="{Binding SelectedLetter}"></Picker>
+        <CarouselView ItemsSource="{Binding StartingLetters}" BackgroundColor="Green" HeightRequest="200" >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="CornflowerBlue">
                         <Frame BorderColor="Black" 
                                Margin="8" 
                                HasShadow="True" 
-                               HeightRequest="50" 
+                               HeightRequest="150" 
                                VerticalOptions="CenterAndExpand">
                             <StackLayout>
-                                <Label Text="{Binding StartingLetters.Value}" 
+                                <Label Text="{Binding}" 
                                        FontSize="14" 
                                        FontAttributes="Bold" 
                                        TextColor="White"
