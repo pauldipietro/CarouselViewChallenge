@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarouselViewChallenge.Views.SpecialCarrouselView"
+             Spacing="0"
+             VerticalOptions="FillAndExpand">
+    <Grid IsVisible="{Binding HasSpecial}"
+          HeightRequest="240">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image 
+             Source="{Binding Special.Image}"
+             Opacity="0.5"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="240"
+                Aspect="AspectFill"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="3"
+                VerticalOptions="FillAndExpand"/>
+
+        <Label Text="{Binding Special.Title}"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontSize="20"
+                HorizontalOptions="FillAndExpand"
+                Margin="20,20,0,0"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"/>
+
+        <Label Text="{Binding Special.Description}"
+               FontSize="20"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                Margin="20,20,0,0"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"/>
+
+        <Label Text="{Binding Special.Price,StringFormat='${0} USD'}"
+               FontSize="30"
+                TextColor="White"
+               FontAttributes="Bold"
+                HorizontalOptions="FillAndExpand"
+                Margin="20,20,0,0"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"/>
+    </Grid>
+
+     <Image 
+            Source="{Binding Activity.Image}"
+            IsVisible="{Binding HasActivity}"
+            HorizontalOptions="FillAndExpand"
+            HeightRequest="240"
+            Aspect="AspectFill"/>
+
+    <Grid HorizontalOptions="FillAndExpand"
+          HeightRequest="240"
+          BackgroundColor="LightGray"
+          IsVisible="{Binding HasFreeActivity}">
+
+        <Image Source="{Binding FreeActivity.Image}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HeightRequest="240"
+                        Opacity="0.5"
+                        Aspect="AspectFill"/>
+        <StackLayout Padding="20"
+                     VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding FreeActivity.Title}"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+
+            <Label Text="{Binding FreeActivity.Price, StringFormat='${0}'}"/>
+                            
+            <Button Text="Check website"
+                    HorizontalOptions="Start"
+                    Padding="10,0"
+                    TextColor="White"
+                    BackgroundColor="#2196F3"
+                    BorderWidth="0"/>
+        </StackLayout>
+    </Grid>
+</StackLayout>
