@@ -1,4 +1,5 @@
 ﻿using System;
+using TinyCsvParser.Mapping;
 
 namespace CarouselViewChallenge.Models
 {
@@ -15,23 +16,24 @@ namespace CarouselViewChallenge.Models
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
         public string Image { get; set; }
+    }
 
-        public static Monster FromCsv(string csvLine)
+    public class CsvMonsterMapping : CsvMapping<Monster>
+    {
+        public CsvMonsterMapping()
+            : base()
         {
-            string[] values = csvLine.Split(',');
-            Monster monster = new Monster();
-            monster.Name = Convert.ToString(values[0]);
-            monster.Type = Convert.ToString(values[1]);
-            monster.Alignment = Convert.ToString(values[2]);
-            monster.Size = Convert.ToString(values[3]);
-            monster.Strength = Convert.ToInt32(values[4]);
-            monster.Dexterity = Convert.ToInt32(values[5]);
-            monster.Constitution = Convert.ToInt32(values[6]);
-            monster.Intelligence = Convert.ToInt32(values[7]);
-            monster.Wisdom = Convert.ToInt32(values[8]);
-            monster.Charisma = Convert.ToInt32(values[9]);
-            monster.Image = Convert.ToString(values[10]);
-            return monster;
+            MapProperty(0, x => x.Name);
+            MapProperty(1, x => x.Type);
+            MapProperty(2, x => x.Alignment);
+            MapProperty(3, x => x.Size);
+            MapProperty(4, x => x.Strength);
+            MapProperty(5, x => x.Dexterity);
+            MapProperty(6, x => x.Constitution);
+            MapProperty(7, x => x.Intelligence);
+            MapProperty(8, x => x.Wisdom);
+            MapProperty(9, x => x.Charisma);
+            MapProperty(10, x => x.Image);
         }
     }
 }

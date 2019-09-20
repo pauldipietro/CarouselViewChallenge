@@ -11,6 +11,7 @@ namespace CarouselViewChallenge.ViewModels
         public FakeMonsterService _monsterService;
         private ObservableCollection<string> _startingLetters;
         private string _selectedLetter;
+        private List<Monster> _monsters;
 
         public CarouselViewChallengePageViewModel()
         {
@@ -20,8 +21,8 @@ namespace CarouselViewChallenge.ViewModels
             //    "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
             //};
 
-            //_monsterService = new FakeMonsterService();
-            //Monsters = _monsterService.GetMonsters();
+            _monsterService = new FakeMonsterService();
+            Monsters = _monsterService.GetMonsters();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -52,7 +53,18 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
-        public List<Monster> Monsters { get; }
+        public List<Monster> Monsters
+        {
+            get => _monsters;
+            set
+            {
+                if (_monsters != value)
+                {
+                    _monsters = value;
+                    OnPropertyChanged(new PropertyChangedEventArgs("Monsters"));
+                }
+            }
+        }
 
         private void OnPropertyChanged(PropertyChangedEventArgs eventArgs)
         {

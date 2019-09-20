@@ -9,7 +9,7 @@
              xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels">
 
     <StackLayout>
-        <Picker ItemsSource="{Binding StartingLetters}" Title="Select a starting letter" SelectedItem="{Binding SelectedLetter}"></Picker>
+        <!--<Picker ItemsSource="{Binding StartingLetters}" Title="Select a starting letter" SelectedItem="{Binding SelectedLetter}"></Picker>
         <CarouselView ItemsSource="{Binding StartingLetters}" BackgroundColor="Green" HeightRequest="200" >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
@@ -30,6 +30,29 @@
                     </StackLayout>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
+        </CarouselView>-->
+
+        <CarouselView ItemsSource="{Binding Monsters}" BackgroundColor="Green" HeightRequest="200" >
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="CornflowerBlue">
+                        <Frame BorderColor="Black" 
+                               Margin="8" 
+                               HasShadow="True" 
+                               HeightRequest="150" 
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" 
+                                       FontSize="14" 
+                                       FontAttributes="Bold" 
+                                       TextColor="White"
+                                       HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
         </CarouselView>
+
     </StackLayout>
 </ContentPage>

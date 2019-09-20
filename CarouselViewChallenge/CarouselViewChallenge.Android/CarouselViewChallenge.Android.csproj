@@ -44,6 +44,9 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>C:\Users\grimorde\.nuget\packages\acr.userdialogs\7.0.30\lib\netstandard2.0\Acr.UserDialogs.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
     <Reference Include="System.Core" />

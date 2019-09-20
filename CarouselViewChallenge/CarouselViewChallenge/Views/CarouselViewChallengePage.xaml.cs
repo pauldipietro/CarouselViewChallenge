@@ -14,7 +14,7 @@ namespace CarouselViewChallenge.Views
         {
             InitializeComponent();
             vm = new CarouselViewChallengePageViewModel();
-            SetupData();
+            //SetupData();
         }
 
         private void SetupData()
