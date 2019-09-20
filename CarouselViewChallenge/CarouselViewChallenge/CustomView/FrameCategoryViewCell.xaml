@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CarouselViewChallenge.CustomView.FrameCategoryViewCell" VerticalOptions="CenterAndExpand">
+    <ContentView.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="5,0,0,0"></On>
+            <On Platform="Android" Value="10"></On>
+        </OnPlatform>
+    </ContentView.Padding>
+     <Frame  CornerRadius="5" Padding="5" HeightRequest="120" WidthRequest="100">
+        <Image Source="{Binding Icon}" HorizontalOptions="Center" Aspect="AspectFill" />
+    </Frame>
+</ContentView>
