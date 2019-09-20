@@ -11,7 +11,7 @@ namespace CarouselViewChallenge.ViewModels
         public FakeMonsterService _monsterService;
         private ObservableCollection<string> _startingLetters;
         private string _selectedLetter;
-        private List<Monster> _monsters;
+        private ObservableCollection<Monster> _monsters;
 
         public CarouselViewChallengePageViewModel()
         {
@@ -53,7 +53,7 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
-        public List<Monster> Monsters
+        public ObservableCollection<Monster> Monsters
         {
             get => _monsters;
             set

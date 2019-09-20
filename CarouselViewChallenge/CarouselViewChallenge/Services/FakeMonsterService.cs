@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.IO;
 using System.Linq;
@@ -13,14 +14,14 @@ namespace CarouselViewChallenge.Services
 {
     public class FakeMonsterService
     {
-        public List<Monster> GetMonsters()
+        public ObservableCollection<Monster> GetMonsters()
         {
             return Deserialize("Monsters.csv");
         }
 
-        private List<Monster> Deserialize(string name)
+        private ObservableCollection<Monster> Deserialize(string name)
         {
-            List<Monster> monsters = new List<Monster>();
+            ObservableCollection<Monster> monsters = new ObservableCollection<Monster>();
             var assembly = this.GetType().GetTypeInfo().Assembly;
             var resources = assembly.GetManifestResourceNames();
             var resourceName = resources.Single(r => r.EndsWith(name, StringComparison.OrdinalIgnoreCase));
@@ -36,7 +37,8 @@ namespace CarouselViewChallenge.Services
                 var result = csvParser
                     .ReadFromStream(stream, Encoding.ASCII)
                     .ToList();
-                monsters = result.Select(x => x.Result).ToList();
+
+                monsters = new ObservableCollection<Monster>(result.Select(x => x.Result));
                 return monsters;
             }
             catch (Exception ex)
