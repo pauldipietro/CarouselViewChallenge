@@ -4,10 +4,51 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid BackgroundColor="#cfd8dc">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="240" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <BoxView BackgroundColor="black" Grid.Row="0"/>
+            <CarouselView Grid.Row="1" 
+                          HeightRequest="240"
+                          PositionChanged="OnPositionChanged"
+                          Position="1"
+                          HorizontalScrollBarVisibility="Never"
+                          x:Name="carousel">
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>https://loremflickr.com/320/240?random=4</x:String>
+                        <x:String>https://loremflickr.com/320/240?random=1</x:String>
+                        <x:String>https://loremflickr.com/320/240?random=2</x:String>
+                        <x:String>https://loremflickr.com/320/240?random=3</x:String>
+                        <x:String>https://loremflickr.com/320/240?random=4</x:String>
+                        <x:String>https://loremflickr.com/320/240?random=1</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding .}"
+                               Aspect="AspectFill" />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <StackLayout BackgroundColor="Black"
+                         Grid.Row="2"
+                         Padding="15">
+                <Label TextColor="white"
+                       FontSize="Header"
+                       Text="Debugging:"/>
+                <Label TextColor="white"
+                       Text="{Binding Position,
+                                Source={x:Reference carousel},
+                                StringFormat='Position: {0}'}" />
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
