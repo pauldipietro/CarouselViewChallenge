@@ -1,0 +1,59 @@
+﻿<?xml version="1.0"
+      encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d dblend"
+             x:Class="CarouselViewChallenge.Views.PlantView"
+             xmlns:ViewModels="clr-namespace:CarouselViewChallenge.ViewModels;assembly=CarouselViewChallenge"
+             x:DataType="ViewModels:PlantViewModel"
+             xmlns:dblend="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Converters="clr-namespace:CarouselViewChallenge.Resources.Converters;assembly=CarouselViewChallenge"
+             dblend:DataContext="{dblend:DesignInstance ViewModels:PlantViewModel}">
+    <ContentView.Content>
+        <Grid VerticalOptions="CenterAndExpand"
+              HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0"
+                   HeightRequest="250"
+                   WidthRequest="250"
+                   CornerRadius="125"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                <Image Aspect="AspectFill"
+                       Source="{Binding ImageUrl}" />
+            </Frame>
+            <StackLayout Grid.Row="1"
+                         HorizontalOptions="CenterAndExpand"
+                         Margin="25,0,0,0"
+            >
+                <Label Text="{Binding Name}"
+                       FontSize="Title" />
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="{Binding NextWatering,Converter={Converters:DateRelativeToNowStringConverter}, StringFormat='Next watering in: {0}'}" 
+                        VerticalOptions="Center"/>
+                    <Frame HeightRequest="25"
+                           WidthRequest="25"
+                           CornerRadius="12.5"
+                           BackgroundColor="{StaticResource RedAppColor}"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           IsVisible="{Binding IsOverdue}">
+                        <Label Text="!"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               TextColor="White"
+                               FontAttributes="Bold" />
+                    </Frame></StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
