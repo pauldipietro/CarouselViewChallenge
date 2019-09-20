@@ -5,26 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.App">
-    <Application.Resources>        
-        <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeRegular">
-            <On Platform="iOS" Value="FontAwesome5Free-Regular" />
-            <On Platform="Android" Value="fa-regular.otf#Regular" />
+    <Application.Resources>
+        <OnPlatform x:Key="font_extrabold" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Montserrat-ExtraBold.ttf#Montserrat-ExtraBold" />
+            <On Platform="iOS" Value="Montserrat-ExtraBold" />
         </OnPlatform>
-        <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeSolid">
-            <On Platform="iOS" Value="FontAwesome5Free-Solid" />
-            <On Platform="Android" Value="fa-solid.otf#Solid" />
+        <OnPlatform x:Key="font_bold" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold" />
+            <On Platform="iOS" Value="Montserrat-Bold" />
         </OnPlatform>
-        <OnPlatform x:TypeArguments="x:String" x:Key="LatoBlack">
-            <On Platform="iOS" Value="Lato-Black" />
-            <On Platform="Android" Value="Lato-Black.ttf#Regular" />
-        </OnPlatform>
-        <OnPlatform x:TypeArguments="x:String" x:Key="LatoBold">
-            <On Platform="iOS" Value="Lato-Bold" />
-            <On Platform="Android" Value="Lato-Bold.ttf#Bold" />
-        </OnPlatform>
-        <OnPlatform x:TypeArguments="x:String" x:Key="LatoRegular">
-            <On Platform="iOS" Value="Lato-Regular" />
-            <On Platform="Android" Value="Lato-Regular.ttf#Regular" />
+        <OnPlatform x:Key="font_regular" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Montserrat-Regular.ttf#Montserrat-Regular" />
+            <On Platform="iOS" Value="Montserrat-Regular" />
         </OnPlatform>
     </Application.Resources>
 </Application>

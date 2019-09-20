@@ -65,8 +65,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Renderers\EntryRenderer.cs" />
-    <Compile Include="Effects\SafeAreaPaddingEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -121,29 +119,42 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\fa-solid.otf" />
-    <BundleResource Include="Resources\fa-regular.otf" />
-    <BundleResource Include="Resources\Lato-Regular.ttf" />
-    <BundleResource Include="Resources\Lato-Bold.ttf" />
-    <BundleResource Include="Resources\Lato-Black.ttf" />
-    <ImageAsset Include="Assets.xcassets\seattle.imageset\seattle%403x.jpg" />
-    <ImageAsset Include="Assets.xcassets\seattle.imageset\seattle%402x.jpg" />
-    <ImageAsset Include="Assets.xcassets\seattle.imageset\seattle.jpg" />
     <ImageAsset Include="Assets.xcassets\seattle.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\elba.imageset\elba%403x.jpg" />
-    <ImageAsset Include="Assets.xcassets\elba.imageset\elba%402x.jpg" />
-    <ImageAsset Include="Assets.xcassets\elba.imageset\elba.jpg" />
     <ImageAsset Include="Assets.xcassets\elba.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\bali.imageset\bali%403x.jpg" />
-    <ImageAsset Include="Assets.xcassets\bali.imageset\bali%402x.jpg" />
-    <ImageAsset Include="Assets.xcassets\bali.imageset\bali.jpg" />
     <ImageAsset Include="Assets.xcassets\bali.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\oranges.imageset\oranges%403x.png" />
+    <ImageAsset Include="Assets.xcassets\oranges.imageset\oranges%402x.png" />
+    <ImageAsset Include="Assets.xcassets\oranges.imageset\oranges.png" />
+    <ImageAsset Include="Assets.xcassets\oranges.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\pear.imageset\pear%403x.png" />
+    <ImageAsset Include="Assets.xcassets\pear.imageset\pear%402x.png" />
+    <ImageAsset Include="Assets.xcassets\pear.imageset\pear.png" />
+    <ImageAsset Include="Assets.xcassets\pear.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\tomato.imageset\tomato%403x.png" />
+    <ImageAsset Include="Assets.xcassets\tomato.imageset\tomato%402x.png" />
+    <ImageAsset Include="Assets.xcassets\tomato.imageset\tomato.png" />
+    <ImageAsset Include="Assets.xcassets\tomato.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo%403x.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo%402x.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\Montserrat-Bold.ttf" />
+    <BundleResource Include="Resources\Montserrat-ExtraBold.ttf" />
+    <BundleResource Include="Resources\Montserrat-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
