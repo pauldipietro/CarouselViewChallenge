@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:m="clr-namespace:CarouselViewChallenge.Models"
              xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewTwoPage"
@@ -11,10 +12,10 @@
 
     <ContentPage.Resources>
 
-        <DataTemplate x:Key="fortTemplate" x:DataType="x:String">
+        <DataTemplate x:Key="fortTemplate" x:DataType="m:FortItem">
             <ContentView>
                 <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10, 5">
-                    <Label Text="{Binding }" TextColor="{StaticResource textColor}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="{Binding SystemName}" TextColor="{StaticResource textColor}" HorizontalOptions="Center" VerticalOptions="Center"/>
                 </Frame>
             </ContentView>
         </DataTemplate>

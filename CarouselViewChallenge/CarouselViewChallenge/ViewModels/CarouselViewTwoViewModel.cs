@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarouselViewChallenge.Models;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
@@ -16,9 +17,9 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
-        public ObservableCollection<string> LargeShipList { get; set; }
+        public ObservableCollection<FortItem> LargeShipList { get; set; }
 
-        public ObservableCollection<string> SmallShipList { get; set; }
+        public ObservableCollection<FortItem> SmallShipList { get; set; }
 
         public string _ccBalance;
         public string CCBalance
@@ -64,31 +65,32 @@ namespace CarouselViewChallenge.ViewModels
 
         public CarouselViewTwoViewModel()
         {
-            LargeShipList = new ObservableCollection<string>
+            // fake data
+            LargeShipList = new ObservableCollection<FortItem>
             {
-                "First Large Item",
-                "Second Large Item",
-                "Third Large Item",
-                "Fourth Large Item",
-                "Fifth Large Item",
-                "Sixth Large Item",
-                "Seventh Large Item",
-                "Eighth Large Item",
-                "Ninth Large Item",
-                "Tenth Large Item"
+                new FortItem("Xinca", "101 ly", "station", "343 ls", "independent"),
+                new FortItem("Ngarawe", "86 ly", "station", "35 ls", "empire"),
+                new FortItem("Yanerones", "115 ly", "planetary", "42 ls", "empire"),
+                new FortItem("Damoorai", "86 ly", "station", "1,324 ls", "empire"),
+                new FortItem("Ostyat", "117 ly", "station", "41 ls", "independent"),
+                new FortItem("Itzamni", "64 ly", "planetary", "158,992 ls", "empire"),
+                new FortItem("HIP 20524", "53 ly", "planetary", "2,192 ls", "empire"),
+                new FortItem("Amenta", "47 ly", "station", "236 ls", "empire"),
+                new FortItem("27 G. Caeli", "54 ly", "outpost", "3,145 ls", "independent"),
+                new FortItem("Kappa Reticuli", "81 ly", "planetary", "350 ls", "federation")
             };
-            SmallShipList = new ObservableCollection<string>
+            SmallShipList = new ObservableCollection<FortItem>
             {
-                "First Small Item",
-                "Second Small Item",
-                "Third Small Item",
-                "Fourth Small Item",
-                "Fifth Small Item",
-                "Sixth Small Item",
-                "Seventh Small Item",
-                "Eighth Small Item",
-                "Ninth Small Item",
-                "Tenth Small Item"
+                new FortItem("Lutni", "30 ly", "planetary", "21 ls", "empire"),
+                new FortItem("AB Pictoris", "41 ly", "station", "1,739 ls", "empire"),
+                new FortItem("HIP 21778", "66 ly", "outpost", "181 ls", "independent"),
+                new FortItem("Biliri", "68 ly", "outpost", "181 ls", "empire"),
+                new FortItem("Ngarawe", "86 ly", "station", "35 ls", "empire"),
+                new FortItem("Lopocares", "125 ly", "outpost", "329 ls", "federation"),
+                new FortItem("Carverda", "41 ly", "station", "727 ls", "empire"),
+                new FortItem("HIP 32812", "62 ly", "outpost", "1,753 ls", "federation"),
+                new FortItem("Tiburnat", "53 ly", "planetary", "2,192 ls", "empire"),
+                new FortItem("Ju Shiva", "47 ly", "station", "236 ls", "independent"),
             };
             Cycle = "Cycle 150";
             CCBalance = "853 CC";
