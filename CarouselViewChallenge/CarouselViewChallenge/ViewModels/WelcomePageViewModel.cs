@@ -35,9 +35,43 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
+        private string _dotSections;
+        public string DotSections
+        {
+            get
+            {
+                return _dotSections;
+            }
+            set
+            {
+                if (_dotSections != value)
+                {
+                    _dotSections = value;
+                    OnPropertyChanged(new PropertyChangedEventArgs("DotSections"));
+                }
+            }
+        }
+
+        public void setCarrouselPosition(int pos)
+        {
+            var sb = new StringBuilder();
+            for (int i = 0; i < _sections.Count; i++)
+            {
+                if (i == pos)
+                {
+                    sb.Append("●");
+                    continue;
+                }
+                sb.Append("○");
+            }
+
+            DotSections = sb.ToString();
+        }
+
         private void OnPropertyChanged(PropertyChangedEventArgs eventArgs)
         {
             PropertyChanged?.Invoke(this, eventArgs);
         }
+
     }
 }

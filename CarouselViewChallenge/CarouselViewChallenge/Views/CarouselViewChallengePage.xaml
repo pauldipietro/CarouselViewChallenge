@@ -1,13 +1,145 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="RubikLight" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Rubik-Light.ttf#Rubik-Light" />
+                <On Platform="iOS" Value="Rubik-Medium" />
+            </OnPlatform>
+            <OnPlatform x:Key="RubikMedium" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Rubik-Medium.ttf#Rubik-Medium" />
+                <On Platform="iOS" Value="Rubik-Medium" />
+            </OnPlatform>
+            <Color x:Key="CorAzulPadrao">#0016A6</Color>
+
+            <Style x:Key="FonteLightBranco" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource RubikLight}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="FonteMediumBranco" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource RubikMedium}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="FontRegularAccent" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource RubikMedium}" />
+                <Setter Property="TextColor" Value="{StaticResource CorAzulPadrao}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <RelativeLayout x:Name="LayoutBase" BackgroundColor="BlanchedAlmond"> 
+            <Image Source="background_principal.png" HorizontalOptions="Fill" Aspect="Fill"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" />
+
+            <FlexLayout x:Name="BarraSuperior" Direction="Row" Wrap="NoWrap" AlignItems="Center"
+                        HorizontalOptions="Fill" BackgroundColor="{StaticResource CorAzulPadrao}"
+
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=56}">
+
+                <StackLayout x:Name="BarraNavegacao" Orientation="Horizontal" FlexLayout.Grow="1" Padding="16,0,24,0"
+                             VerticalOptions="FillAndExpand">
+                    <Image Source="Vibe.png" HeightRequest="32" VerticalOptions="Center" />
+                    <Label Text="Início" FontSize="19" VerticalOptions="Center"
+                           Style="{StaticResource FonteMediumBranco}"
+                           VerticalTextAlignment="Center" Margin="22,0,0,0" />
+                </StackLayout>
+
+                <StackLayout x:Name="BarraOpcoesAuxiliares" Orientation="Horizontal" Spacing="4" />
+
+                <Button x:Name="IconeMenu" Text="&#xf0c9;" Margin="4,0,4,0" WidthRequest="48" HeightRequest="48"
+                        Padding="0" CornerRadius="24" FontSize="24" TextColor="White" VerticalOptions="Center"
+                        BackgroundColor="{StaticResource CorAzulPadrao}" />
+            </FlexLayout>
+
+            <StackLayout BackgroundColor="Transparent"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=56}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-56}">
+
+                <Grid Padding="32,12,32,0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".3*" />
+                        <ColumnDefinition Width=".7*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Agência" Style="{StaticResource FonteLightBranco}" FontSize="Small" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="Conta" Style="{StaticResource FonteLightBranco}"
+                           HorizontalOptions="End" FontSize="Small" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="00510-4" Style="{StaticResource FonteMediumBranco}"
+                           FontSize="Medium" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="0000022541-9" Style="{StaticResource FonteMediumBranco}"
+                           FontSize="Medium" HorizontalOptions="End" />
+                </Grid>
+
+                <CarouselView PeekAreaInsets="50" ItemsSource="{Binding MainCards}">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame Margin="12" HasShadow="True" Padding="24" VerticalOptions="FillAndExpand"
+                                       CornerRadius="8">
+                                    <Grid RowSpacing="20" ColumnSpacing="20">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding iconHex}" TextColor="{StaticResource CorAzulPadrao}"
+                                               FontFamily="{StaticResource RubikLight}" FontSize="36" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Header}"
+                                               Style="{StaticResource FontRegularAccent}" FontSize="Medium"
+                                               VerticalOptions="Center" />
+                                        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Padding="0"
+                                               HasShadow="False" Content="{Binding Content}"/>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <StackLayout HeightRequest="300">
+                    <Label Text="Mais acessadas" FontSize="Small"  TextColor="{StaticResource CorAzulPadrao}"
+                       VerticalOptions="EndAndExpand" Margin="16,0,0,0" />
+
+                    <CollectionView ItemsSource="{Binding SmallCards}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal" SnapPointsAlignment="Start" SnapPointsType="Mandatory"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal" Padding="16" Spacing="12" x:Name="MaisAcessadosStack">
+                                    <Frame WidthRequest="100" BackgroundColor="White">
+                                        <StackLayout InputTransparent="True">
+                                            <Label InputTransparent="True" Text="{Binding iconHex}" Style="{StaticResource FontRegularAccent}"/>
+                                            <Label InputTransparent="True" Text="{Binding Header}" Style="{StaticResource FontRegularAccent}"/>
+                                            <!--<ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsRunning="True" Color="{StaticResource CorAzulPadrao}" />-->
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
