@@ -88,11 +88,11 @@
                       PeekAreaInsets="80" 
                       VerticalOptions="StartAndExpand">
             <CarouselView.ItemsLayout>
-                <ListItemsLayout SnapPointsType="MandatorySingle" SnapPointsAlignment="Center">
+                <LinearItemsLayout SnapPointsType="MandatorySingle" SnapPointsAlignment="Center">
                     <x:Arguments>
                         <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
                     </x:Arguments>
-                </ListItemsLayout>
+                </LinearItemsLayout>
             </CarouselView.ItemsLayout>
         </CarouselView>
 
