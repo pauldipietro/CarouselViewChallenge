@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:c="clr-namespace:CarouselViewChallenge.Converters"
              xmlns:m="clr-namespace:CarouselViewChallenge.Models"
              xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
              mc:Ignorable="d"
@@ -12,10 +14,43 @@
 
     <ContentPage.Resources>
 
+        <c:FactionToLogo x:Key="factionLogo"/>
+        <c:StationPadToImage x:Key="stationImage"/>
+        
         <DataTemplate x:Key="fortTemplate" x:DataType="m:FortItem">
             <ContentView>
-                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10, 5">
-                    <Label Text="{Binding SystemName}" TextColor="{StaticResource textColor}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10, 5" Padding="10">
+                    <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="Fill">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <ffsvg:SvgCachedImage Grid.Row="0" Grid.Column="0" 
+                                              Source="{Binding Path=MajorFaction, Converter={StaticResource factionLogo}, Mode=OneWay}" 
+                                              HeightRequest="60" 
+                                              VerticalOptions="Center"/>
+                        <Label Grid.Row="0" Grid.Column="1"
+                               Text="{Binding SystemName, Mode=OneWay}" 
+                               LineBreakMode="WordWrap" 
+                               MaxLines="2" 
+                               TextColor="{DynamicResource textColor}" 
+                               FontAttributes="Bold" 
+                               FontSize="Large"
+                               VerticalOptions="Center"/>
+                        <ffsvg:SvgCachedImage Grid.Row="1" Grid.Column="0" 
+                                              Source="{Binding Path=StationPad, Converter={StaticResource stationImage}, Mode=OneWay}" 
+                                              HeightRequest="60" 
+                                              VerticalOptions="Center"/>
+                        <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                            <Label Text="{Binding Path=DistanceToHQ, StringFormat='Distance From HQ: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                            <Label Text="{Binding Path=StationDistance, StringFormat='SC Distance: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                            <Label Text="{Binding Path=StationPad, StringFormat='Starport Type: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                        </StackLayout>
+                    </Grid>
                 </Frame>
             </ContentView>
         </DataTemplate>
@@ -24,7 +59,7 @@
     
     <StackLayout Spacing="5" VerticalOptions="FillAndExpand">
 
-        <ContentView BackgroundColor="{StaticResource brandColor}" Margin="0, 5, 0, 0">
+        <ContentView BackgroundColor="{StaticResource brandColor}">
             <Label Text="{Binding Path=CCBalance, StringFormat='Projected CC Balance: {0}', Mode=OneWay}" 
                    TextColor="{StaticResource altTextColor}" 
                    FontAttributes="Bold" 
@@ -32,9 +67,12 @@
                    Margin="10, 0"/>
         </ContentView>
 
-        <Label Text="Deliver units of Lavigny Garrison Supplies from Kamadhenu to contacts in controlled systems to help fortify Emperor Lavigny-Duval's hold over them." 
-                   TextColor="{DynamicResource textColor}"
-                   Margin="10, 0, 0, 5"/>
+        <StackLayout Orientation="Vertical" Spacing="5" Margin="10, 0, 0, 5">
+            <Label Text="Deliver units of Lavigny Garrison Supplies from Kamadhenu to contacts in controlled systems to help fortify Emperor Lavigny-Duval's hold over them." 
+                   TextColor="{DynamicResource textColor}"/>
+            <Label Text="Fortifying over 100% is wasted effort. The UI is not always up to date so deliver 1 unit of supplies and check that fortification has not been completed before completing your delivery." 
+                   TextColor="{DynamicResource textColor}"/>
+        </StackLayout>
 
         <ContentView BackgroundColor="{StaticResource brandColor}">
             <Label Text="Large Ship Targets" 
@@ -44,7 +82,7 @@
                    Margin="10, 0"/>
         </ContentView>
 
-        <CarouselView ItemsSource="{Binding LargeShipList, Mode=OneWay}" ItemTemplate="{StaticResource fortTemplate}" PeekAreaInsets="100">
+        <CarouselView ItemsSource="{Binding LargeShipList, Mode=OneWay}" ItemTemplate="{StaticResource fortTemplate}" PeekAreaInsets="150">
             <CarouselView.ItemsLayout>
                 <LinearItemsLayout SnapPointsType="None">
                     <x:Arguments>
@@ -62,7 +100,7 @@
                    Margin="10, 0"/>
         </ContentView>
 
-        <CarouselView ItemsSource="{Binding SmallShipList, Mode=OneWay}" ItemTemplate="{StaticResource fortTemplate}" PeekAreaInsets="100">
+        <CarouselView ItemsSource="{Binding SmallShipList, Mode=OneWay}" ItemTemplate="{StaticResource fortTemplate}" PeekAreaInsets="150">
             <CarouselView.ItemsLayout>
                 <LinearItemsLayout SnapPointsType="None">
                     <x:Arguments>
