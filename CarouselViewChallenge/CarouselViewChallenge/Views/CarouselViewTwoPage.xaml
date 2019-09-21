@@ -10,6 +10,7 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewTwoPage"
              x:DataType="vm:CarouselViewTwoViewModel"
+             x:Name="CarouselViewTwo"
              BackgroundColor="{StaticResource pageBackground}">
 
     <ContentPage.Resources>
@@ -29,6 +30,10 @@
                             <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BindingContext.CopySystemNameCommand, Source={x:Reference CarouselViewTwo}, Mode=OneWay}"
+                                                  CommandParameter="{Binding SystemName, Mode=OneWay}"/>
+                        </Grid.GestureRecognizers>
                         <ffsvg:SvgCachedImage Grid.Row="0" Grid.Column="0" 
                                               Source="{Binding Path=MajorFaction, Converter={StaticResource factionLogo}, Mode=OneWay}" 
                                               HeightRequest="60" 

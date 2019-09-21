@@ -1,7 +1,11 @@
-﻿using CarouselViewChallenge.Models;
+﻿using CarouselViewChallenge.Helpers;
+using CarouselViewChallenge.Models;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Input;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace CarouselViewChallenge.ViewModels
 {
@@ -16,6 +20,8 @@ namespace CarouselViewChallenge.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+        public ICommand CopySystemNameCommand { get; }
 
         public ObservableCollection<FortItem> LargeShipList { get; set; }
 
@@ -95,6 +101,13 @@ namespace CarouselViewChallenge.ViewModels
             Cycle = "Cycle 150";
             CCBalance = "853 CC";
             LastUpdated = DateTime.Now;
+            CopySystemNameCommand = new Command<string>(CopySystemNameAsync);
+        }
+
+        private async void CopySystemNameAsync(string name)
+        {
+            await Clipboard.SetTextAsync(name).ConfigureAwait(false);
+            ToastHelper.Toast(String.Format("{0} copied", name));
         }
     }
 }
