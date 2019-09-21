@@ -7,3 +7,5 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Formatting", "RCS1057:Add empty line between declarations.", Scope = "type", Target = "~T:CarouselViewChallenge.Models.NewsItem")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Formatting", "RCS1057:Add empty line between declarations.", Scope = "type", Target = "~T:CarouselViewChallenge.ViewModels.CarouselViewChallengeViewModel")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("General", "RCS1079:Throwing of new NotImplementedException.", Scope = "member", Target = "~M:CarouselViewChallenge.Converters.NewsTopicToImage.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)~System.Object")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Formatting", "RCS1057:Add empty line between declarations.", Justification = "<Pending>", Scope = "type", Target = "~T:CarouselViewChallenge.ViewModels.CarouselViewTwoViewModel")]
+

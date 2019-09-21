@@ -12,6 +12,7 @@
     <None Remove="Resources\alliance.green.svg" />
     <None Remove="Resources\antal.logo.svg" />
     <None Remove="Resources\combat-fighter2.svg" />
+    <None Remove="Resources\coriolis.orange.svg" />
     <None Remove="Resources\crime.svg" />
     <None Remove="Resources\delaine.logo.svg" />
     <None Remove="Resources\economy-chart.svg" />
@@ -23,15 +24,18 @@
     <None Remove="Resources\grom.logo.svg" />
     <None Remove="Resources\health.svg" />
     <None Remove="Resources\hudson.logo.svg" />
+    <None Remove="Resources\independent.orange.svg" />
     <None Remove="Resources\lyr.logo.svg" />
     <None Remove="Resources\mahon.logo.svg" />
     <None Remove="Resources\mining-pick.svg" />
     <None Remove="Resources\mystery.svg" />
     <None Remove="Resources\NewsBoW.csv" />
+    <None Remove="Resources\outpost.orange.svg" />
     <None Remove="Resources\patreus.logo.svg" />
     <None Remove="Resources\politics.svg" />
     <None Remove="Resources\religion-ankh.svg" />
     <None Remove="Resources\science-atom.svg" />
+    <None Remove="Resources\surface-port.orange.svg" />
     <None Remove="Resources\theatre.svg" />
     <None Remove="Resources\torval.logo.svg" />
     <None Remove="Resources\winters.logo.svg" />
@@ -44,6 +48,7 @@
     <EmbeddedResource Include="Resources\alliance.green.svg" />
     <EmbeddedResource Include="Resources\antal.logo.svg" />
     <EmbeddedResource Include="Resources\combat-fighter2.svg" />
+    <EmbeddedResource Include="Resources\coriolis.orange.svg" />
     <EmbeddedResource Include="Resources\crime.svg" />
     <EmbeddedResource Include="Resources\delaine.logo.svg" />
     <EmbeddedResource Include="Resources\economy-chart.svg" />
@@ -55,21 +60,25 @@
     <EmbeddedResource Include="Resources\grom.logo.svg" />
     <EmbeddedResource Include="Resources\health.svg" />
     <EmbeddedResource Include="Resources\hudson.logo.svg" />
+    <EmbeddedResource Include="Resources\independent.orange.svg" />
     <EmbeddedResource Include="Resources\lyr.logo.svg" />
     <EmbeddedResource Include="Resources\mahon.logo.svg" />
     <EmbeddedResource Include="Resources\mining-pick.svg" />
     <EmbeddedResource Include="Resources\mystery.svg" />
     <EmbeddedResource Include="Resources\NewsBoW.csv" />
+    <EmbeddedResource Include="Resources\outpost.orange.svg" />
     <EmbeddedResource Include="Resources\patreus.logo.svg" />
     <EmbeddedResource Include="Resources\politics.svg" />
     <EmbeddedResource Include="Resources\religion-ankh.svg" />
     <EmbeddedResource Include="Resources\science-atom.svg" />
+    <EmbeddedResource Include="Resources\surface-port.orange.svg" />
     <EmbeddedResource Include="Resources\theatre.svg" />
     <EmbeddedResource Include="Resources\torval.logo.svg" />
     <EmbeddedResource Include="Resources\winters.logo.svg" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.30" />
     <PackageReference Include="CsvHelper" Version="12.1.2" />
     <PackageReference Include="MonkeyCache.FileStore" Version="1.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
@@ -83,6 +92,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\CarouselViewTwoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\WelcomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

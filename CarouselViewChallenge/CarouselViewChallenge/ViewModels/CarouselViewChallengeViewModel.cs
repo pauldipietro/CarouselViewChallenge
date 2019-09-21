@@ -1,4 +1,5 @@
 ﻿using CarouselViewChallenge.Converters;
+using CarouselViewChallenge.Helpers;
 using CarouselViewChallenge.Models;
 using CarouselViewChallenge.Services;
 using MonkeyCache.FileStore;
@@ -88,6 +89,7 @@ namespace CarouselViewChallenge.ViewModels
             catch (Exception ex)
             {
                 Message = String.Format("Error: {0}", ex.Message);
+                ToastHelper.Toast(Message);
             }
         }
     }

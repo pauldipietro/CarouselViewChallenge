@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:c="clr-namespace:CarouselViewChallenge.Converters"
+             xmlns:m="clr-namespace:CarouselViewChallenge.Models"
+             xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
+             mc:Ignorable="d"
+             x:Class="CarouselViewChallenge.Views.CarouselViewTwoPage"
+             x:DataType="vm:CarouselViewTwoViewModel"
+             x:Name="CarouselViewTwo"
+             BackgroundColor="{StaticResource pageBackground}">
+
+    <ContentPage.Resources>
+
+        <c:FactionToLogo x:Key="factionLogo"/>
+        <c:StationPadToImage x:Key="stationImage"/>
+        
+        <DataTemplate x:Key="fortTemplate" x:DataType="m:FortItem">
+            <ContentView>
+                <Frame BorderColor="{StaticResource brandColor}" BackgroundColor="{StaticResource contentBackground}" Margin="10, 5" Padding="10">
+                    <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="Fill">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BindingContext.CopySystemNameCommand, Source={x:Reference CarouselViewTwo}, Mode=OneWay}"
+                                                  CommandParameter="{Binding SystemName, Mode=OneWay}"/>
+                        </Grid.GestureRecognizers>
+                        <ffsvg:SvgCachedImage Grid.Row="0" Grid.Column="0" 
+                                              Source="{Binding Path=MajorFaction, Converter={StaticResource factionLogo}, Mode=OneWay}" 
+                                              HeightRequest="60" 
+                                              VerticalOptions="Center"/>
+                        <Label Grid.Row="0" Grid.Column="1"
+                               Text="{Binding SystemName, Mode=OneWay}" 
+                               LineBreakMode="WordWrap" 
+                               MaxLines="2" 
+                               TextColor="{DynamicResource textColor}" 
+                               FontAttributes="Bold" 
+                               FontSize="Large"
+                               VerticalOptions="Center"/>
+                        <ffsvg:SvgCachedImage Grid.Row="1" Grid.Column="0" 
+                                              Source="{Binding Path=StationPad, Converter={StaticResource stationImage}, Mode=OneWay}" 
+                                              HeightRequest="60" 
+                                              VerticalOptions="Center"/>
+                        <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                            <Label Text="{Binding Path=DistanceToHQ, StringFormat='Distance From HQ: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                            <Label Text="{Binding Path=StationDistance, StringFormat='SC Distance: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                            <Label Text="{Binding Path=StationPad, StringFormat='Starport Type: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </ContentView>
+        </DataTemplate>
+
+    </ContentPage.Resources>
+    
+    <StackLayout Spacing="5" VerticalOptions="FillAndExpand">
+
+        <ContentView BackgroundColor="{StaticResource brandColor}">
+            <Label Text="{Binding Path=CCBalance, StringFormat='Projected CC Balance: {0}', Mode=OneWay}" 
+                   TextColor="{StaticResource altTextColor}" 
+                   FontAttributes="Bold" 
+                   LineBreakMode="NoWrap" 
+                   Margin="10, 0"/>
+        </ContentView>
+
+        <StackLayout Orientation="Vertical" Spacing="5" Margin="10, 0, 0, 5">
+            <Label Text="Deliver units of Lavigny Garrison Supplies from Kamadhenu to contacts in controlled systems to help fortify Emperor Lavigny-Duval's hold over them." 
+                   TextColor="{DynamicResource textColor}"/>
+            <Label Text="Fortifying over 100% is wasted effort. The UI is not always up to date so deliver 1 unit of supplies and check that fortification has not been completed before completing your delivery." 
+                   TextColor="{DynamicResource textColor}"/>
+        </StackLayout>
+
+        <ContentView BackgroundColor="{StaticResource brandColor}">
+            <Label Text="Large Ship Targets" 
+                   TextColor="{StaticResource altTextColor}" 
+                   FontAttributes="Bold" 
+                   LineBreakMode="NoWrap" 
+                   Margin="10, 0"/>
+        </ContentView>
+
+        <CarouselView ItemsSource="{Binding LargeShipList, Mode=OneWay}" ItemTemplate="{StaticResource fortTemplate}" PeekAreaInsets="150">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout SnapPointsType="None">
+                    <x:Arguments>
+                        <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
+                    </x:Arguments>
+                </LinearItemsLayout>
+            </CarouselView.ItemsLayout>
+        </CarouselView>
+
+        <ContentView BackgroundColor="{StaticResource brandColor}">
+            <Label Text="Small Ship Targets" 
+                   TextColor="{StaticResource altTextColor}" 
+                   FontAttributes="Bold" 
+                   LineBreakMode="NoWrap" 
+                   Margin="10, 0"/>
+        </ContentView>
+
+        <CarouselView ItemsSource="{Binding SmallShipList, Mode=OneWay}" ItemTemplate="{StaticResource fortTemplate}" PeekAreaInsets="150">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout SnapPointsType="None">
+                    <x:Arguments>
+                        <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
+                    </x:Arguments>
+                </LinearItemsLayout>
+            </CarouselView.ItemsLayout>
+        </CarouselView>
+        
+        <StackLayout Orientation="Horizontal" Spacing="10" BackgroundColor="{StaticResource brandColor}">
+            <Label Text="{Binding Cycle, Mode=OneWay}" 
+                   HorizontalOptions="Start" 
+                   TextColor="{StaticResource altTextColor}" 
+                   Margin="10, 0, 0, 0"/>
+            <Label Text="{Binding LastUpdated, StringFormat='Updated: {0}', Mode=OneWay}" 
+                   HorizontalOptions="EndAndExpand" 
+                   HorizontalTextAlignment="End" 
+                   TextColor="{StaticResource altTextColor}" 
+                   Margin="0, 0, 10, 0"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

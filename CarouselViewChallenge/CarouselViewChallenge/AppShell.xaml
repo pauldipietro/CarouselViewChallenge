@@ -39,6 +39,9 @@
         <Tab Title="Challenge" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:CarouselViewChallengePage}" />
         </Tab>
+        <Tab Title="Challenge Two" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate local:CarouselViewTwoPage}" />
+        </Tab>
     </TabBar>
 
 </Shell>
