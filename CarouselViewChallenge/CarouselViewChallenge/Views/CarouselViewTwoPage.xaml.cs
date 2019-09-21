@@ -5,11 +5,11 @@ using Xamarin.Forms.Xaml;
 namespace CarouselViewChallenge.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CarouselViewChallengePage : ContentPage
+    public partial class CarouselViewTwoPage : ContentPage
     {
-        private readonly CarouselViewChallengeViewModel vm = new CarouselViewChallengeViewModel();
+        private readonly CarouselViewTwoViewModel vm = new CarouselViewTwoViewModel();
 
-        public CarouselViewChallengePage()
+        public CarouselViewTwoPage()
         {
             InitializeComponent();
             BindingContext = vm;
