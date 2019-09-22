@@ -12,7 +12,22 @@
                     <StackLayout BackgroundColor="#cfd8dc">
                         <Frame BorderColor="Black" Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
                             <StackLayout>
-                                <Image Source="{Binding Img}"/>
+                                
+                                <Frame CornerRadius="60"
+                                       WidthRequest="200"
+                                       HeightRequest="200"
+                                       HorizontalOptions="Center"
+                                       Margin="0"
+                                       Padding="0"
+                                       IsClippedToBounds="true">
+                                    <Grid>
+                                        <Image Source="{Binding Img}"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="FillAndExpand"
+                                           Aspect="AspectFill"/>
+                                    </Grid>
+                                    
+                                </Frame>
                                 <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                                 <BoxView HeightRequest="2" BackgroundColor="DarkSlateGray"/>
                                 <Label FormattedText="{Binding Platform}" FontSize="18" Margin="16"/>
