@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace ColumbiaMobileProject.ViewModels
+namespace CarouselViewChallenge.ViewModels
 {
     public abstract class BaseViewModel : INotifyPropertyChanged
     {

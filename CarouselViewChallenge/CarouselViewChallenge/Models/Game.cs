@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ColumbiaMobileProject.Models
+namespace CarouselViewChallenge.Models
 {
     public class Game
     {

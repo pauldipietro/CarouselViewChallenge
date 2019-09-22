@@ -1,10 +1,10 @@
-﻿using ColumbiaMobileProject.Models;
+﻿using CarouselViewChallenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace ColumbiaMobileProject.ViewModels
+namespace CarouselViewChallenge.ViewModels
 {
     class ListGamesViewModel : BaseViewModel
     {

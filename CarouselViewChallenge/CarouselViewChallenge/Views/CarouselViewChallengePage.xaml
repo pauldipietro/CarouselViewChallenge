@@ -6,8 +6,26 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="#cfd8dc">
+                        <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Image Source="{Binding Img}"/>
+                                <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                <BoxView HeightRequest="2" BackgroundColor="DarkSlateGray"/>
+                                <Label FormattedText="{Binding Platform}" FontSize="18" Margin="16"/>
+                            </StackLayout>
+                            <!--<ImageCell 
+                              TextColor="Black"
+                              ImageSource="{Binding Img}"  
+                              Text="{Binding Name}"
+                              Detail="{Binding Platform}"/>-->
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </ContentPage.Content>
 </ContentPage>

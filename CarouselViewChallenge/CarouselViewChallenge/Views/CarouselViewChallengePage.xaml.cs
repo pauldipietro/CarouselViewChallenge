@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using CarouselViewChallenge.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,9 @@ namespace CarouselViewChallenge.Views
         public CarouselViewChallengePage()
         {
             InitializeComponent();
+
+            // Bind the view with viewmodel
+            BindingContext = new ListGamesViewModel();
         }
     }
 }
