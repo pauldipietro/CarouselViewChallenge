@@ -6,5 +6,24 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.App">
     <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- COLORS -->
+            <Color x:Key="WhiteColor">#FFFFFF</Color>
+            <Color x:Key="BlackColor">#000000</Color>
+
+            <!-- FONTS -->
+            <OnPlatform x:Key="MontserratRegular"
+                        x:TypeArguments="x:String"
+                        Android="Montserrat-Regular.ttf#Montserrat"
+                        iOS="Montserrat-Regular" />
+
+
+            <OnPlatform x:Key="MontserratBold"
+                        x:TypeArguments="x:String"
+                        Android="Montserrat-Bold.ttf#Montserrat"
+                        iOS="Montserrat-Bold" />
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
