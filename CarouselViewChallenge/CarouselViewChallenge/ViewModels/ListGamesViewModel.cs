@@ -35,8 +35,8 @@ namespace CarouselViewChallenge.ViewModels
             Games = new ObservableCollection<Game>();
             Games.Add(new Game
             {
-                Name = "Watchdog",
-                Img = @"http://static2.gamespot.com/uploads/scale_medium/1197/11970954/2309326-watchdogs.jpg",
+                Name = "Anno 1800",
+                Img = @"https://s3.gaming-cdn.com/images/products/2249/271x377/anno-1800-cover.jpg",
                 Platform = "Uplay"
             });
 

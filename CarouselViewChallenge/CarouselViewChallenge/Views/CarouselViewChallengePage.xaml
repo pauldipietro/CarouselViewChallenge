@@ -10,7 +10,7 @@
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="#cfd8dc">
-                        <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
+                        <Frame BorderColor="Black" Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
                             <StackLayout>
                                 <Image Source="{Binding Img}"/>
                                 <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
