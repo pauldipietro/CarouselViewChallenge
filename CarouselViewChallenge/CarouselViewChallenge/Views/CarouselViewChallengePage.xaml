@@ -1,13 +1,107 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+<ContentPage
+    x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid>
+            <CarouselView
+                x:Name="carousel"
+                BackgroundColor="Red"
+                ItemsSource="{Binding Sliders}"
+                PeekAreaInsets="0"
+                PositionChanged="Carousel_PositionChanged">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="36" BackgroundColor="{Binding BackgroundColor}">
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Label
+                                    FontFamily="{StaticResource MaterialFontFamily}"
+                                    FontSize="96"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Icon}"
+                                    TextColor="White" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="36"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Header}"
+                                    TextColor="White" />
+                                <!--<BoxView BackgroundColor="DarkSlateGray" HeightRequest="2" />-->
+                                <Label
+                                    Margin="16"
+                                    FontSize="18"
+                                    FormattedText="{Binding Text}"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <Grid
+                Margin="24,0"
+                HeightRequest="50"
+                VerticalOptions="End">
+                <Label
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    Text="SKIP"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <StackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <BoxView
+                        x:Name="bv0"
+                        BackgroundColor="#FFFFFFFF"
+                        CornerRadius="100"
+                        HeightRequest="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="10" />
+                    <BoxView
+                        x:Name="bv1"
+                        BackgroundColor="#7CFFFFFF"
+                        CornerRadius="100"
+                        HeightRequest="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="10" />
+                    <BoxView
+                        x:Name="bv2"
+                        BackgroundColor="#7CFFFFFF"
+                        CornerRadius="100"
+                        HeightRequest="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="10" />
+                    <BoxView
+                        x:Name="bv3"
+                        BackgroundColor="#7CFFFFFF"
+                        CornerRadius="100"
+                        HeightRequest="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="10" />
+                </StackLayout>
+                <Label
+                    Grid.Column="2"
+                    FontAttributes="Bold"
+                    HorizontalOptions="End"
+                    Text="{Binding TextLabel}"
+                    TextColor="White"
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Next_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
