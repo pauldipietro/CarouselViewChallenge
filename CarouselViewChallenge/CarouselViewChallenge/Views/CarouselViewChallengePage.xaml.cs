@@ -18,8 +18,10 @@ namespace CarouselViewChallenge.Views
         public RickAndMorthyViewModel VM { get; set; }
         public CarouselViewChallengePage()
         {
+
             InitializeComponent();
             VM = new RickAndMorthyViewModel();
+
             VM.Characters = new ObservableCollection<Character>
             {
                 new Character
@@ -40,11 +42,11 @@ namespace CarouselViewChallenge.Views
                 },
                 new Character
                 {
-                    image = "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
-                    name = "Summer Smith",
-                    species = "Human",
-                    status = "Alive",
-                    gender = "Female"
+                    image = "https://rickandmortyapi.com/api/character/avatar/212.jpeg",
+                    name = "Magma-Q",
+                    species = "Alien, Alphabetrian",
+                    status = "Dead",
+                    gender = "Male"
                 },
                 new Character
                 {
@@ -56,11 +58,11 @@ namespace CarouselViewChallenge.Views
                 },
                 new Character
                 {
-                    image = "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
-                    name = "Jerry Smith",
-                    species = "Human",
+                    image = "https://rickandmortyapi.com/api/character/avatar/376.jpeg",
+                    name = "Veronica Ann Bennet",
+                    species = "Alien, Gazorpian",
                     status = "Alive",
-                    gender = "Male"
+                    gender = "Female"
                 }
 
 

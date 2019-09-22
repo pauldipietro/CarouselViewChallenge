@@ -6,58 +6,38 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
              xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              Title="{Binding Title}">
-    <CarouselView ItemsSource="{Binding Characters}" PeekAreaInsets="50">
-        <CarouselView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout BackgroundColor="#cfd8dc">
-                    <Frame BorderColor="Gray" 
-                           Margin="5" 
-                           HasShadow="True" 
-                           HeightRequest="450" 
-                           VerticalOptions="CenterAndExpand"
-                           CornerRadius="25">
-                        <StackLayout>
-                            <Label Text="{Binding name}" FontSize="24" FontAttributes="Bold" 
+    <StackLayout HorizontalOptions="Center" BackgroundColor="#000" VerticalOptions="Center" >
+        <Label Text="Rick And Morty" TextColor="#3cd500" TextDecorations="Underline" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="48" HorizontalOptions="Center" VerticalOptions="Center"  />
+        <CarouselView ItemsSource="{Binding Characters}" >
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <yummy:PancakeView BackgroundColor="#fff720" CornerRadius="90,90,0,0" IsClippedToBounds="true" HorizontalOptions="FillAndExpand">
+                            <ScrollView>
+                                <StackLayout>
+                                    <Image Source="{Binding image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="300" />
+                                    <Label TextColor="#000" Text="{Binding name}" FontSize="36" FontAttributes="Bold" TextDecorations="Underline" 
                                    HorizontalTextAlignment="Center"/>
-                            <Image Source="{Binding image}" Aspect="Fill" HeightRequest="200"/>
-                            <!--<BoxView HeightRequest="5" BackgroundColor="DarkSlateGray"/>-->
-                            <Grid BackgroundColor="Azure">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <Label FormattedText="Status |" FontSize="18" Margin="16"
-                                       VerticalOptions="CenterAndExpand"
-                                       Grid.Row="0" 
-                                       Grid.Column="1"/>
-                                <Label FormattedText="{Binding status}" FontSize="18" Margin="16"
-                                       VerticalOptions="CenterAndExpand"
-                                       Grid.Row="0" 
-                                       Grid.Column="2"/>
-                                <Label FormattedText="Species |" FontSize="18" Margin="16"
-                                       VerticalOptions="CenterAndExpand"
-                                       Grid.Row="1" 
-                                       Grid.Column="1"/>
-                                <Label FormattedText="{Binding species}" FontSize="18" Margin="16"
-                                       VerticalOptions="CenterAndExpand"
-                                       Grid.Row="1" 
-                                       Grid.Column="2"/>
-                                <Label FormattedText="Gender |" FontSize="18" Margin="16" 
-                                       VerticalOptions="CenterAndExpand"
-                                       Grid.Row="2" 
-                                       Grid.Column="1"/>
-                                <Label FormattedText="{Binding gender}" FontSize="18" Margin="16" 
-                                       VerticalOptions="CenterAndExpand"
-                                       Grid.Row="2" 
-                                       Grid.Column="2"/>
-                            </Grid>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </DataTemplate>
-        </CarouselView.ItemTemplate>
-    </CarouselView>
+                                    <Label TextColor="Gray"  Text="Status" FontSize="14" TextDecorations="Underline" FontAttributes="Bold" 
+                                   HorizontalTextAlignment="Center"/>
+                                    <Label TextColor="#000" Text="{Binding status}" FontSize="20" FontAttributes="Bold" 
+                                   HorizontalTextAlignment="Center"/>
+                                    <Label TextColor="Gray" Text="Species" FontSize="14" TextDecorations="Underline" FontAttributes="Bold" 
+                                   HorizontalTextAlignment="Center"/>
+                                    <Label TextColor="#000" Text="{Binding species}" FontSize="20" FontAttributes="Bold" 
+                                   HorizontalTextAlignment="Center"/>
+                                    <Label TextColor="Gray" Text="Gender" FontSize="14" TextDecorations="Underline" FontAttributes="Bold" 
+                                   HorizontalTextAlignment="Center"/>
+                                    <Label TextColor="#000" Text="{Binding gender}" FontSize="20" FontAttributes="Bold" 
+                                   HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ScrollView>
+                        </yummy:PancakeView>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
 </ContentPage>

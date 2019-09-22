@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />  
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.2.1" />
   </ItemGroup>
 
   <ItemGroup>
