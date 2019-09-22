@@ -9,16 +9,25 @@
         <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout BackgroundColor="#363636">
-                        <Frame  Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#cfd8dc">
+                        <!-- 656565-->
+                        <Frame  Margin="8" 
+                                CornerRadius="5"
+                                HasShadow="True" 
+                                HeightRequest="450" 
+                                VerticalOptions="CenterAndExpand"
+                                BackgroundColor="#fff" 
+                                >
                             <StackLayout>
                                 
                                 <Frame CornerRadius="60"
                                        WidthRequest="200"
                                        HeightRequest="200"
                                        HorizontalOptions="Center"
+                                       HasShadow="True" 
                                        Margin="0"
                                        Padding="0"
+                                       BorderColor="Black"
                                        IsClippedToBounds="true">
                                     <Grid>
                                         <Image Source="{Binding Img}"
@@ -26,9 +35,26 @@
                                     </Grid>
                                     
                                 </Frame>
-                                <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                                <BoxView HeightRequest="2" BackgroundColor="DarkSlateGray"/>
-                                <Label FormattedText="{Binding Platform}" FontSize="18" Margin="16"/>
+                                <Frame BackgroundColor="#141414"
+                                       HeightRequest="50"
+                                       Padding="0"
+                                       HasShadow="True" 
+                                       Margin="0">
+                                    <Grid>
+                                        <Label Text="{Binding Name}"
+                                           TextColor="#69B3EF"
+                                           FontSize="24" 
+                                           FontAttributes="Bold" 
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+                                    </Grid>
+                                    
+                                </Frame>
+
+
+                                <Label FormattedText="{Binding Platform}" FontSize="18" Margin="16"
+                                       HorizontalOptions="Center"/>
+
                             </StackLayout>
                         </Frame>
                     </StackLayout>
