@@ -17,11 +17,6 @@
                                 <BoxView HeightRequest="2" BackgroundColor="DarkSlateGray"/>
                                 <Label FormattedText="{Binding Platform}" FontSize="18" Margin="16"/>
                             </StackLayout>
-                            <!--<ImageCell 
-                              TextColor="Black"
-                              ImageSource="{Binding Img}"  
-                              Text="{Binding Name}"
-                              Detail="{Binding Platform}"/>-->
                         </Frame>
                     </StackLayout>
                 </DataTemplate>
