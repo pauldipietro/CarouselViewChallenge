@@ -6,7 +6,8 @@
              xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             >
     <ContentPage.Content>
         <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50"
                       Focused="CarouselView_Focused"
@@ -44,9 +45,9 @@
                                                    BorderColor="Black"
                                                    IsClippedToBounds="true">
                                             <Grid>
-                                                <Image 
-                                                Source="{Binding Img}"
-                                               Aspect="AspectFill"/>
+                                                <Image Source="{Binding Img}"
+                                                        Aspect="Fill"
+                                              />
                                             </Grid>
 
                                         </Frame>
@@ -67,12 +68,28 @@
                                         </Frame>
                                     </StackLayout>
                                     
-                                </yummy:PancakeView>                    
-                                
+                                </yummy:PancakeView>
 
 
-                                <Label FormattedText="{Binding Platform}" FontSize="18" Margin="16"
-                                       HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
+                                    <Label Text="Price:"
+                                           Margin="2"
+                                           VerticalOptions="Center"/>
+                                    <Label FormattedText="{Binding Price}" 
+                                           FontSize="30" 
+                                           Margin="3"
+                                           VerticalOptions="End"
+                                           FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Button Text="Purchase"
+                                        CornerRadius="10"
+                                        Margin="13"
+                                        HorizontalOptions="Center"
+                                        BackgroundColor="#555555"
+                                        TextColor="WhiteSmoke"
+                                        WidthRequest="100"/>
+
 
                             </StackLayout>
                         </yummy:PancakeView>
