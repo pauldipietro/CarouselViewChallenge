@@ -9,8 +9,8 @@
         <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout BackgroundColor="#cfd8dc">
-                        <Frame BorderColor="Black" Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#363636">
+                        <Frame  Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
                             <StackLayout>
                                 
                                 <Frame CornerRadius="60"
@@ -22,9 +22,7 @@
                                        IsClippedToBounds="true">
                                     <Grid>
                                         <Image Source="{Binding Img}"
-                                           HorizontalOptions="FillAndExpand"
-                                           VerticalOptions="FillAndExpand"
-                                           Aspect="AspectFill"/>
+                                               Aspect="AspectFill"/>
                                     </Grid>
                                     
                                 </Frame>
