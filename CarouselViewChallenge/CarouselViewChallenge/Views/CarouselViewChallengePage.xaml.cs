@@ -19,5 +19,10 @@ namespace CarouselViewChallenge.Views
             // Bind the view with viewmodel
             BindingContext = new ListGamesViewModel();
         }
+
+        private async void CarouselView_Focused(object sender, FocusEventArgs e)
+        {
+            
+        }
     }
 }

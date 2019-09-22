@@ -3,60 +3,79 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50">
+        <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50"
+                      Focused="CarouselView_Focused"
+                      >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="#cfd8dc">
                         <!-- 656565-->
-                        <Frame  Margin="8" 
-                                CornerRadius="5"
+                        <!--BackgroundColor="#fff"-->
+                        
+                        <yummy:PancakeView  
+                                Margin="15" 
+                                CornerRadius="10"
                                 HasShadow="True" 
                                 HeightRequest="450" 
                                 VerticalOptions="CenterAndExpand"
-                                BackgroundColor="#fff" 
+                                BackgroundColor="#fff"
+                                Padding="0"
                                 >
                             <StackLayout>
-                                
-                                <Frame CornerRadius="60"
-                                       WidthRequest="200"
-                                       HeightRequest="200"
-                                       HorizontalOptions="Center"
-                                       HasShadow="True" 
-                                       Margin="0"
-                                       Padding="0"
-                                       BorderColor="Black"
-                                       IsClippedToBounds="true">
-                                    <Grid>
-                                        <Image Source="{Binding Img}"
+                                <yummy:PancakeView CornerRadius="10"
+                                                   VerticalOptions="StartAndExpand"
+                                                   BackgroundGradientStartColor="#555555"
+                                                   BackgroundGradientEndColor="#333333"
+                                                   >
+                                    <StackLayout>
+                                        <Frame x:Name="frameImage" 
+                                                CornerRadius="60"
+                                                   WidthRequest="200"
+                                                   HeightRequest="200"
+                                                   HorizontalOptions="Center"
+                                                   HasShadow="True" 
+                                                   Margin="10"
+                                                   Padding="0"
+                                                   BorderColor="Black"
+                                                   IsClippedToBounds="true">
+                                            <Grid>
+                                                <Image 
+                                                Source="{Binding Img}"
                                                Aspect="AspectFill"/>
-                                    </Grid>
+                                            </Grid>
+
+                                        </Frame>
+                                        <Frame BackgroundColor="#141414"
+                                               HeightRequest="50"
+                                               Padding="0"
+                                               Margin="0">
+                                            <Grid>
+                                                <Label Text="{Binding Name}"
+                                                   TextColor="#FFA334" 
+                                                   FontSize="24" 
+                                                   FontAttributes="Bold" 
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalTextAlignment="Center"/>
+                                            </Grid>
+                                            <!--DarkOrange 69B3EF-->
+
+                                        </Frame>
+                                    </StackLayout>
                                     
-                                </Frame>
-                                <Frame BackgroundColor="#141414"
-                                       HeightRequest="50"
-                                       Padding="0"
-                                       HasShadow="True" 
-                                       Margin="0">
-                                    <Grid>
-                                        <Label Text="{Binding Name}"
-                                           TextColor="#69B3EF"
-                                           FontSize="24" 
-                                           FontAttributes="Bold" 
-                                           HorizontalTextAlignment="Center"
-                                           VerticalTextAlignment="Center"/>
-                                    </Grid>
-                                    
-                                </Frame>
+                                </yummy:PancakeView>                    
+                                
 
 
                                 <Label FormattedText="{Binding Platform}" FontSize="18" Margin="16"
                                        HorizontalOptions="Center"/>
 
                             </StackLayout>
-                        </Frame>
+                        </yummy:PancakeView>
                     </StackLayout>
                 </DataTemplate>
             </CarouselView.ItemTemplate>

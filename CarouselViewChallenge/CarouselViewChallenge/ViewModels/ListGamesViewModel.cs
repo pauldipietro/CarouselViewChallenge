@@ -33,18 +33,19 @@ namespace CarouselViewChallenge.ViewModels
         public ListGamesViewModel()
         {
             Games = new ObservableCollection<Game>();
-            Games.Add(new Game
-            {
-                Name = "Anno 1800",
-                Img = @"https://s3.gaming-cdn.com/images/products/2249/271x377/anno-1800-cover.jpg",
-                Platform = "Uplay"
-            });
+
 
             Games.Add(new Game
             {
                 Name = "We Happy Few",
                 Img = @"https://pbs.twimg.com/profile_images/897864241566294017/QCYJPjVX_400x400.jpg",
                 Platform = "Steam"
+            });
+            Games.Add(new Game
+            {
+                Name = "Anno 1800",
+                Img = @"https://s3.gaming-cdn.com/images/products/2249/271x377/anno-1800-cover.jpg",
+                Platform = "Uplay"
             });
             Games.Add(new Game
             {
