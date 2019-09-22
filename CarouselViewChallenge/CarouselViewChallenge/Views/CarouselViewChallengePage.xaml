@@ -11,6 +11,7 @@
     <ContentPage.Content>
         <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50"
                       Focused="CarouselView_Focused"
+                      Scrolled="CarouselView_Scrolled"
                       >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
@@ -19,14 +20,14 @@
                         <!--BackgroundColor="#fff"-->
                         
                         <yummy:PancakeView  
-                                Margin="15" 
-                                CornerRadius="10"
-                                HasShadow="True" 
-                                HeightRequest="450" 
-                                VerticalOptions="CenterAndExpand"
-                                BackgroundColor="#fff"
-                                Padding="0"
-                                >
+                                            Margin="15" 
+                                            CornerRadius="10"
+                                            HasShadow="True" 
+                                            HeightRequest="450" 
+                                            VerticalOptions="CenterAndExpand"
+                                            BackgroundColor="#fff"
+                                            Padding="0"
+                                            >
                             <StackLayout>
                                 <yummy:PancakeView CornerRadius="10"
                                                    VerticalOptions="StartAndExpand"
