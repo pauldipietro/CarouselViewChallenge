@@ -49,8 +49,6 @@ namespace CarouselViewChallenge.Views
         {
             debug.Text = $"FVII:{e.FirstVisibleItemIndex} | LVII:{e.LastVisibleItemIndex} | HD:{e.HorizontalDelta:0.000} | HO:{e.HorizontalOffset:0.000}";
 
-            // var fullWidth = carousel.Width;
-
             var position = e.HorizontalOffset;
 
             // Set the background color of our page to the item in the color gradient
@@ -61,7 +59,6 @@ namespace CarouselViewChallenge.Views
                 page.BackgroundColor = _backgroundColors.First();
             else
                 page.BackgroundColor = _backgroundColors[(int)position];
-
         }
 
         protected override void OnAppearing()

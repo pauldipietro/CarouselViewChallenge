@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace CarouselViewChallenge.Models
 {
-    public class CarouselItem
+    public class CarouselItem : INotifyPropertyChanged
     {
         public string Title { get; set; }
         public int Price { get; set; }
@@ -15,28 +15,41 @@ namespace CarouselViewChallenge.Models
         public Color BackgroundColor { get; set; }
         public string Type { get; set; }
         public string ImageSrc { get; set; }
-        public int Rotation { get; set; }
         public string Description { get; set; } = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium dolor sed felis varius, at elementum nunc blandit.";
 
-        //double _position;
-        //public event PropertyChangedEventHandler PropertyChanged;
+        private double _position;
+        private double _scale;
 
-        //public double Position
-        //{
-        //    get { return _position; }
-        //    set
-        //    {
-        //        if (_position != value)
-        //        {
-        //            _position = value;
-        //            OnPropertyChanged();
-        //        }
-        //    }
-        //}
+        public CarouselItem()
+        {
+            Scale = 1;
+        }
 
-        //protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
+        public double Position
+        {
+            get { return _position; }
+            set
+            {
+                _position = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public double Scale
+        {
+            get { return _scale; }
+            set
+            {
+                _scale = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
