@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using CarouselViewChallenge.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,11 @@ namespace CarouselViewChallenge.Views
             InitializeComponent();
             Vm = new CarouselViewChallengePageViewModel();
             BindingContext = Vm;
+        }
+
+        private void StartingLetterButton_Clicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

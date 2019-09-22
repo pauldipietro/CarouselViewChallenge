@@ -16,6 +16,9 @@ namespace CarouselViewChallenge.Models
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
         public string Image { get; set; }
+
+        public bool HasImage => !string.IsNullOrEmpty(Image);
+        public string SubHeader => $"{Size} {Type}, {Alignment}";
     }
 
     public class CsvMonsterMapping : CsvMapping<Monster>

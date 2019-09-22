@@ -1,8 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using CarouselViewChallenge.Models;
 using CarouselViewChallenge.Services;
+using Xamarin.Forms;
 
 namespace CarouselViewChallenge.ViewModels
 {
@@ -12,6 +16,7 @@ namespace CarouselViewChallenge.ViewModels
         private ObservableCollection<string> _startingLetters;
         private string _selectedLetter;
         private ObservableCollection<Monster> _monsters;
+        private ObservableCollection<Monster> _filteredMonsters;
 
         public CarouselViewChallengePageViewModel()
         {
@@ -23,9 +28,19 @@ namespace CarouselViewChallenge.ViewModels
 
             _monsterService = new FakeMonsterService();
             Monsters = _monsterService.GetMonsters();
+            FilteredMonsters = Monsters;
+
+            FilterCommand = new Command<string>(async (letter) => await FilterExecute(letter));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public ICommand FilterCommand { get; }
+
+        private async Task FilterExecute(string letter)
+        {
+            var monsters = Monsters.Where(x => x.Name.StartsWith(letter));
+            FilteredMonsters = new ObservableCollection<Monster>(monsters);
+        }
 
         public string SelectedLetter
         {
@@ -62,6 +77,18 @@ namespace CarouselViewChallenge.ViewModels
                 {
                     _monsters = value;
                     OnPropertyChanged(new PropertyChangedEventArgs("Monsters"));
+                }
+            }
+        }
+        public ObservableCollection<Monster> FilteredMonsters
+        {
+            get => _filteredMonsters;
+            set
+            {
+                if (_filteredMonsters != value)
+                {
+                    _filteredMonsters = value;
+                    OnPropertyChanged(new PropertyChangedEventArgs("FilteredMonsters"));
                 }
             }
         }
