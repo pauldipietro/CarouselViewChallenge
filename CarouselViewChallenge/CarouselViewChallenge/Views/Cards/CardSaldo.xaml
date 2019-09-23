@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CarouselViewChallenge.Views.Cards.CardSaldo">
+    <ContentView.Resources>
+        <OnPlatform x:Key="FontAwesome" x:TypeArguments="x:String">
+            <On Platform="Android" Value="FontAwesome-Solid.otf#FontAwesome-Solid" />
+            <On Platform="iOS" Value="FontAwesome-Regular" />
+        </OnPlatform>
+        <OnPlatform x:Key="RubikLight" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Rubik-Light.ttf#Rubik-Light" />
+            <On Platform="iOS" Value="Rubik-Medium" />
+        </OnPlatform>
+        <OnPlatform x:Key="RubikMedium" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Rubik-Medium.ttf#Rubik-Medium" />
+            <On Platform="iOS" Value="Rubik-Medium" />
+        </OnPlatform>
+        <Color x:Key="CorAzulPadrao">#0016A6</Color>
+
+        <Style x:Key="labelValor" TargetType="Label">
+            <Setter Property="FontFamily" Value="{DynamicResource RubikLight}" />
+            <Setter Property="TextColor" Value="#081E60" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="{StaticResource CorAzulPadrao}" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="saldoValor" TargetType="Label" BasedOn="{StaticResource labelValor}" />
+        <Style x:Key="labelValorEscondido" TargetType="Label" BasedOn="{StaticResource labelValor}">
+            <Setter Property="TextColor" Value="#efefef" />
+            <Setter Property="BackgroundColor" Value="#efefef" />
+        </Style>
+        <Style x:Key="labelRotulo" TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="{StaticResource RubikLight}" />
+            <!--<Setter Property="FontSize" Value="Small"/>-->
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="TextColor" Value="{StaticResource CorAzulPadrao}" />
+        </Style>
+        <Style x:Key="frameValorEscondido" TargetType="Frame">
+            <Setter Property="Margin" Value="24,0" />
+            <Setter Property="HeightRequest" Value="32" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="BackgroundColor" Value="#dedede" />
+            <Setter Property="HasShadow" Value="False" />
+        </Style>
+        <Style x:Key="buttonAlternar" TargetType="Button">
+            <!--<Setter Property="WidthRequest" Value="60"/>-->
+            <!--<Setter Property="Margin" Value="0,32,0,0"/>-->
+            <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" />
+            <!-- <Setter Property="ButtonType" Value="Text"/> -->
+            <Setter Property="TextColor" Value="{StaticResource CorAzulPadrao}" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="BorderColor" Value="White" />
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <ScrollView Orientation="Vertical">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Spacing="4" Grid.Row="0" Grid.Column="0">
+                    <Label Text="Total" Style="{StaticResource labelRotulo}" />
+
+                    <Label Style="{DynamicResource saldoValor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="R$  " FontFamily="{StaticResource RubikMedium}" FontSize="Large" />
+                                <Span Text="99.132,13" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </StackLayout>
+
+                <StackLayout Spacing="4" Grid.Row="1" Grid.Column="0">
+                    <Label Text="Disponível para saque" Style="{StaticResource labelRotulo}" />
+
+                    <Label Style="{DynamicResource saldoValor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="R$  " FontFamily="{StaticResource RubikMedium}" FontSize="Large" />
+                                <Span Text="99.132,13" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1">
+                    <Button Text="&#xf070;" Style="{StaticResource buttonAlternar}"
+                            Command="{Binding AlternarVisibilidade}" IsVisible="{Binding SaldoVisivel}" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

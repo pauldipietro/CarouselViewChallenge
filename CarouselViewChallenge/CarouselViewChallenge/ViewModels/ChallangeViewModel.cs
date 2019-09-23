@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CarouselViewChallenge.Annotations;
 using CarouselViewChallenge.Models;
+using CarouselViewChallenge.Views.Cards;
 using Xamarin.Forms;
 
 namespace CarouselViewChallenge.ViewModels
@@ -16,21 +17,49 @@ namespace CarouselViewChallenge.ViewModels
 
         public ChallangeViewModel()
         {
-            MainCards = new ObservableCollection<MainCard>();
-            SmallCards = new ObservableCollection<Card>();
-
-            var random = new Random();
-            for (int i = 0; i < 10; i++)
+            MainCards = new ObservableCollection<MainCard>
             {
-                var main = new MainCard
+                new MainCard
                 {
-                    iconHex = "ico",
-                    Header = random.Next().ToString(),
-                    Content = new StackLayout()
-                };
-                MainCards.Add(main);
-                SmallCards.Add(main);
-            }
+                    iconHex = "\uf3d1",
+                    Header = "Saldo",
+                    Content = new CardSaldo()
+                },
+                new MainCard
+                {
+                    iconHex = "\uf0ca",
+                    Header = "Últimos Lançamentos",
+                    Content = new CardUltimosLancamentos()
+                },
+            };
+            SmallCards = new ObservableCollection<Card>
+            {
+                new Card
+                {
+                    iconHex = "\uf362",
+                    Header = "Transferências"
+                },
+                new Card
+                {
+                    iconHex = "\uf0b1",
+                    Header = "Fidelidade"
+                },
+                new Card
+                {
+                    iconHex = "\uf688",
+                    Header = "Reemissão de Comprovante"
+                },
+                new Card
+                {
+                    iconHex = "\uf53d",
+                    Header = "Extrato"
+                },
+                new Card
+                {
+                    iconHex = "\uf02a",
+                    Header = "Pagento de Boleto"
+                }
+            };
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

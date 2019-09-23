@@ -8,6 +8,10 @@
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Resources>
         <ResourceDictionary>
+            <OnPlatform x:Key="FontAwesome" x:TypeArguments="x:String">
+                <On Platform="Android" Value="FontAwesome-Solid.otf#FontAwesome-Solid" />
+                <On Platform="iOS" Value="FontAwesome-Regular" />
+            </OnPlatform>
             <OnPlatform x:Key="RubikLight" x:TypeArguments="x:String">
                 <On Platform="Android" Value="Rubik-Light.ttf#Rubik-Light" />
                 <On Platform="iOS" Value="Rubik-Medium" />
@@ -23,6 +27,16 @@
                 <Setter Property="TextColor" Value="White" />
             </Style>
 
+            <Style x:Key="FaSolidBranco" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource FontAwesome}"/>
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="FaSolidAccent" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource FontAwesome}"/>
+                <Setter Property="TextColor" Value="{StaticResource CorAzulPadrao}" />
+            </Style>
+
             <Style x:Key="FonteMediumBranco" TargetType="Label">
                 <Setter Property="FontFamily" Value="{DynamicResource RubikMedium}" />
                 <Setter Property="TextColor" Value="White" />
@@ -34,7 +48,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <RelativeLayout x:Name="LayoutBase" BackgroundColor="BlanchedAlmond"> 
+        <RelativeLayout x:Name="LayoutBase"> 
             <Image Source="background_principal.png" HorizontalOptions="Fill" Aspect="Fill"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" />
@@ -57,7 +71,7 @@
                 <StackLayout x:Name="BarraOpcoesAuxiliares" Orientation="Horizontal" Spacing="4" />
 
                 <Button x:Name="IconeMenu" Text="&#xf0c9;" Margin="4,0,4,0" WidthRequest="48" HeightRequest="48"
-                        Padding="0" CornerRadius="24" FontSize="24" TextColor="White" VerticalOptions="Center"
+                        Padding="0" CornerRadius="24" FontSize="24" Style="{StaticResource FaSolidBranco}" VerticalOptions="Center"
                         BackgroundColor="{StaticResource CorAzulPadrao}" />
             </FlexLayout>
 
@@ -86,11 +100,11 @@
                            FontSize="Medium" HorizontalOptions="End" />
                 </Grid>
 
-                <CarouselView PeekAreaInsets="50" ItemsSource="{Binding MainCards}">
+                <CarouselView PeekAreaInsets="25" ItemsSource="{Binding MainCards}">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>
-                                <Frame Margin="12" HasShadow="True" Padding="24" VerticalOptions="FillAndExpand"
+                                <Frame Margin="10" HasShadow="True" Padding="24" VerticalOptions="FillAndExpand"
                                        CornerRadius="8">
                                     <Grid RowSpacing="20" ColumnSpacing="20">
                                         <Grid.RowDefinitions>
@@ -102,8 +116,7 @@
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
 
-                                        <Label Text="{Binding iconHex}" TextColor="{StaticResource CorAzulPadrao}"
-                                               FontFamily="{StaticResource RubikLight}" FontSize="36" />
+                                        <Label Text="{Binding iconHex}" FontFamily="{StaticResource FontAwesome}" TextColor="{StaticResource CorAzulPadrao}" FontSize="36"/>
                                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Header}"
                                                Style="{StaticResource FontRegularAccent}" FontSize="Medium"
                                                VerticalOptions="Center" />
@@ -116,22 +129,21 @@
                     </CarouselView.ItemTemplate>
                 </CarouselView>
 
-                <StackLayout HeightRequest="300">
-                    <Label Text="Mais acessadas" FontSize="Small"  TextColor="{StaticResource CorAzulPadrao}"
+                <StackLayout>
+                    <Label Text="Mais acessadas" FontSize="Small" TextColor="{StaticResource CorAzulPadrao}"
                        VerticalOptions="EndAndExpand" Margin="16,0,0,0" />
 
-                    <CollectionView ItemsSource="{Binding SmallCards}">
+                    <CollectionView ItemsSource="{Binding SmallCards}" HeightRequest="190">
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout Orientation="Horizontal" SnapPointsAlignment="Start" SnapPointsType="Mandatory"/>
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Orientation="Horizontal" Padding="16" Spacing="12" x:Name="MaisAcessadosStack">
-                                    <Frame WidthRequest="100" BackgroundColor="White">
-                                        <StackLayout InputTransparent="True">
-                                            <Label InputTransparent="True" Text="{Binding iconHex}" Style="{StaticResource FontRegularAccent}"/>
-                                            <Label InputTransparent="True" Text="{Binding Header}" Style="{StaticResource FontRegularAccent}"/>
-                                            <!--<ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsRunning="True" Color="{StaticResource CorAzulPadrao}" />-->
+                                <StackLayout Orientation="Horizontal" Padding="10" x:Name="MaisAcessadosStack">
+                                    <Frame WidthRequest="72" HeightRequest="72" BackgroundColor="White" Padding="8" VerticalOptions="Start">
+                                        <StackLayout InputTransparent="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Label InputTransparent="True" Text="{Binding iconHex}" Style="{StaticResource FaSolidAccent}" FontSize="16" HorizontalTextAlignment="Center"/>
+                                            <Label InputTransparent="True" Text="{Binding Header}" Style="{StaticResource FontRegularAccent}" FontSize="Micro" HorizontalTextAlignment="Center"/>
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>
