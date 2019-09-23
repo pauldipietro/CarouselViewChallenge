@@ -60,86 +60,86 @@ Bugbear,Humanoid,CE,Medium,15,14,13,8,11,9,Bugbear.jpg
 Bugbear Chief,Humanoid,CE,Medium,17,14,14,11,12,11,
 Bulette,Monstrosity,U,Large,19,11,21,2,10,5,Bulette.jpg
 Bullywug,Humanoid,NE,Medium,12,12,13,7,10,7,Bullywug.jpg
-Cambion,Fiend,E,Medium,18,18,16,14,12,16,
+Cambion,Fiend,E,Medium,18,18,16,14,12,16,Cambion.jpg
 Camel,Beast,U,Large,16,8,14,2,8,5,
-Carrion Crawler,Monstrosity,U,Large,14,13,16,1,12,5,
+Carrion Crawler,Monstrosity,U,Large,14,13,16,1,12,5,CarrionCrawler.jpg
 Cat,Beast,U,Tiny,3,15,10,3,12,7,
-Centaur,Monstrosity,NG,Large,18,14,14,9,13,11,
-Chain Devil,Fiend (Devil),LE,Medium,18,15,18,11,12,14,
-Chasme,Fiend (Demon),CE,Large,15,15,12,11,14,10,
-Chimera,Monstrosity,CE,Large,19,11,19,3,14,10,
-Chuul,Aberration,CE,Large,19,10,16,5,11,5,
-Clay Golem,Construct,U,Large,20,9,18,3,8,1,
-Cloaker,Aberration,CN,Large,17,15,12,13,12,14,
-Cloud Giant,Giant,N,Huge,27,10,22,12,16,16,
-Cockatrice,Monstrosity,U,Small,6,12,12,2,13,5,
+Centaur,Monstrosity,NG,Large,18,14,14,9,13,11,Centaur.jpg
+Chain Devil,Fiend (Devil),LE,Medium,18,15,18,11,12,14,Chaindevil.jpg
+Chasme,Fiend (Demon),CE,Large,15,15,12,11,14,10,Chasme.jpg
+Chimera,Monstrosity,CE,Large,19,11,19,3,14,10,Chimera.jpg
+Chuul,Aberration,CE,Large,19,10,16,5,11,5,Chuul.jpg
+Clay Golem,Construct,U,Large,20,9,18,3,8,1,Claygolem.jpg
+Cloaker,Aberration,CN,Large,17,15,12,13,12,14,Cloaker.jpg
+Cloud Giant,Giant,N,Huge,27,10,22,12,16,16,cloudgiant.jpg
+Cockatrice,Monstrosity,U,Small,6,12,12,2,13,5,Cockatrice.jpg
 Commoner,Humanoid,ANY,Medium,10,10,10,10,10,10,
 Constrictor Snake,Beast,U,large,15,14,12,1,10,3,
-"Copper Dragon, Adult",Dragon,CG,Huge,23,12,21,18,15,17,
+"Copper Dragon, Adult",Dragon,CG,Huge,23,12,21,18,15,17,copperdragon.jpg
 "Copper Dragon, Ancient",Dragon,CG,Gargantuan,27,12,25,20,17,19,
 "Copper Dragon, Wyrmling",Dragon,CG,Medium,15,12,13,14,11,13,
 "Copper Dragon, Young",Dragon,CG,Large,19,12,17,16,13,15,
-Couatl,Celestial,LG,Medium,16,20,17,18,20,18,
+Couatl,Celestial,LG,Medium,16,20,17,18,20,18,Couatl.jpg
 Crab,Beast,U,Tiny,2,11,10,1,8,2,
-Crawling Claw,Undead,NE,Tiny,13,14,11,5,10,4,
+Crawling Claw,Undead,NE,Tiny,13,14,11,5,10,4,Crawlingclaw.jpg
 Crocodile,Beast,U,Large,15,10,13,2,10,5,
 Cult Fanatic,Humanoid,NOT GOOD,Medium,11,14,12,10,13,14,
 Cultist,Humanoid,NOT GOOD,Medium,11,12,10,10,11,10,
-Cyclops,Giant,CN,Huge,22,11,20,8,6,10,
-Dao,Elemental,NE,Large,23,12,24,12,13,14,
-Darkmantle,Monstrosity,U,Small,16,12,13,2,10,5,
-Death Dog,Monstrosity,NE,Medium,15,14,14,3,13,6,
-Death Knight,Undead,CE,Medium,20,11,20,12,16,18,
-Death Slaad,Aberration,CE,Medium,20,15,19,15,10,16,
-Death Tyrant,Undead,LE,Large,10,14,14,19,15,19,
+Cyclops,Giant,CN,Huge,22,11,20,8,6,10,Cyclops.jpg
+Dao,Elemental,NE,Large,23,12,24,12,13,14,Dao.png
+Darkmantle,Monstrosity,U,Small,16,12,13,2,10,5,Darkmantle.jpg
+Death Dog,Monstrosity,NE,Medium,15,14,14,3,13,6,Deathdog.jpg
+Death Knight,Undead,CE,Medium,20,11,20,12,16,18,DeathKnight.jpg
+Death Slaad,Aberration,CE,Medium,20,15,19,15,10,16,Deathslaad.jpg
+Death Tyrant,Undead,LE,Large,10,14,14,19,15,19,deathtyrant.jpg
 Deer,Beast,U,Medium,11,16,11,2,14,5,
-Demilich,Undead,NE,Tiny,1,20,10,20,17,20,
-Deva,Celestial,LG,Medium,18,18,18,17,20,20,
+Demilich,Undead,NE,Tiny,1,20,10,20,17,20,Demilich.jpg
+Deva,Celestial,LG,Medium,18,18,18,17,20,20,Deva.jpg
 Dire Wolf,Beast,U,Large,17,15,15,3,12,7,
-Displacer Beast,Monstrosity,LE,Large,18,15,16,6,12,8,
-Djinni,Elemental,CG,Large,21,15,22,15,16,20,
-Doppelganger,Monstrosity,N,Medium,11,18,14,11,12,14,
-Dracolich,Undead,LE,VARIES,25,10,23,16,15,19,
+Displacer Beast,Monstrosity,LE,Large,18,15,16,6,12,8,DisplacerBeast.jpg
+Djinni,Elemental,CG,Large,21,15,22,15,16,20,Djinn.png
+Doppelganger,Monstrosity,N,Medium,11,18,14,11,12,14,Doppelganger.jpg
+Dracolich,Undead,LE,VARIES,25,10,23,16,15,19,Dracolich.jpg
 Draft Horse,Beast,U,Large,18,10,12,2,11,7,
-Dragon Turtle,Dragon,N,Gargantuan,25,10,20,10,12,12,
-Dretch,Fiend (Demon),CE,small,11,11,12,5,8,3,
-Drider,Monstrosity,CE,Large,16,16,18,13,14,12,
-Drow,Humanoid,NE,Medium,10,14,10,11,11,12,
+Dragon Turtle,Dragon,N,Gargantuan,25,10,20,10,12,12,Dragonturtle.jpg
+Dretch,Fiend (Demon),CE,small,11,11,12,5,8,3,Dretch.jpg
+Drider,Monstrosity,CE,Large,16,16,18,13,14,12,Drider.jpg
+Drow,Humanoid,NE,Medium,10,14,10,11,11,12,Drow.jpg
 Drow Elite Warrior,Humanoid,NE,Medium,13,18,14,11,13,12,
 Drow Mage,Humanoid,NE,Medium,9,14,10,17,13,12,
 Drow Priestess of Lolth,Humanoid,NE,Medium,10,14,12,13,17,18,
 Druid,Humanoid,ANY,Medium,10,12,13,12,15,11,
-Dryad,Fey,N,Medium,1,12,11,14,15,18,
-Duergar,Humanoid,LE,Medium,14,11,14,11,10,9,
-Duodrone,Construct,LN,Medium,11,13,12,6,10,7,
-Dust Mephit,Elemental,NE,Small,5,14,10,9,11,10,
+Dryad,Fey,N,Medium,1,12,11,14,15,18,Dryad.png
+Duergar,Humanoid,LE,Medium,14,11,14,11,10,9,Duergar.jpg
+Duodrone,Construct,LN,Medium,11,13,12,6,10,7,Duodrone.jpg
+Dust Mephit,Elemental,NE,Small,5,14,10,9,11,10,DustMephit.png
 Eagle,Beast,U,Small,6,15,10,2,14,7,
-Earth Elemental,Elemental,N,Large,20,8,20,5,10,5,
-Efreeti,Elemental,LE,Large,22,12,24,16,15,16,
+Earth Elemental,Elemental,N,Large,20,8,20,5,10,5,Earthelemental.jpg
+Efreeti,Elemental,LE,Large,22,12,24,16,15,16,Efreeti.png
 Elephant,Beast,U,Huge,22,9,17,3,11,6,
 Elk,Beast,U,Large,16,10,12,2,10,6,
-Empyrean,Celestial,CG OR NE,Huge,30,21,30,21,22,27,
-Erinyes,Fiend (Devil),LE,Medium,18,16,18,14,14,18,
-Ettercap,Monstrosity,NE,Medium,14,15,13,7,12,8,
-Ettin,Giant,CE,large,21,8,17,6,10,8,
+Empyrean,Celestial,CG OR NE,Huge,30,21,30,21,22,27,Empyrean.jpg
+Erinyes,Fiend (Devil),LE,Medium,18,16,18,14,14,18,Erinyes.jpg
+Ettercap,Monstrosity,NE,Medium,14,15,13,7,12,8,Ettercap.png
+Ettin,Giant,CE,large,21,8,17,6,10,8,Ettin.png
 Faerie Dragon,Dragon,CG,Tiny,3,20,13,14,12,16,
-Fire Elemental,Elemental,N,large,10,17,16,6,10,7,
-Fire Giant,Giant,LE,Huge,25,9,23,10,14,13,
+Fire Elemental,Elemental,N,large,10,17,16,6,10,7,Fireelemental.jpg
+Fire Giant,Giant,LE,Huge,25,9,23,10,14,13,firegiant.jpg
 Fire Snake,Elemental,NE,Medium,12,14,11,7,10,8,
 Flameskull,Undead,NE,Tiny,1,17,14,16,10,11,
-Flesh Golem,Construct,N,Medium,19,9,18,6,10,5,
-Flumph,Aberration,LG,Small,6,15,10,14,14,11,
-Flying Snake,Beast,U,Tiny,4,18,11,2,12,5,
+Flesh Golem,Construct,N,Medium,19,9,18,6,10,5,Fleshgolem.jpg
+Flumph,Aberration,LG,Small,6,15,10,14,14,11,Flumph.jpg
+Flying Snake,Beast,U,Tiny,4,18,11,2,12,5,Flyingsnake.jpg
 Flying Sword,Construct,U,Small,12,15,11,1,5,1,
-Fomorian,Giant,CE,Huge,23,10,20,9,14,6,
+Fomorian,Giant,CE,Huge,23,10,20,9,14,6,Fomorian.png
 Frog,Beast,U,Tiny,1,13,8,1,8,3,
-Frost Giant,Giant,NE,Huge,23,9,21,9,10,12,
-Galeb Duhr,Elemental,N,Medium,20,14,20,11,12,11,
-Gargoyle,Elemental,CE,Medium,15,11,16,6,11,7,
-Gas Spore,Plant,U,Large,5,1,3,1,1,1,
-Gelatinous Cube,Ooze,U,Large,14,3,20,1,6,1,
-Ghast,Undead,CE,Medium,16,17,10,11,10,8,
-Ghost,Undead,ANY,Medium,7,13,10,10,12,17,
+Frost Giant,Giant,NE,Huge,23,9,21,9,10,12,frostgiant.jpg
+Galeb Duhr,Elemental,N,Medium,20,14,20,11,12,11,Galebduhr.jpg
+Gargoyle,Elemental,CE,Medium,15,11,16,6,11,7,Gargoyle.png
+Gas Spore,Plant,U,Large,5,1,3,1,1,1,Gasspore.jpg
+Gelatinous Cube,Ooze,U,Large,14,3,20,1,6,1,Gelatinouscube.jpg
+Ghast,Undead,CE,Medium,16,17,10,11,10,8,Ghast.png
+Ghost,Undead,ANY,Medium,7,13,10,10,12,17,Ghost.png
 Ghoul,Undead,CE,Medium,13,15,10,7,10,6,
 Giant Ape,Beast,U,Huge,23,14,18,7,12,7,
 Giant Badger,Beast,U,Medium,13,10,15,2,12,5,
@@ -149,9 +149,9 @@ Giant Centipede,Beast,U,small,5,14,12,1,7,3,
 Giant Constrictor Snake,Beast,U,Huge,19,14,12,1,10,3,
 Giant Crab,Beast,U,Medium,13,15,11,1,9,3,
 Giant Crocodile,Beast,U,Huge,21,9,17,2,10,7,
-Giant Eagle,Beast,U,Large,16,17,13,8,14,10,
+Giant Eagle,Beast,U,Large,16,17,13,8,14,10,Gianteagle.jpg
 Giant Elk,Beast,U,Huge,19,16,14,7,14,10,
-Giant Fire Beetle,Beast,U,small,8,10,12,1,7,3,
+Giant Fire Beetle,Beast,U,small,8,10,12,1,7,3,Giantfirebeetle.png
 Giant Frog,Beast,U,Medium,12,13,11,2,10,3,
 Giant Goat,Beast,U,Large,17,11,12,3,12,6,
 Giant Hyena,Beast,U,Large,16,14,14,2,12,7,
@@ -163,266 +163,266 @@ Giant Rat,Beast,U,Small,7,15,11,2,10,4,
 Giant Scorpion,Beast,U,Large,15,13,15,1,9,3,
 Giant Sea Horse,Beast,U,Large,12,15,11,2,12,5,
 Giant Shark,Beast,U,Huge,23,11,21,1,10,5,
-Giant Spider,Beast,U,Large,14,16,12,2,11,4,
+Giant Spider,Beast,U,Large,14,16,12,2,11,4,Giantspider.jpg
 Giant Toad,Beast,U,Large,15,13,13,2,10,3,
 Giant Vulture,Beast,NE,Large,15,10,15,6,12,7,
 Giant Wasp,Beast,U,Medium,10,14,10,1,10,3,
 Giant Weasel,Beast,U,Medium,11,16,10,4,12,5,
 Giant Wolf Spider,Beast,U,Medium,12,16,13,3,12,4,
-Gibbering Mouther,Aberration,N,Medium,10,8,16,3,10,6,
+Gibbering Mouther,Aberration,N,Medium,10,8,16,3,10,6,Gibberingmouther.png
 Githyanki Knight,Humanoid,LE,Medium,16,14,15,14,14,15,
-Githyanki Warrior,Humanoid,LE,Medium,15,14,12,13,13,10,
-Githzerai Monk,Humanoid,LN,Medium,12,15,12,13,14,10,
+Githyanki Warrior,Humanoid,LE,Medium,15,14,12,13,13,10,Githyanki.jpg
+Githzerai Monk,Humanoid,LN,Medium,12,15,12,13,14,10,Githzerai.jpg
 Githzerai Zerth,Humanoid,LN,Medium,13,18,15,16,17,12,
-Glabrezu,Fiend (Demon),CE,Large,20,15,21,19,17,16,
+Glabrezu,Fiend (Demon),CE,Large,20,15,21,19,17,16,Glabrezu.jpg
 Gladiator,Humanoid,ANY,Medium,18,15,16,10,12,15,
-Gnoll,Humanoid,CE,Medium,14,12,11,6,10,7,
+Gnoll,Humanoid,CE,Medium,14,12,11,6,10,7,Gnoll.png
 Gnoll Fang of Yeenoghu,Humanoid,CE,Medium,17,15,15,10,11,13,
 Gnoll Pack Lord,Humanoid,CE,Medium,16,14,13,8,11,9,
 "Gnome, Deep (Svirfneblin)",Humanoid,NG,Small,15,14,14,12,10,9,
 Goat,Beast,U,Medium,12,10,11,2,10,5,
 Goblin,Humanoid,NE,small,8,14,10,10,8,8,
 Goblin Boss,Humanoid,NE,small,10,14,10,10,8,10,
-"Gold Dragon, Adult",Dragon,LG,Huge,27,14,25,16,15,24,
+"Gold Dragon, Adult",Dragon,LG,Huge,27,14,25,16,15,24,golddragon.jpg
 "Gold Dragon, Ancient",Dragon,LG,Gargantuan,30,14,29,18,17,28,
 "Gold Dragon, Wyrmling",Dragon,LG,Medium,19,14,17,14,11,16,
 "Gold Dragon, Young",Dragon,LG,Large,23,14,21,16,13,20,
-Gorgon,Construct,U,Large,20,11,18,2,12,7,
-Goristro,Fiend (Demon),CE,Huge,25,11,25,6,13,14,
-Gray Ooze,Ooze,U,Medium,12,6,16,1,6,2,
-Gray Slaad,Aberration,CN,Medium,17,17,16,13,8,14,
-"Green Dragon, Adult",Dragon,LE,Huge,23,12,21,18,15,17,
+Gorgon,Construct,U,Large,20,11,18,2,12,7,Gorgon.png
+Goristro,Fiend (Demon),CE,Huge,25,11,25,6,13,14,Goristro.jpg
+Gray Ooze,Ooze,U,Medium,12,6,16,1,6,2,Grayooze.png
+Gray Slaad,Aberration,CN,Medium,17,17,16,13,8,14,Grayslaad.jpg
+"Green Dragon, Adult",Dragon,LE,Huge,23,12,21,18,15,17,greendragon.jpg
 "Green Dragon, Ancient",Dragon,LE,Gargantuan,27,12,25,20,17,19,
 "Green Dragon, Wyrmling",Dragon,LE,Medium,15,12,13,14,11,13,
 "Green Dragon, Young",Dragon,LE,Large,19,12,17,16,13,15,
-Green Hag,Fey,NE,Medium,18,12,16,13,14,14,
-Green Slaad,Aberration,CN,Large,18,15,16,11,8,12,
-Grell,Aberration,NE,Medium,15,14,13,12,11,9,
-Grick,Monstrosity,N,Medium,14,14,11,3,14,5,
+Green Hag,Fey,NE,Medium,18,12,16,13,14,14,GreenHag.png
+Green Slaad,Aberration,CN,Large,18,15,16,11,8,12,Greenslaad.jpg
+Grell,Aberration,NE,Medium,15,14,13,12,11,9,Grell.png
+Grick,Monstrosity,N,Medium,14,14,11,3,14,5,Grick.png
 Grick Alpha,Monstrosity,N,Medium,18,16,15,4,14,9,
-Griffon,Monstrosity,U,Large,18,15,16,2,13,8,
-Grimlock,Humanoid,NE,Medium,16,12,12,9,8,6,
+Griffon,Monstrosity,U,Large,18,15,16,2,13,8,Griffon.png
+Grimlock,Humanoid,NE,Medium,16,12,12,9,8,6,Grimlock.png
 Guard,Humanoid,ANY,Medium,13,12,12,10,11,10,
-Guardian Naga,Monstrosity,LG,Large,19,18,16,16,19,18,
+Guardian Naga,Monstrosity,LG,Large,19,18,16,16,19,18,Guardian_naga.jpg
 Gynosphinx,Monstrosity,LN,Large,18,15,16,18,18,18,
-Half Ogre,Giant,C,Large,17,10,14,7,9,10,
-Half-Red Dragon Veteran,Humanoid,ANY,Medium,16,13,14,10,11,10,
-Harpy,Monstrosity,CE,Medium,12,13,12,7,10,13,
+Half Ogre,Giant,C,Large,17,10,14,7,9,10,Halfogre.jpg
+Half-Red Dragon Veteran,Humanoid,ANY,Medium,16,13,14,10,11,10,Halfreddragon.png
+Harpy,Monstrosity,CE,Medium,12,13,12,7,10,13,Harpy.png
 Hawk,Beast,U,Tiny,5,16,8,2,14,6,
-Hell Hound,Fiend,LE,Medium,17,12,14,6,13,6,
-Helmed Horror,Construct,N,Medium,18,13,16,10,10,10,
-Hezrou,Fiend (Demon),CE,Large,19,17,20,5,12,13,
-Hill Giant,Giant,CE,Huge,21,8,19,5,9,6,
-Hippogriff,Monstrosity,U,Large,17,13,13,2,12,8,
+Hell Hound,Fiend,LE,Medium,17,12,14,6,13,6,Hellhound.png
+Helmed Horror,Construct,N,Medium,18,13,16,10,10,10,HelmedHorror.png
+Hezrou,Fiend (Demon),CE,Large,19,17,20,5,12,13,Hezrou.jpg
+Hill Giant,Giant,CE,Huge,21,8,19,5,9,6,hillgiant.jpg
+Hippogriff,Monstrosity,U,Large,17,13,13,2,12,8,Hippogriff.png
 Hobgoblin,Humanoid,LE,Medium,13,12,12,10,10,9,
 Hobgoblin Captain,Humanoid,LE,Medium,15,14,14,12,10,13,
-Hobgoblin Warlord,Humanoid,LE,Medium,16,14,16,14,11,15,
-Homunculus,Construct,N,Tiny,4,15,11,10,10,7,
-Hook Horror,Monstrosity,N,Large,18,10,15,6,12,7,
+Hobgoblin Warlord,Humanoid,LE,Medium,16,14,16,14,11,15,HobgoblinWarlord.png
+Homunculus,Construct,N,Tiny,4,15,11,10,10,7,Homunculus.png
+Hook Horror,Monstrosity,N,Large,18,10,15,6,12,7,Hookhorror.jpg
 Horned Devil,Fiend (Devil),LE,Large,22,17,21,12,16,17,
 Hunter Shark,Beast,U,Large,18,13,15,1,10,4,
-Hydra,Monstrosity,U,Huge,20,12,20,2,10,7,
-Hyena,Beast,U,Medium,11,13,12,2,12,5,
-Ice Devil,Fiend (Devil),LE,Large,21,14,18,18,15,18,
-Ice Mephit,Elemental,NE,Small,7,13,10,9,11,12,
-Imp,Fiend (Devil),LE,Tiny,6,17,13,11,12,14,
-Intellect Devourer,Aberration,LE,Tiny,6,14,13,12,11,10,
-Invisible Stalker,Elemental,N,Medium,16,19,14,10,15,11,
-Iron Golem,Construct,U,Large,24,9,20,3,11,1,
+Hydra,Monstrosity,U,Huge,20,12,20,2,10,7,Hydra.png
+Hyena,Beast,U,Medium,11,13,12,2,12,5,Hyena.jpg
+Ice Devil,Fiend (Devil),LE,Large,21,14,18,18,15,18,Icedevil.jpg
+Ice Mephit,Elemental,NE,Small,7,13,10,9,11,12,IceMephit.png
+Imp,Fiend (Devil),LE,Tiny,6,17,13,11,12,14,Imp.jpg
+Intellect Devourer,Aberration,LE,Tiny,6,14,13,12,11,10,Intellectdevourer.png
+Invisible Stalker,Elemental,N,Medium,16,19,14,10,15,11,InvisibleStalker.png
+Iron Golem,Construct,U,Large,24,9,20,3,11,1,Irongolem.jpg
 Jackal,Beast,U,Small,8,15,11,3,12,6,
-Jackalwere,Humanoid,CE,Medium,11,15,11,13,11,10,
-Kenku,Humanoid,CN,Medium,10,16,10,11,10,10,
+Jackalwere,Humanoid,CE,Medium,11,15,11,13,11,10,Jackalwere.png
+Kenku,Humanoid,CN,Medium,10,16,10,11,10,10,Kenku.png
 Killer Whale,Beast,U,Huge,19,10,13,3,12,7,
 Knight,Humanoid,ANY,Medium,16,11,14,11,11,15,
-Kobold,Humanoid,LE,Small,7,15,9,8,7,8,
-Kraken,Monstrosity,CE,Gargantuan,30,11,25,22,18,20,
-Kuo-Toa,Humanoid,NE,Medium,13,10,11,11,10,8,
-Kuo-Toa Archpriest,Humanoid,NE,Medium,16,14,16,13,16,14,
-Kuo-Toa Whip,Humanoid,NE,Medium,14,10,14,12,14,11,
-Lamia,Monstrosity,CE,Large,16,13,15,14,15,16,
-Lemure,Fiend (Devil),LE,Medium,10,5,11,1,11,3,
-Lich,Undead,E,Medium,11,16,16,20,14,16,
+Kobold,Humanoid,LE,Small,7,15,9,8,7,8,kobold.jpg
+Kraken,Monstrosity,CE,Gargantuan,30,11,25,22,18,20,Kraken.jpg
+Kuo-Toa,Humanoid,NE,Medium,13,10,11,11,10,8,Kuotoa.jpg
+Kuo-Toa Archpriest,Humanoid,NE,Medium,16,14,16,13,16,14,Kuotuaarchpriest.jpg
+Kuo-Toa Whip,Humanoid,NE,Medium,14,10,14,12,14,11,Kuotoawhip.jpg
+Lamia,Monstrosity,CE,Large,16,13,15,14,15,16,Lamia.png
+Lemure,Fiend (Devil),LE,Medium,10,5,11,1,11,3,Lemure.jpg
+Lich,Undead,E,Medium,11,16,16,20,14,16,lich.jpg
 Lion,Beast,U,Large,17,15,13,3,12,8,
 Lizard,Beast,U,Tiny,2,11,10,1,8,3,
 Lizard King/Queen,Humanoid,CE,Medium,17,12,15,11,11,15,
 Lizardfolk,Humanoid,N,Medium,15,10,13,7,12,7,
 Lizardfolk Shaman,Humanoid,N,Medium,15,10,13,10,15,8,
 Mage,Humanoid,ANY,Medium,9,14,11,17,12,11,
-Magma Mephit,Elemental,NE,Small,8,12,12,7,10,10,
-Magmin,Elemental,CN,Small,7,15,12,8,11,10,
+Magma Mephit,Elemental,NE,Small,8,12,12,7,10,10,MagmaMephit.png
+Magmin,Elemental,CN,Small,7,15,12,8,11,10,Magmin.jpg
 Mammoth,Beast,U,Huge,24,9,21,3,11,6,
-Manes,Fiend (Demon),CE,Small,10,9,13,3,8,4,
-Manticore,Monstrosity,LE,Large,17,16,17,7,12,8,
-Marid,Elemental,CN,Large,22,12,26,18,17,18,
-Marilith,Fiend (Demon),CE,Large,18,20,20,18,16,20,
-Mastiff,Beast,U,Medium,13,14,12,3,12,7,
-Medusa,Monstrosity,LE,Medium,10,15,16,12,13,15,
-Merfolk,Humanoid,N,Medium,10,13,12,11,11,12,
-Merrow,Monstrosity,CE,Large,18,10,15,8,10,9,
-Mezzoloth,Fiend,NE,Medium,18,11,16,7,10,11,
-Mimic,Monstrosity,N,Medium,17,12,15,5,13,8,
-Mind Flayer,Aberration,LE,Medium,11,12,12,19,17,17,
-Minotaur,Monstrosity,CE,Large,18,11,16,6,16,9,
+Manes,Fiend (Demon),CE,Small,10,9,13,3,8,4,Manes.jpg
+Manticore,Monstrosity,LE,Large,17,16,17,7,12,8,manticore.jpg
+Marid,Elemental,CN,Large,22,12,26,18,17,18,Marid.jpg
+Marilith,Fiend (Demon),CE,Large,18,20,20,18,16,20,Marilith.jpg
+Mastiff,Beast,U,Medium,13,14,12,3,12,7,Mastiff.jpg
+Medusa,Monstrosity,LE,Medium,10,15,16,12,13,15,Medusa.png
+Merfolk,Humanoid,N,Medium,10,13,12,11,11,12,Merfolk.png
+Merrow,Monstrosity,CE,Large,18,10,15,8,10,9,Merrow.png
+Mezzoloth,Fiend,NE,Medium,18,11,16,7,10,11,Mezzoloth.png
+Mimic,Monstrosity,N,Medium,17,12,15,5,13,8,Mimic.jpg
+Mind Flayer,Aberration,LE,Medium,11,12,12,19,17,17,Mindflayer.jpg
+Minotaur,Monstrosity,CE,Large,18,11,16,6,16,9,Minotaur.png
 Minotaur Skeleton,Undead,LE,Large,18,11,15,6,8,5,
-Monodrone,Construct,LN,Medium,1,13,12,4,10,5,
-Mud Mephit,Elemental,NE,Small,8,12,12,9,11,7,
+Monodrone,Construct,LN,Medium,1,13,12,4,10,5,Monodrone.jpg
+Mud Mephit,Elemental,NE,Small,8,12,12,9,11,7,MudMephit.png
 Mule,Beast,U,Medium,14,10,13,2,10,5,
-Mummy,Undead,LE,Medium,16,8,15,6,10,12,
+Mummy,Undead,LE,Medium,16,8,15,6,10,12,Mummy.png
 Mummy Lord,Undead,LE,Medium,18,10,17,11,18,16,
-Myconid Adult,Plant,LN,Medium,10,10,12,10,13,7,
+Myconid Adult,Plant,LN,Medium,10,10,12,10,13,7,Myconids.jpg
 Myconid Sovereign,Plant,LN,Large,12,10,14,13,15,10,
 Myconid Sprout,Plant,LN,Small,8,10,10,8,11,5,
-Nalfeshnee,Fiend (Demon),LE,Large,21,10,22,19,12,15,
+Nalfeshnee,Fiend (Demon),LE,Large,21,10,22,19,12,15,Nalfeshnee.jpg
 Needle Blight,Plant,NE,Medium,12,12,13,4,8,3,
-Night Hag,Fiend,NE,Medium,18,15,16,16,14,16,
-Nightmare,Fiend,NE,Large,18,15,16,10,13,15,
+Night Hag,Fiend,NE,Medium,18,15,16,16,14,16,NightHag.png
+Nightmare,Fiend,NE,Large,18,15,16,10,13,15,Nightmare.jpg
 Noble,Humanoid,ANY,Medium,11,12,11,12,14,16,
-Nothic,Aberration,NE,Medium,14,16,16,13,10,8,
-Nycaloth,Fiend,NE,Large,20,11,19,12,10,15,
-Ochre Jelly,Ooze,U,Large,15,6,14,2,6,1,
-Octopus,Beast,U,Small,4,15,11,3,10,4,
-Ogre,Giant,CE,Large,19,8,16,5,7,7,
+Nothic,Aberration,NE,Medium,14,16,16,13,10,8,Nothic.png
+Nycaloth,Fiend,NE,Large,20,11,19,12,10,15,Nycaloth.png
+Ochre Jelly,Ooze,U,Large,15,6,14,2,6,1,Ochrejelly.png
+Octopus,Beast,U,Small,4,15,11,3,10,4,Octopus.jpg
+Ogre,Giant,CE,Large,19,8,16,5,7,7,ogre.jpg
 Ogre Zombie,Undead,NE,Large,19,6,18,3,6,5,
-Oni,Giant,LE,Large,19,11,16,14,12,15,
-Orc,Humanoid,CE,Medium,16,12,16,7,11,10,
+Oni,Giant,LE,Large,19,11,16,14,12,15,Oni.png
+Orc,Humanoid,CE,Medium,16,12,16,7,11,10,Orc.jpg
 Orc Eye of Gruumsh,Humanoid,CE,Medium,16,12,16,9,13,12,
 Orc War Chief,Humanoid,CE,Medium,18,12,18,11,11,16,
-Orog,Humanoid,CE,Medium,18,12,18,12,11,12,
-Otyugh,Aberration,N,Large,16,11,19,6,13,6,
+Orog,Humanoid,CE,Medium,18,12,18,12,11,12,Orog.jpg
+Otyugh,Aberration,N,Large,16,11,19,6,13,6,Otyugh.png
 Owl,Beast,U,Tiny,3,13,8,2,12,7,
-Owlbear,Monstrosity,U,Large,20,12,17,3,12,7,
+Owlbear,Monstrosity,U,Large,20,12,17,3,12,7,owlbear.jpg
 Panther,Beast,U,Medium,14,15,10,3,14,7,
-Pegasus,Celestial,CG,Large,18,15,16,10,15,13,
-Pentadrone,Construct,LN,Large,15,14,12,10,10,13,
-Peryton,Monstrosity,CE,Medium,16,12,13,9,12,10,
-Phase Spider,Monstrosity,U,Large,15,15,12,6,10,6,
-Piercer,Monstrosity,U,Medium,10,13,16,1,7,3,
-Pit Fiend,Fiend (Devil),LE,Large,26,14,24,22,18,24,
-Pixie,Fey,NG,Tiny,2,20,8,10,14,15,
-Planetar,Celestial,LG,Large,24,20,24,19,22,25,
-Plesiosaurus,Beast,U,Large,18,15,16,2,12,5,
+Pegasus,Celestial,CG,Large,18,15,16,10,15,13,Pegasus.png
+Pentadrone,Construct,LN,Large,15,14,12,10,10,13,Pentadrone.jpg
+Peryton,Monstrosity,CE,Medium,16,12,13,9,12,10,Peryton.png
+Phase Spider,Monstrosity,U,Large,15,15,12,6,10,6,Phase_spider.jpg
+Piercer,Monstrosity,U,Medium,10,13,16,1,7,3,Piercer.jpg
+Pit Fiend,Fiend (Devil),LE,Large,26,14,24,22,18,24,PitFiend.jpg
+Pixie,Fey,NG,Tiny,2,20,8,10,14,15,Pixie.jpg
+Planetar,Celestial,LG,Large,24,20,24,19,22,25,Planetar.jpg
+Plesiosaurus,Beast,U,Large,18,15,16,2,12,5,Plesiosaurus.jpg
 Poisonous Snake,Beast,U,Tiny,2,16,11,1,10,3,
 Polar Bear,Beast,U,Large,20,10,16,2,13,7,
 Pony,Beast,U,Medium,15,10,13,2,11,7,
 Priest,Humanoid,ANY,Medium,10,10,12,13,16,13,
-Pseudodragon,Dragon,NG,Tiny,6,15,13,10,12,10,
+Pseudodragon,Dragon,NG,Tiny,6,15,13,10,12,10,Pseudodragon.png
 Pteranodon,Beast,U,Medium,12,15,10,2,9,5,
-Purple Worm,Monstrosity,U,Gargantuan,28,7,22,1,8,4,
-Quadrone,Construct,LN,Medium,12,14,12,10,10,11,
-Quaggoth,Humanoid,CN,Medium,17,12,16,6,12,7,
+Purple Worm,Monstrosity,U,Gargantuan,28,7,22,1,8,4,PurpleWorm.png
+Quadrone,Construct,LN,Medium,12,14,12,10,10,11,Quadrone.jpg
+Quaggoth,Humanoid,CN,Medium,17,12,16,6,12,7,Quaggoth.png
 Quaggoth Spore Servant,Plant,U,Medium,17,12,16,2,6,1,
-Quasit,Fiend (Demon),CE,Tiny,5,17,10,7,10,10,
-Quipper,Beast,U,Tiny,2,16,9,1,7,2,
-Rakshasa,Fiend,LE,Medium,14,17,18,13,16,20,
-Rat,Beast,U,Tiny,2,11,9,2,10,4,
+Quasit,Fiend (Demon),CE,Tiny,5,17,10,7,10,10,Quasit.jpg
+Quipper,Beast,U,Tiny,2,16,9,1,7,2,Quipper.jpg
+Rakshasa,Fiend,LE,Medium,14,17,18,13,16,20,Rakshasa.png
+Rat,Beast,U,Tiny,2,11,9,2,10,4,Rat.jpg
 Raven,Beast,U,Tiny,2,14,8,2,12,6,
-"Red Dragon, Adult",Dragon,CE,Huge,27,10,25,16,13,21,
+"Red Dragon, Adult",Dragon,CE,Huge,27,10,25,16,13,21,reddragon.jpg
 "Red Dragon, Ancient",Dragon,CE,Gargantuan,30,10,29,18,15,23,
 "Red Dragon, Wyrmling",Dragon,CE,Medium,19,10,17,12,11,15,
 "Red Dragon, Young",Dragon,CE,Large,23,10,21,14,11,19,
-Red Slaad,Aberration,CN,Large,16,12,16,6,6,7,
+Red Slaad,Aberration,CN,Large,16,12,16,6,6,7,Redslaad.jpg
 Reef Shark,Beast,U,Medium,14,13,13,1,10,4,
-Remorhaz,Monstrosity,U,Huge,24,13,21,4,10,5,
-Revenant,Undead,N,Medium,18,14,18,13,16,18,
+Remorhaz,Monstrosity,U,Huge,24,13,21,4,10,5,Remorhaz.jpg
+Revenant,Undead,N,Medium,18,14,18,13,16,18,Revenant.png
 Rhinoceros,Beast,U,Large,21,8,15,2,12,6,
 Riding Horse,Beast,U,Large,16,10,12,2,11,7,
-Roc,Monstrosity,U,Gargantuan,28,10,20,3,10,9,
-Roper,Monstrosity,NE,Large,18,8,17,7,16,6,
+Roc,Monstrosity,U,Gargantuan,28,10,20,3,10,9,Roc.png
+Roper,Monstrosity,NE,Large,18,8,17,7,16,6,roper.jpg
 Rug of Smothering,Construct,U,Large,17,14,10,1,3,1,
-Rust Monster,Monstrosity,U,Medium,13,12,13,2,13,6,
+Rust Monster,Monstrosity,U,Medium,13,12,13,2,13,6,rustmonster.jpg
 Saber-Toothed Tiger,Beast,U,Large,18,14,15,3,12,8,
-Sahuagin,Humanoid,LE,Medium,13,11,12,12,13,9,
+Sahuagin,Humanoid,LE,Medium,13,11,12,12,13,9,Sahuagin.png
 Sahuagin Baron,Humanoid,LE,Large,19,15,16,14,13,17,
 Sahuagin Priestess,Humanoid,LE,Medium,13,11,12,12,14,13,
-Salamander,Elemental,NE,Large,18,14,15,11,10,12,
-Satyr,Fey,CN,Medium,12,16,11,12,10,14,
-Scarecrow,Construct,CE,Medium,11,13,11,10,10,13,
+Salamander,Elemental,NE,Large,18,14,15,11,10,12,Salamander.png
+Satyr,Fey,CN,Medium,12,16,11,12,10,14,Satyr.jpg
+Scarecrow,Construct,CE,Medium,11,13,11,10,10,13,Scarecrow.jpg
 Scorpion,Beast,U,Tiny,2,11,8,1,8,2,
 Scout,Humanoid,ANY,Medium,11,14,12,11,13,11,
-Sea Hag,Fey,CE,Medium,16,13,16,12,12,13,
+Sea Hag,Fey,CE,Medium,16,13,16,12,12,13,SeaHag.png
 Sea Horse,Beast,U,Tiny,1,12,8,1,10,2,
-Shadow,Undead,CE,Medium,6,14,13,6,10,8,
+Shadow,Undead,CE,Medium,6,14,13,6,10,8,Shadow.jpg
 Shadow Demon,Fiend (Demon),CE,Medium,1,17,12,14,13,14,
-Shadow Dragon,Dragon,CE,VARIES,23,10,21,14,11,19,
-Shambling Mound,Plant,U,Large,18,8,16,5,10,5,
-Shield Guardian,Construct,U,Large,18,8,18,7,1,,
-Shrieker,Plant,U,Medium,1,1,10,1,10,3,
-"Silver Dragon, Adult",Dragon,LG,Huge,27,10,25,16,13,21,
+Shadow Dragon,Dragon,CE,VARIES,23,10,21,14,11,19,shadowdragon.jpg
+Shambling Mound,Plant,U,Large,18,8,16,5,10,5,Shamblingmound.jpg
+Shield Guardian,Construct,U,Large,18,8,18,7,1,,ShieldGuardian.png
+Shrieker,Plant,U,Medium,1,1,10,1,10,3,Shrieker.jpg
+"Silver Dragon, Adult",Dragon,LG,Huge,27,10,25,16,13,21,silverdragon.jpg
 "Silver Dragon, Ancient",Dragon,LG,Gargantuan,30,10,29,18,15,23,
 "Silver Dragon, Wyrmling",Dragon,LG,Medium,19,10,17,12,11,15,
 "Silver Dragon, Young",Dragon,LG,Large,23,10,21,14,11,19,
-Skeleton,Undead,LE,Medium,10,14,15,6,8,5,
+Skeleton,Undead,LE,Medium,10,14,15,6,8,5,Skeleton.jpg
 Slaad Tadpole,Aberration,CN,Tiny,7,15,10,3,5,3,
-Smoke Mephit,Elemental,NE,Small,6,14,12,10,10,11,
-Solar,Celestial,LG,Large,26,22,26,25,25,30,
-Spectator,Aberration,LN,Medium,8,14,14,13,14,11,
-Specter,Undead,CE,Medium,1,14,11,10,10,11,
+Smoke Mephit,Elemental,NE,Small,6,14,12,10,10,11,SmokeMephit.png
+Solar,Celestial,LG,Large,26,22,26,25,25,30,Solar.jpg
+Spectator,Aberration,LN,Medium,8,14,14,13,14,11,Spectator.jpg
+Specter,Undead,CE,Medium,1,14,11,10,10,11,Specter.png
 Spider,Beast,U,Tiny,2,14,8,1,10,2,
-Spined Devil,Fiend (Devil),LE,Small,10,15,12,11,14,8,
-Spirit Naga,Monstrosity,CE,Large,18,17,14,16,15,16,
-Sprite,Fey,NG,Tiny,3,18,10,14,13,11,
+Spined Devil,Fiend (Devil),LE,Small,10,15,12,11,14,8,Spineddevil.jpg
+Spirit Naga,Monstrosity,CE,Large,18,17,14,16,15,16,SpiritNaga.png
+Sprite,Fey,NG,Tiny,3,18,10,14,13,11,Sprite.png
 Spy,Humanoid,ANY,Medium,1,15,10,12,14,16,
-Steam Mephit,Elemental,NE,Small,5,11,10,11,10,12,
-Stirge,Beast,U,Tiny,4,16,11,2,8,6,
-Stone Giant,Giant,N,Huge,23,15,20,10,12,9,
-Stone Golem,Construct,U,Large,22,9,20,3,11,1,
-Storm Giant,Giant,CG,Huge,29,14,20,16,18,18,
-Succubus/Incubus,Fiend,NE,Medium,8,17,13,15,12,20,
+Steam Mephit,Elemental,NE,Small,5,11,10,11,10,12,SteamMephit.png
+Stirge,Beast,U,Tiny,4,16,11,2,8,6,Stirge.png
+Stone Giant,Giant,N,Huge,23,15,20,10,12,9,stonegiant.jpg
+Stone Golem,Construct,U,Large,22,9,20,3,11,1,stonegolem.jpg
+Storm Giant,Giant,CG,Huge,29,14,20,16,18,18,stormgiant.jpg
+Succubus/Incubus,Fiend,NE,Medium,8,17,13,15,12,20,Succubus.jpg
 Swarm of Bats,Beast,U,Medium,5,15,10,2,12,4,
 Swarm of Insects,Beast,U,Medium,3,13,10,1,7,1,
 Swarm of Poisonous Snakes,Beast,U,Medium,8,18,11,1,10,3,
 Swarm of Quippers,Beast,U,Medium,13,16,9,1,7,2,
 Swarm of Rats,Beast,U,Medium,9,11,9,2,10,3,
 Swarm of Ravens,Beast,U,Medium,6,14,8,3,12,6,
-Tarrasque,Monstrosity,U,Gargantuan,30,11,30,3,11,11,
-Thri-Kreen,Humanoid,CN,Medium,12,15,13,8,12,7,
-Thug,Humanoid,NOT GOOD,Medium,15,11,14,10,10,11,
+Tarrasque,Monstrosity,U,Gargantuan,30,11,30,3,11,11,Tarrasque.jpg
+Thri-Kreen,Humanoid,CN,Medium,12,15,13,8,12,7,Thrikreen.jpg
+Thug,Humanoid,NOT GOOD,Medium,15,11,14,10,10,11,Thug.png
 Tiger,Beast,U,Large,17,15,14,3,12,8,
-Treant,Plant,CG,Huge,23,8,21,12,16,12,
+Treant,Plant,CG,Huge,23,8,21,12,16,12,Treant.png
 Tribal Warrior,Humanoid,ANY,Medium,13,11,12,8,11,8,
 Triceratops,Beast,U,Huge,22,9,17,2,11,5,
-Tridrone,Construct,LN,Medium,12,13,12,9,10,9,
-Troglodyte,Humanoid,CE,Medium,14,10,14,6,10,6,
-Troll,Giant,CE,Large,18,13,20,7,9,7,
-Twig Blight,Plant,NE,Small,6,13,12,4,8,3,
+Tridrone,Construct,LN,Medium,12,13,12,9,10,9,Tridrone.jpg
+Troglodyte,Humanoid,CE,Medium,14,10,14,6,10,6,Troglodyte.png
+Troll,Giant,CE,Large,18,13,20,7,9,7,Troll.jpg
+Twig Blight,Plant,NE,Small,6,13,12,4,8,3,Twigblight.png
 Tyrannosaurus Rex,Beast,U,Huge,25,10,19,2,12,9,
-Ultroloth,Fiend,NE,Medium,16,16,18,18,15,19,
-Umber Hulk,Monstrosity,CE,Large,20,13,16,9,10,10,
-Unicorn,Celestial,LG,Large,18,14,15,11,17,16,
+Ultroloth,Fiend,NE,Medium,16,16,18,18,15,19,Ultroloth.png
+Umber Hulk,Monstrosity,CE,Large,20,13,16,9,10,10,UmberHulk.jpg
+Unicorn,Celestial,LG,Large,18,14,15,11,17,16,Unicorn.png
 Vampire,Undead,LE,Medium,18,18,18,17,15,18,
-Vampire Spawn,Undead,NE,Medium,16,16,16,11,10,12,
+Vampire Spawn,Undead,NE,Medium,16,16,16,11,10,12,VampireSpawn.png
 Veteran,Humanoid,ANY,Medium,16,13,14,10,11,10,
 Vine Blight,Plant,NE,Medium,15,8,14,5,10,3,
-Violet Fungus,Plant,U,Medium,3,1,10,1,3,1,
-Vrock,Fiend (Demon),CE,Large,17,15,18,8,13,8,
+Violet Fungus,Plant,U,Medium,3,1,10,1,3,1,Violetfungus.jpg
+Vrock,Fiend (Demon),CE,Large,17,15,18,8,13,8,Vrock.jpg
 Vulture,Beast,U,Medium,7,10,13,2,12,4,
 Warhorse,Beast,U,Large,18,12,13,2,12,7,
 Warhorse Skeleton,Undead,LE,Large,18,12,15,2,8,5,
-Water Elemental,Elemental,N,Large,18,14,18,5,10,8,
-Water Weird,Elemental,N,Large,17,16,13,11,10,10,
+Water Elemental,Elemental,N,Large,18,14,18,5,10,8,Waterelemental.jpg
+Water Weird,Elemental,N,Large,17,16,13,11,10,10,Waterweird.jpg
 Weasel,Beast,U,Tiny,3,16,8,2,12,3,
-Werebear,Humanoid,NG,Medium,19,10,17,11,12,12,
-Wereboar,Humanoid,NE,Medium,17,10,15,10,11,8,
-Wererat,Humanoid,LE,Medium,10,15,12,11,10,8,
-Weretiger,Humanoid,N,Medium,17,15,16,10,13,11,
-Werewolf,Humanoid,CE,Medium,15,13,14,10,11,10,
-"White Dragon, Adult",Dragon,CE,Huge,22,10,22,8,12,12,
+Werebear,Humanoid,NG,Medium,19,10,17,11,12,12,Werebear.png
+Wereboar,Humanoid,NE,Medium,17,10,15,10,11,8,Wereboar.png
+Wererat,Humanoid,LE,Medium,10,15,12,11,10,8,Wererat.png
+Weretiger,Humanoid,N,Medium,17,15,16,10,13,11,Weretiger.png
+Werewolf,Humanoid,CE,Medium,15,13,14,10,11,10,Werewolf.png
+"White Dragon, Adult",Dragon,CE,Huge,22,10,22,8,12,12,whitedragon.jpg
 "White Dragon, Ancient",Dragon,CE,Gargantuan,26,10,26,10,13,14,
 "White Dragon, Wyrmling",Dragon,CE,Medium,14,10,14,5,10,11,
 "White Dragon, Young",Dragon,CE,Large,18,10,18,6,11,12,
-Wight,Undead,NE,Medium,15,14,16,10,13,15,
-Will-O'-Wisp,Undead,CE,Tiny,1,28,10,13,14,11,
+Wight,Undead,NE,Medium,15,14,16,10,13,15,Wight.png
+Will-O'-Wisp,Undead,CE,Tiny,1,28,10,13,14,11,Willowisp.jpg
 Winged Kobold,Humanoid,LE,Small,7,16,9,8,7,8,
-Winter Wolf,Monstrosity,NE,Large,18,13,14,7,12,8,
+Winter Wolf,Monstrosity,NE,Large,18,13,14,7,12,8,Winterwolf.png
 Wolf,Beast,U,Medium,12,15,12,3,12,6,
-Worg,Monstrosity,NE,Large,16,13,13,7,11,8,
-Wraith,Undead,NE,Medium,6,16,16,12,14,15,
-Wyvern,Dragon,U,Large,19,1,16,5,12,6,
-Xorn,Elemental,N,Medium,17,10,22,11,10,11,
-Yeti,Monstrosity,CE,Large,18,13,16,8,12,7,
-Yochlol,Fiend (Demon),CE,Medium,15,14,18,13,15,15,
+Worg,Monstrosity,NE,Large,16,13,13,7,11,8,Worg.jpg
+Wraith,Undead,NE,Medium,6,16,16,12,14,15,Wraith.jpg
+Wyvern,Dragon,U,Large,19,1,16,5,12,6,Wyvern.png
+Xorn,Elemental,N,Medium,17,10,22,11,10,11,Xorn.jpg
+Yeti,Monstrosity,CE,Large,18,13,16,8,12,7,Yeti.jpg
+Yochlol,Fiend (Demon),CE,Medium,15,14,18,13,15,15,Yochlol.jpg
 Young Remorhaz,Monstrosity,U,Large,18,13,17,3,10,4,
-Yuan-Ti Abomination,Monstrosity,NE,Large,19,16,17,17,15,18,
-Yuan-Ti Malison,Monstrosity,NE,Medium,16,14,13,14,12,16,
-Yuan-Ti Pureblood,Monstrosity,NE,Medium,11,12,11,13,12,14,
-Zombie,Undead,NE,Medium,13,6,16,3,6,5,
+Yuan-Ti Abomination,Monstrosity,NE,Large,19,16,17,17,15,18,Yuanti.jpg
+Yuan-Ti Malison,Monstrosity,NE,Medium,16,14,13,14,12,16,YuantiMalison.png
+Yuan-Ti Pureblood,Monstrosity,NE,Medium,11,12,11,13,12,14,YuantiPureblood.png
+Zombie,Undead,NE,Medium,13,6,16,3,6,5,Zombie.jpg

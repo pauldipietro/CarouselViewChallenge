@@ -1,83 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             Visual="Material"
-             x:Name="ChallengePage"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
-             xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
-             xmlns:behaviours="clr-namespace:CarouselViewChallenge.Behaviours;assembly=CarouselViewChallenge"
-             xmlns:converters="clr-namespace:CarouselViewChallenge.Converters;assembly=CarouselViewChallenge">
+<ContentPage
+    x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
+    x:Name="ChallengePage"
+    Visual="Material"
+    mc:Ignorable="d">
 
     <ContentPage.Resources>
         <Style x:Key="LetterButton" TargetType="Button">
-            <Setter Property="BackgroundColor" Value="#9D0A0E"></Setter>
-            <Setter Property="TextColor" Value="White"/>
-            <Setter Property="FontAttributes" Value="Bold"></Setter>
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="#9D0A0E" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="HorizontalOptions" Value="Center" />
         </Style>
         <Style x:Key="MonsterName" TargetType="Label">
-            <Setter Property="TextColor" Value="#741D14"/>
-            <Setter Property="FontAttributes" Value="Bold"></Setter>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="TextColor" Value="#741D14" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="VerticalOptions" Value="Start" />
         </Style>
         <Style x:Key="MonsterSubHeading" TargetType="Label">
-            <Setter Property="TextColor" Value="#741D14"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="TextColor" Value="#741D14" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="VerticalOptions" Value="Start" />
         </Style>
         <Style x:Key="StatHeader" TargetType="Label">
-            <Setter Property="TextColor" Value="#741D14"/>
-            <Setter Property="FontAttributes" Value="Bold"></Setter>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="VerticalOptions" Value="Center"/>
-            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="#741D14" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="Center" />
         </Style>
         <Style x:Key="StatData" TargetType="Label">
-            <Setter Property="TextColor" Value="#741D14"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="VerticalOptions" Value="Center"/>
-            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="#741D14" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="Center" />
         </Style>
-
-        <converters:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
 
     </ContentPage.Resources>
 
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <CarouselView Grid.Row="0"
-                      ItemsSource="{Binding StartingLetters}" 
-                      HeightRequest="75" 
-                      NumberOfSideItems="2" 
-                      PeekAreaInsets="100">
+        <CarouselView
+            Grid.Row="0"
+            HeightRequest="75"
+            ItemsSource="{Binding StartingLetters}"
+            NumberOfSideItems="2"
+            PeekAreaInsets="100">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame BackgroundColor="#9D0A0E"
-                               BorderColor="White"
-                               HasShadow="True" 
-                               VerticalOptions="CenterAndExpand">
+                        <Frame
+                            BackgroundColor="#9D0A0E"
+                            BorderColor="White"
+                            HasShadow="True"
+                            VerticalOptions="CenterAndExpand">
                             <StackLayout BackgroundColor="#9D0A0E">
-                                <!--<Label Text="{Binding}" 
-                                       Style="{StaticResource LetterButton}">
-                                    <Label.Behaviors>
-                                        <behaviours:EventToCommandBehavior EventName="ItemTapped" Command="{Binding FilterCommand}" EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />
-                                    </Label.Behaviors>
-                                </Label>-->
 
-                                <Button x:Name="StartingLetterButton"
-                                        Text="{Binding}"
-                                        Style="{StaticResource LetterButton}"
-                                        Command="{Binding Source={x:Reference ChallengePage}, Path=BindingContext.FilterCommand}"
-                                        CommandParameter="{Binding}" />
+                                <Button
+                                    x:Name="StartingLetterButton"
+                                    Command="{Binding Source={x:Reference ChallengePage}, Path=BindingContext.FilterCommand}"
+                                    CommandParameter="{Binding}"
+                                    Style="{StaticResource LetterButton}"
+                                    Text="{Binding}" />
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -85,69 +80,117 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
 
-        <CarouselView Grid.Row="1" ItemsSource="{Binding FilteredMonsters}" PeekAreaInsets="100">
+        <CarouselView
+            Grid.Row="1"
+            ItemsSource="{Binding FilteredMonsters}"
+            PeekAreaInsets="100">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
-                        <Frame BorderColor="Black" 
-                               Margin="8" 
-                               HasShadow="True" 
-                               VerticalOptions="CenterAndExpand"                                >
+                    <pancake:PancakeView
+                        Margin="10"
+                        BackgroundGradientEndColor="GhostWhite"
+                        BackgroundGradientStartColor="DarkRed"
+                        CornerRadius="50"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout>
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="50"/>
-                                    <RowDefinition Height="30"/>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
-                                <Image Source="{Binding Image}" IsVisible="{Binding HasImage}" Grid.Row="0"></Image>
-                                <Label Text="{Binding Name}" 
-                                       Grid.Row="1"
-                                       Style="{StaticResource MonsterName}" />
-                                <Label Text="{Binding SubHeader}" 
-                                       Style="{StaticResource MonsterSubHeading}"
-                                       Grid.Row="2"/>
+                                <Image
+                                    Grid.Row="0"
+                                    IsVisible="{Binding HasImage}"
+                                    Source="{Binding Image}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Style="{StaticResource MonsterName}"
+                                    Text="{Binding Name}" />
+                                <Label
+                                    Grid.Row="2"
+                                    Style="{StaticResource MonsterSubHeading}"
+                                    Text="{Binding SubHeader}" />
                                 <Grid Grid.Row="3">
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Style="{StaticResource StatHeader}" Text="STR" Grid.Row="0" Grid.Column="0"/>
-                                    <Label Style="{StaticResource StatHeader}" Text="DEX" Grid.Row="0" Grid.Column="1"/>
-                                    <Label Style="{StaticResource StatHeader}" Text="CON" Grid.Row="0" Grid.Column="2"/>
-                                    <Label Style="{StaticResource StatHeader}" Text="INT" Grid.Row="0" Grid.Column="3"/>
-                                    <Label Style="{StaticResource StatHeader}" Text="WIS" Grid.Row="0" Grid.Column="4"/>
-                                    <Label Style="{StaticResource StatHeader}" Text="CHA" Grid.Row="0" Grid.Column="5"/>
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Style="{StaticResource StatHeader}"
+                                        Text="STR" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Style="{StaticResource StatHeader}"
+                                        Text="DEX" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        Style="{StaticResource StatHeader}"
+                                        Text="CON" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="3"
+                                        Style="{StaticResource StatHeader}"
+                                        Text="INT" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="4"
+                                        Style="{StaticResource StatHeader}"
+                                        Text="WIS" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="5"
+                                        Style="{StaticResource StatHeader}"
+                                        Text="CHA" />
 
-                                    <Label Style="{StaticResource StatData}" Text="{Binding Strength}" Grid.Row="1" Grid.Column="0"/>
-                                    <Label Style="{StaticResource StatData}" Text="{Binding Dexterity}" Grid.Row="1" Grid.Column="1"/>
-                                    <Label Style="{StaticResource StatData}" Text="{Binding Constitution}" Grid.Row="1" Grid.Column="2"/>
-                                    <Label Style="{StaticResource StatData}" Text="{Binding Intelligence}" Grid.Row="1" Grid.Column="3"/>
-                                    <Label Style="{StaticResource StatData}" Text="{Binding Wisdom}" Grid.Row="1" Grid.Column="4"/>
-                                    <Label Style="{StaticResource StatData}" Text="{Binding Charisma}" Grid.Row="1" Grid.Column="5"/>
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Style="{StaticResource StatData}"
+                                        Text="{Binding Strength}" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Style="{StaticResource StatData}"
+                                        Text="{Binding Dexterity}" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="2"
+                                        Style="{StaticResource StatData}"
+                                        Text="{Binding Constitution}" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="3"
+                                        Style="{StaticResource StatData}"
+                                        Text="{Binding Intelligence}" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="4"
+                                        Style="{StaticResource StatData}"
+                                        Text="{Binding Wisdom}" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="5"
+                                        Style="{StaticResource StatData}"
+                                        Text="{Binding Charisma}" />
 
                                 </Grid>
                             </Grid>
-                            <!--<StackLayout>
-                                <Label Text="{Binding Name}" 
-                                       FontSize="14" 
-                                       FontAttributes="Bold" 
-                                       TextColor="Black"
-                                       HorizontalTextAlignment="Center"/>
-                                <Label Text="{Binding Type}"></Label>
-                                <Label Text="{Binding Alignment}"></Label>
-                                <Label Text="{Binding Size}"></Label>
-                            </StackLayout>-->
-                        </Frame>
-                    </StackLayout>
+                        </StackLayout>
+                    </pancake:PancakeView>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
