@@ -6,8 +6,72 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <StackLayout Padding="5">
+            <Label Text="Drones"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+            <CarouselView PeekAreaInsets="20" 
+                      ItemsSource="{Binding _items}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White"
+                           HasShadow="false"
+                           Padding="0,5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame CornerRadius="5"
+                                       BackgroundColor="#2196F3"
+                                       Grid.RowSpan="2"/>
+                                <Image Source="{Binding Image}"
+                                       Grid.Row="0"
+                                       Grid.ColumnSpan="2"
+                                       VerticalOptions="Start"/>
+                                <StackLayout Grid.Row="1"
+                                             Padding="5,0"
+                                             VerticalOptions="Start">
+                                    <Label Text="{Binding ItemText}"
+                                                FontSize="Title"
+                                                TextColor="White"
+                                                FontAttributes="Bold"/>
+                                    <Label Text="{Binding Description}"
+                                               FontSize="Body"
+                                               TextColor="#2b2a6f"
+                                               FontAttributes="Italic"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Price}"
+                                           FontSize="Medium"
+                                           TextColor="White"
+                                               FontAttributes="Bold"
+                                           VerticalOptions="Center"
+                                                HorizontalOptions="StartAndExpand"/>
+                                        <Frame BackgroundColor="#f9144c"
+                                           HorizontalOptions="End"
+                                               CornerRadius="10"
+                                               WidthRequest="40"
+                                               HeightRequest="40"
+                                               Padding="1">
+                                            <Label Text="+"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   FontSize="Title"
+                                                   TextColor="White"/>
+                                        </Frame>
+                                    </StackLayout>
+                                </StackLayout>
+                               
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
