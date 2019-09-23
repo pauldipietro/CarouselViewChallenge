@@ -10,8 +10,9 @@
              >
     <ContentPage.Content>
         <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50"
-                      Focused="CarouselView_Focused"
                       Scrolled="CarouselView_Scrolled"
+                      Focused="CarouselView_Focused"
+                      
                       >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
@@ -20,10 +21,10 @@
                         <!--BackgroundColor="#fff"-->
                         
                         <yummy:PancakeView  
-                                            Margin="15" 
+                                            Margin="{Binding Margin}" 
                                             CornerRadius="10"
                                             HasShadow="True" 
-                                            HeightRequest="450" 
+                                            HeightRequest="{Binding Height}" 
                                             VerticalOptions="CenterAndExpand"
                                             BackgroundColor="#fff"
                                             Padding="0"
@@ -44,7 +45,8 @@
                                                    Margin="10"
                                                    Padding="0"
                                                    BorderColor="Black"
-                                                   IsClippedToBounds="true">
+                                                   IsClippedToBounds="true"
+                                               >
                                             <Grid>
                                                 <Image Source="{Binding Img}"
                                                         Aspect="Fill"
