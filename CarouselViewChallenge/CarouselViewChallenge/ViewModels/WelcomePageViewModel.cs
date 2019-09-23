@@ -39,5 +39,7 @@ namespace CarouselViewChallenge.ViewModels
         {
             PropertyChanged?.Invoke(this, eventArgs);
         }
+
+        
     }
 }
