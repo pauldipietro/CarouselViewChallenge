@@ -16,7 +16,7 @@
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Frame BackgroundColor="White"
-                           HasShadow="True"
+                           HasShadow="false"
                            Padding="0,5">
                             <Grid>
                                 <Grid.RowDefinitions>
@@ -51,7 +51,7 @@
                                            TextColor="White"
                                                FontAttributes="Bold"
                                            VerticalOptions="Center"
-                                                HorizontalOptions="CenterAndExpand"/>
+                                                HorizontalOptions="StartAndExpand"/>
                                         <Frame BackgroundColor="#f9144c"
                                            HorizontalOptions="End"
                                                CornerRadius="10"

@@ -30,21 +30,21 @@ namespace CarouselViewChallenge.ViewModels
                     ItemText = "Movic Air Platinum",
                     Image = ImageSource.FromResource("CarouselViewChallenge.Resources.blackDrone.png"),
                     Description = "Creates highly accurate and detailed models of whatever area is being scanned.",
-                    Price = "$714,00"
+                    Price = "Price $714,00"
                 },
                 new ItemClass
                 {
                     ItemText = "AirCraft",
                     Image = ImageSource.FromResource("CarouselViewChallenge.Resources.Drone-PNG-Transparent-Picture.png"),
                     Description = "These models can be used to extrapolate accurate measurements of distance and volume from building locations",
-                    Price = "$1.230,00"
+                    Price = "Price $1.230,00"
                 },
                 new ItemClass
                 {
                     ItemText = "White Ghost",
                     Image = ImageSource.FromResource("CarouselViewChallenge.Resources.Drone-PNG-Image.png"),
                     Description = "Has a distinct advantage over traditional aerial photogrammetry by being able to penetrate dense canopies",
-                    Price = "$892,00"
+                    Price = "Price $892,00"
                 }
             };
         }
