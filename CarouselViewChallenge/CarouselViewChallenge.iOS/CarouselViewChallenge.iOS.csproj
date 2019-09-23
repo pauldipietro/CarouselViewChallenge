@@ -119,6 +119,10 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\le_02.jpg" />
+    <BundleResource Include="Resources\le_03.jpg" />
+    <BundleResource Include="Resources\le_00.jpg" />
+    <BundleResource Include="Resources\le_01.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -131,11 +135,14 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms.PancakeView">
+      <Version>1.2.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CarouselViewChallenge\CarouselViewChallenge.csproj">
-      <Project>{1AD32EAF-CE1F-497F-8598-87F19CDA3D10}</Project>
+      <Project>{A9F8B9B3-719F-4F40-9044-924E7B921409}</Project>
       <Name>CarouselViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

@@ -3,11 +3,78 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid ColumnSpacing="0" RowSpacing="0" Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <yummy:PancakeView HasShadow="false"
+                               BorderThickness="0"
+                               CornerRadius="30,30,0,30"
+                               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               Margin="10">
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.7*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <CarouselView ItemsSource="{Binding Images}" PeekAreaInsets="0"
+                              HorizontalScrollBarVisibility="Never"
+                              Grid.Column="0" Grid.ColumnSpan="2">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Aspect="AspectFill" />
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <StackLayout Margin="0,20,15,10"
+                             VerticalOptions="EndAndExpand"
+                             Grid.Column="1">
+                    <yummy:PancakeView x:Name="p1"
+                                       HeightRequest="40" WidthRequest="300"
+                                       CornerRadius="15">
+                        <Label Text="145 mph"
+                               FontAttributes="Bold" FontSize="14"
+                               Margin="10,5,10,5"
+                               VerticalTextAlignment="Center"
+                               VerticalOptions="Center" HorizontalOptions="Center" />
+                    </yummy:PancakeView>
+                    <yummy:PancakeView x:Name="p2"
+                                       HeightRequest="40" WidthRequest="300"
+                                       CornerRadius="15">
+                        <Label Text="217 hp"
+                               FontAttributes="Bold" FontSize="14"
+                               Margin="10,5,10,5"
+                               VerticalTextAlignment="Center"
+                               VerticalOptions="Center" HorizontalOptions="Center" />
+                    </yummy:PancakeView>
+                </StackLayout>
+            </Grid>
+            </yummy:PancakeView>
+
+            <StackLayout Grid.Row="1" Orientation="Vertical"
+                         VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                         Spacing="2.5"
+                         Margin="20,0,20,20">
+                <Label Text="Lotus Elise" FontSize="24" FontAttributes="Bold" />
+                <Label Text="Sport 220" FontSize="20" />
+                <Label Text="The purest useable sports car on sale remains one of the greatest driving experiences available at any price. The Elise Sport 220 builds on the many celebrated Elise virtues, blending agility, power, balance and communication into one compact expression of pure driving joy."
+                       Margin="0,5,0,0"
+                       FontSize="14"/>
+                <Button Text="configure"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        BackgroundColor="Orange"
+                        CornerRadius="10"
+                        WidthRequest="150"
+                        HorizontalOptions="Start" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
