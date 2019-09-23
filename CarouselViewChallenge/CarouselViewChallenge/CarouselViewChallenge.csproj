@@ -6,6 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\blackDrone.png" />
+    <None Remove="Resources\Drone-Background-PNG.png" />
+    <None Remove="Resources\Drone-PNG-Background-Image.png" />
+    <None Remove="Resources\Drone-PNG-Image.png" />
+    <None Remove="Resources\Drone-PNG-Transparent-Image.png" />
+    <None Remove="Resources\Drone-PNG-Transparent-Picture.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\blackDrone.png" />
+    <EmbeddedResource Include="Resources\Drone-Background-PNG.png" />
+    <EmbeddedResource Include="Resources\Drone-PNG-Background-Image.png" />
+    <EmbeddedResource Include="Resources\Drone-PNG-Image.png" />
+    <EmbeddedResource Include="Resources\Drone-PNG-Transparent-Image.png" />
+    <EmbeddedResource Include="Resources\Drone-PNG-Transparent-Picture.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.819712-pre2" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
   </ItemGroup>
