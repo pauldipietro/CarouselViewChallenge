@@ -12,7 +12,7 @@
     mc:Ignorable="d">
 
     <ContentPage.Resources>
-        <Style x:Key="LetterButton" TargetType="Button">
+        <Style x:Key="LetterButton" TargetType="Label">
             <Setter Property="BackgroundColor" Value="#9D0A0E" />
             <Setter Property="TextColor" Value="White" />
             <Setter Property="FontAttributes" Value="Bold" />
@@ -67,12 +67,17 @@
                             VerticalOptions="CenterAndExpand">
                             <StackLayout BackgroundColor="#9D0A0E">
 
-                                <Button
+                                <Label Style="{StaticResource LetterButton}" Text="{Binding}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding FilterCommand}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button
                                     x:Name="StartingLetterButton"
                                     Command="{Binding Source={x:Reference ChallengePage}, Path=BindingContext.FilterCommand}"
                                     CommandParameter="{Binding}"
                                     Style="{StaticResource LetterButton}"
-                                    Text="{Binding}" />
+                                    Text="{Binding}" />-->
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -92,7 +97,7 @@
                         BackgroundGradientStartColor="DarkRed"
                         CornerRadius="50"
                         VerticalOptions="FillAndExpand">
-                        <StackLayout>
+                        <StackLayout Padding="50">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -102,6 +107,7 @@
                                 </Grid.RowDefinitions>
                                 <Image
                                     Grid.Row="0"
+                                    HeightRequest="300"
                                     IsVisible="{Binding HasImage}"
                                     Source="{Binding Image}" />
                                 <Label
