@@ -5,9 +5,83 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="BlackColor">#000000</Color>
+            <Style x:Key="ItemTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="Margin" Value="12, 12, 12, 6" />
+            </Style>
+            <Style x:Key="ItemEmojiStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="150" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="Margin" Value="12, 12, 12, 6" />
+            </Style>
+            <DataTemplate x:Key="PostItemTemplate">
+                <StackLayout BackgroundColor="{StaticResource BlackColor}">
+                <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
+                        <StackLayout>
+                            <Label 
+                            Grid.Row="0" 
+                            Text="{Binding Text}"
+                            Style="{StaticResource ItemTitleStyle}"
+                            />
+                            <Label
+                            Grid.Row="1"
+                            Text="{Binding Emoji}" 
+                            Style="{StaticResource ItemEmojiStyle}" >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                Tapped="OnTapGestureRecognizerTapped"
+                                NumberOfTapsRequired="2" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label 
+                            Grid.Row="2"
+                            Text="{Binding Description}"   />                 
+
+                        </StackLayout>
+                    </Frame>
+            </StackLayout>
+            </DataTemplate>
+    </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout BackgroundColor="#cfd8dc">
             <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <CarouselView                 
+                CurrentItem="{Binding currentItem, Mode=TwoWay}"
+                ItemsSource="{Binding Items}"
+                ItemTemplate="{StaticResource PostItemTemplate}"
+                VerticalOptions="End"
+                x:Name="Carousel"
+                Visual="Material"
+                FlowDirection="LeftToRight"
+                PeekAreaInsets="50"
+                >
+                <CarouselView.EmptyView>
+                    <Label Text="No data to be displayed!"/>
+                </CarouselView.EmptyView>
+                
+                <CarouselView.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="12, 48, 0, 0" />
+                        <On Platform="Android" Value="12, 24, 12, 12" />
+                    </OnPlatform>
+                 </CarouselView.Margin>
+                <!--<CarouselView.PeekAreaInsets>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="0, 0, 200, 0" />
+                        <On Platform="Android" Value="0, 200, 200, 0" />
+                    </OnPlatform>
+                </CarouselView.PeekAreaInsets>-->
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
+        
 </ContentPage>
