@@ -123,8 +123,10 @@
                                         CornerRadius="10"
                                         Margin="13"
                                         HorizontalOptions="Center"
-                                        BackgroundColor="{StaticResource PrimaryColor}"
+                                        BackgroundColor="#333333"
                                         TextColor="{StaticResource SecondaryColor}"
+                                        FontSize="13"
+                                        FontAttributes="Bold"
                                         BorderColor="Black"
                                         BorderWidth="0"
                                         WidthRequest="100"/>
