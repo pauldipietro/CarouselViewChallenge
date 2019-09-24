@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -14,8 +15,7 @@ namespace CarouselViewChallenge.ViewModels
     {
         public FakeMonsterService _monsterService;
         private ObservableCollection<string> _startingLetters;
-        private string _selectedLetter;
-        private ObservableCollection<Monster> _monsters;
+        private List<Monster> _monsters;
         private ObservableCollection<Monster> _filteredMonsters;
 
         public CarouselViewChallengePageViewModel()
@@ -27,8 +27,8 @@ namespace CarouselViewChallenge.ViewModels
             };
 
             _monsterService = new FakeMonsterService();
-            Monsters = _monsterService.GetMonsters();
-            FilteredMonsters = Monsters;
+            _monsters = _monsterService.GetMonsters();
+            FilteredMonsters = new ObservableCollection<Monster>(_monsters);
 
             FilterCommand = new Command<string>(async (letter) => await FilterExecute(letter));
         }
@@ -38,21 +38,9 @@ namespace CarouselViewChallenge.ViewModels
 
         private async Task FilterExecute(string letter)
         {
-            var monsters = Monsters.Where(x => x.Name.StartsWith(letter));
+            var monsters = _monsters.Where(x => x.StartingLetter.Equals(letter, StringComparison.OrdinalIgnoreCase));
+            FilteredMonsters.Clear();
             FilteredMonsters = new ObservableCollection<Monster>(monsters);
-        }
-
-        public string SelectedLetter
-        {
-            get => _selectedLetter;
-            set
-            {
-                if (_selectedLetter != value)
-                {
-                    _selectedLetter = value;
-                    OnPropertyChanged(new PropertyChangedEventArgs("SelectedLetter"));
-                }
-            }
         }
 
         public ObservableCollection<string> StartingLetters
@@ -68,18 +56,6 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
-        public ObservableCollection<Monster> Monsters
-        {
-            get => _monsters;
-            set
-            {
-                if (_monsters != value)
-                {
-                    _monsters = value;
-                    OnPropertyChanged(new PropertyChangedEventArgs("Monsters"));
-                }
-            }
-        }
         public ObservableCollection<Monster> FilteredMonsters
         {
             get => _filteredMonsters;

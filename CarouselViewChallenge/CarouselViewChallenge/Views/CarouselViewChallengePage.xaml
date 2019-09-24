@@ -12,7 +12,7 @@
     mc:Ignorable="d">
 
     <ContentPage.Resources>
-        <Style x:Key="LetterButton" TargetType="Label">
+        <Style x:Key="LetterButton" TargetType="Button">
             <Setter Property="BackgroundColor" Value="#9D0A0E" />
             <Setter Property="TextColor" Value="White" />
             <Setter Property="FontAttributes" Value="Bold" />
@@ -57,6 +57,12 @@
             ItemsSource="{Binding StartingLetters}"
             NumberOfSideItems="2"
             PeekAreaInsets="100">
+            <CarouselView.ItemsLayout>
+                <ListItemsLayout
+                    Orientation="Horizontal"
+                    SnapPointsAlignment="Start"
+                    SnapPointsType="Mandatory" />
+            </CarouselView.ItemsLayout>
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -66,18 +72,12 @@
                             HasShadow="True"
                             VerticalOptions="CenterAndExpand">
                             <StackLayout BackgroundColor="#9D0A0E">
-
-                                <Label Style="{StaticResource LetterButton}" Text="{Binding}">
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding FilterCommand}" />
-                                    </Label.GestureRecognizers>
-                                </Label>
-                                <!--<Button
+                                <Button
                                     x:Name="StartingLetterButton"
                                     Command="{Binding Source={x:Reference ChallengePage}, Path=BindingContext.FilterCommand}"
                                     CommandParameter="{Binding}"
                                     Style="{StaticResource LetterButton}"
-                                    Text="{Binding}" />-->
+                                    Text="{Binding}" />
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -87,17 +87,26 @@
 
         <CarouselView
             Grid.Row="1"
+            Margin="10,0"
             ItemsSource="{Binding FilteredMonsters}"
             PeekAreaInsets="100">
+            <CarouselView.ItemsLayout>
+                <ListItemsLayout
+                    Orientation="Horizontal"
+                    SnapPointsAlignment="Start"
+                    SnapPointsType="Mandatory" />
+            </CarouselView.ItemsLayout>
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <pancake:PancakeView
                         Margin="10"
                         BackgroundGradientEndColor="GhostWhite"
-                        BackgroundGradientStartColor="DarkRed"
+                        BackgroundGradientStartColor="#DFD8C9"
+                        BorderColor="White"
+                        BorderThickness="5"
                         CornerRadius="50"
                         VerticalOptions="FillAndExpand">
-                        <StackLayout Padding="50">
+                        <StackLayout Padding="10,25,10,0">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -112,10 +121,12 @@
                                     Source="{Binding Image}" />
                                 <Label
                                     Grid.Row="1"
+                                    HorizontalOptions="Center"
                                     Style="{StaticResource MonsterName}"
                                     Text="{Binding Name}" />
                                 <Label
                                     Grid.Row="2"
+                                    HorizontalOptions="Center"
                                     Style="{StaticResource MonsterSubHeading}"
                                     Text="{Binding SubHeader}" />
                                 <Grid Grid.Row="3">

@@ -17,10 +17,5 @@ namespace CarouselViewChallenge.Views
             Vm = new CarouselViewChallengePageViewModel();
             BindingContext = Vm;
         }
-
-        private void StartingLetterButton_Clicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

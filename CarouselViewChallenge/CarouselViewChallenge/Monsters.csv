@@ -1,8 +1,9 @@
-﻿Aarakocra,Humanoid,NG,Medium,10,14,10,11,12,11,Aarakocra.jpg
-Aboleth,Aberration,LE,Large,21,9,15,18,15,18,Aboleth.jpg
+﻿Name,Type,Alignment,Size,Str,Dex,Con,Int,Wis,Cha,Image
+Aarakocra,Humanoid,NG,Medium,10,14,10,11,12,11,Aarakocra.png
+Aboleth,Aberration,LE,Large,21,9,15,18,15,18,Aboleth.png
 Abominable Yeti,Monstrosity,CE,Huge,24,10,22,9,13,9,
 Acolyte,Humanoid,ANY,Medium,10,10,10,10,14,11,
-Air Elemental,Elemental,N,Large,14,20,14,6,10,6,Airelemental.jpg
+Air Elemental,Elemental,N,Large,14,20,14,6,10,6,Airelemental.png
 Allosaurus,Beast,U,Large,19,13,17,2,12,5,Allosaurus.jpg
 Androsphinx,Monstrosity,LN,Large,22,10,20,16,18,23,Androsphinx.jpg
 Animated Armor,Construct,U,Medium,14,11,13,1,3,1,
@@ -18,12 +19,12 @@ Axe Beak,Beast,U,Large,14,12,12,2,10,5,
 Azer,Elemental,LN,Medium,17,12,15,12,13,10,Azer.jpg
 Baboon,Beast,U,Small,8,14,11,4,12,6,
 Badger,Beast,U,Tiny,4,11,12,2,12,5,
-Balor,Fiend (Demon),CE,Huge,26,15,22,20,16,22,Balor.jpg
+Balor,"Fiend (Demon)",CE,Huge,26,15,22,20,16,22,Balor.jpg
 Bandit,Humanoid,NOT LAWFUL,Medium,11,12,12,10,10,10,
 Bandit Captain,Humanoid,NOT LAWFUL,Medium,15,16,14,14,11,14,
 Banshee,Undead,CE,Medium,1,14,10,12,11,17,Banshee.jpg
-Barbed Devil,Fiend (Devil),LE,Medium,16,17,18,12,14,14,BarbedDevil.jpg
-Barlgura,Fiend (Demon),CE,Large,18,15,16,7,14,9,Barlgura.jpg
+Barbed Devil,"Fiend (Devil)",LE,Medium,16,17,18,12,14,14,BarbedDevil.jpg
+"Barlgura","Fiend (Demon)",CE,Large,18,15,16,7,14,9,Barlgura.jpg
 Basilisk,Monstrosity,U,Medium,16,8,15,2,8,7,Basilisk.jpg
 Bat,Beast,U,Tiny,2,15,8,2,12,4,Bat.jpg
 Bearded Devil,Fiend (Devil),LE,Medium,16,15,15,9,11,11,Beardeddevil.jpg
@@ -420,7 +421,7 @@ Wraith,Undead,NE,Medium,6,16,16,12,14,15,Wraith.jpg
 Wyvern,Dragon,U,Large,19,1,16,5,12,6,Wyvern.png
 Xorn,Elemental,N,Medium,17,10,22,11,10,11,Xorn.jpg
 Yeti,Monstrosity,CE,Large,18,13,16,8,12,7,Yeti.jpg
-Yochlol,Fiend (Demon),CE,Medium,15,14,18,13,15,15,Yochlol.jpg
+Yochlol,"Fiend (Demon)",CE,Medium,15,14,18,13,15,15,Yochlol.jpg
 Young Remorhaz,Monstrosity,U,Large,18,13,17,3,10,4,
 Yuan-Ti Abomination,Monstrosity,NE,Large,19,16,17,17,15,18,Yuanti.jpg
 Yuan-Ti Malison,Monstrosity,NE,Medium,16,14,13,14,12,16,YuantiMalison.png

@@ -15,6 +15,8 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.0.30" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.1.1" />
     <PackageReference Include="TinyCsvParser" Version="2.5.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />  

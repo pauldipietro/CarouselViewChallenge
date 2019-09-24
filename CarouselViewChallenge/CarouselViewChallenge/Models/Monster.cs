@@ -19,6 +19,7 @@ namespace CarouselViewChallenge.Models
 
         public bool HasImage => !string.IsNullOrEmpty(Image);
         public string SubHeader => $"{Size} {Type}, {Alignment}";
+        public string StartingLetter => Name.Substring(0, 1);
     }
 
     public class CsvMonsterMapping : CsvMapping<Monster>

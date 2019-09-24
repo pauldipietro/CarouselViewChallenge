@@ -145,4 +145,760 @@
       <Name>CarouselViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Aarakocra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Aboleth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Airelemental.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Allosaurus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Androsphinx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ankheg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Arcanaloth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Azer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Balor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banshee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Barbed_Devil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Barlgura.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Basilisk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Beardeddevil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Behir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Beholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Beholderzombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blackdragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Blackpudding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Blights.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BlinkDog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluedragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Blueslaad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bonedevil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bonenaga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\brassdragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bronzedragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bugbear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bulette.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bullywug.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cambion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CarrionCrawler.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Centaur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Chaindevil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Chasme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Chimera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Chuul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Claygolem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cloaker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cloudgiant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cockatrice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\copperdragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cornugon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Couatl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Crawlingclaw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cyclops.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Darkmantle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Deathdog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DeathKnight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Deathslaad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\deathtyrant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Demilich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Deva.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DisplacerBeast.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Djinn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Doppelganger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dracolich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dragonturtle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dretch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Drider.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Drow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dryad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Duergar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Duodrone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DustMephit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Earthelemental.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Efreeti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Empyrean.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Erinyes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ettercap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ettin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fireelemental.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\firegiant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fleshgolem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Flumph.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Flyingsnake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fomorian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\frostgiant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Galebduhr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gargoyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gasspore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gelatinouscube.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ghast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gianteagle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Giantfirebeetle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Giantspider.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gibberingmouther.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Githyanki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Githzerai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Glabrezu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gnoll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\golddragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gorgon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Goristro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Grayooze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Grayslaad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\greendragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\GreenHag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Greenslaad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Grell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Grick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Griffon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Grimlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Guardian_naga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Halfogre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Halfreddragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Harpy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hellhound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HelmedHorror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hezrou.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hillgiant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hippogriff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HobgoblinWarlord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Homunculus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hookhorror.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Horse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hydra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Hyena.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icedevil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\IceMephit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Imp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Intellectdevourer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\InvisibleStalker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Irongolem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Jackalwere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Kenku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\kobold.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Kraken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Kuotoa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Kuotoawhip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Kuotuaarchpriest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Lamia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Lemure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MagmaMephit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Magmin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Manes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\manticore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Marid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Marilith.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Mastiff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Medusa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Merfolk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Merrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Mezzoloth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Mimic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Mindflayer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Minotaur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Modron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Monodrone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MudMephit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Mummy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Myconids.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nalfeshnee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NightHag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nightmare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nothic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nycaloth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ochrejelly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Octopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ogre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Oni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Orc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Orog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Otyugh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\owlbear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pegasus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pentadrone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Peryton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Phase_spider.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Piercer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PitFiend.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pixie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Planetar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Plesiosaurus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pseudodragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PurpleWorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Quadrone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Quaggoth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Quasit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Quipper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rakshasa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\reddragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Redslaad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Remorhaz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Revenant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Roc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\roper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rustmonster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sahuagin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Salamander.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Satyr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Scarecrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SeaHag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shadow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shadowdragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shamblingmound.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ShieldGuardian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shrieker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\silverdragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Skeleton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SmokeMephit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Solar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Spectator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Specter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sphinx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Spineddevil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SpiritNaga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SteamMephit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Stirge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stonegiant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stonegolem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stormgiant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Succubus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Tarrasque.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Thrikreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Thug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Treant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Tridrone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Troglodyte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Troll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Twigblight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ultroloth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\UmberHulk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Unicorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\VampireSpawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Violetfungus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Vrock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Waterelemental.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Wyvern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Waterweird.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Werebear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Wereboar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Wererat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Weretiger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Werewolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\whitedragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Wight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Willowisp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Winterwolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Worg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Wraith.jpg" />
+  </ItemGroup>
 </Project>
