@@ -6,8 +6,78 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <StackLayout BackgroundColor="Gray">
+            <StackLayout BackgroundColor="White">
+                <Image Source="TimelineHeader.png"/>
+            </StackLayout>
+            
+            <StackLayout BackgroundColor="White" Margin="0,10,0,0">
+                <CarouselView
+                    ItemsSource="{Binding StoryCards}" 
+                    HeightRequest="200"
+                    HorizontalOptions="CenterAndExpand" 
+                    VerticalOptions="CenterAndExpand" 
+                    Margin="10"
+                    NumberOfSideItems="1"
+                    >
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <AbsoluteLayout Margin="5,0,0,0">
+                                    <Frame AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Padding="0"
+                                           CornerRadius="10"
+                                           IsClippedToBounds="True">
+                                        <Image Source="{Binding StoryImage}" Aspect="AspectFill"/>
+                                    </Frame>
+                                    
+                                    <Frame BackgroundColor="Blue"
+                                           AbsoluteLayout.LayoutBounds="1,1,38,38" 
+                                           AbsoluteLayout.LayoutFlags="None"
+                                           Padding="0"
+                                           CornerRadius="100"
+                                           BorderColor="Blue"
+                                           IsClippedToBounds="True" >
+                                    </Frame>                                    
+                                    
+                                    <Frame AbsoluteLayout.LayoutBounds="5,5,30,30" 
+                                           AbsoluteLayout.LayoutFlags="None"
+                                           Padding="0"
+                                           CornerRadius="100"
+                                           IsClippedToBounds="True">
+                                        <Image Source="{Binding ProfileImage}" Aspect="AspectFill"/>
+                                    </Frame>
+
+                                    <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,.2"  
+                                                 AbsoluteLayout.LayoutFlags="All">
+                                        <Label Text="{Binding Name}" 
+                                               FontAttributes="Bold" 
+                                               TextColor="White"
+                                               VerticalOptions="EndAndExpand"
+                                               HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                    
+                                    <Frame BackgroundColor="White"
+                                           AbsoluteLayout.LayoutBounds="1,1,38,38" 
+                                           AbsoluteLayout.LayoutFlags="None"
+                                           Padding="0"
+                                           CornerRadius="100"
+                                           IsClippedToBounds="True" 
+                                           IsVisible="{Binding IsUserStory}">
+                                        <Label Text="+" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Blue" FontSize="25"/>
+                                    </Frame>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+            </StackLayout>
+
+            <StackLayout BackgroundColor="White" Margin="0,10,0,0">
+                <Image Source="TimelinePosts.png"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
