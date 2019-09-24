@@ -15,6 +15,7 @@ namespace CarouselViewChallenge.Models
         //public Visibility ShowKey { get; set; }
         public bool BtnState { get; set; }
         public string Price { get; set; }
+        public string Genre { get; set; }
         //public Brush StateColor { get; set; }
     }
 }

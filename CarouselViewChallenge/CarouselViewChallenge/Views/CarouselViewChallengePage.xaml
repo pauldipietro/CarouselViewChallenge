@@ -8,10 +8,17 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
              >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- All the colors constant -->
+            <!--#555555-->
+            <Color x:Key="PrimaryColor">#555555</Color>
+            <Color x:Key="SecondaryColor">#FFA334</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <CarouselView ItemsSource="{Binding Games}" PeekAreaInsets="50"
                       Scrolled="CarouselView_Scrolled"
-                      Focused="CarouselView_Focused"
                       
                       >
             <CarouselView.ItemTemplate>
@@ -32,7 +39,7 @@
                             <StackLayout>
                                 <yummy:PancakeView CornerRadius="10"
                                                    VerticalOptions="StartAndExpand"
-                                                   BackgroundGradientStartColor="#555555"
+                                                   BackgroundGradientStartColor="{StaticResource PrimaryColor}"
                                                    BackgroundGradientEndColor="#333333"
                                                    >
                                     <StackLayout>
@@ -60,8 +67,8 @@
                                                Margin="0">
                                             <Grid>
                                                 <Label Text="{Binding Name}"
-                                                   TextColor="#FFA334" 
-                                                   FontSize="24" 
+                                                   TextColor="{StaticResource SecondaryColor}" 
+                                                   FontSize="18" 
                                                    FontAttributes="Bold" 
                                                    HorizontalTextAlignment="Center"
                                                    VerticalTextAlignment="Center"/>
@@ -72,8 +79,35 @@
                                     </StackLayout>
                                     
                                 </yummy:PancakeView>
+                                <StackLayout VerticalOptions="StartAndExpand">
 
+                                    <!-- Information genre -->
+                                    <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
+                                        <Label Text="Genre:"
+                                           Margin="2"
+                                           VerticalOptions="Center"/>
+                                        <Label FormattedText="{Binding Genre}" 
+                                           Margin="3"
+                                           VerticalOptions="End"
+                                           FontAttributes="Italic,Bold"/>
+                                    </StackLayout>
+                                    <!-- Information platform -->
+                                    <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
+                                        <Label Text="Platform:"
+                                           Margin="2"
+                                           VerticalOptions="Center"/>
+                                        <Label FormattedText="{Binding Platform}" 
+                                           Margin="3"
+                                           VerticalOptions="End"
+                                           FontAttributes="Italic,Bold"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                
+                                
 
+                                <!-- Information Price -->
                                 <StackLayout Orientation="Horizontal"
                                              HorizontalOptions="Center">
                                     <Label Text="Price:"
@@ -89,8 +123,10 @@
                                         CornerRadius="10"
                                         Margin="13"
                                         HorizontalOptions="Center"
-                                        BackgroundColor="#555555"
-                                        TextColor="WhiteSmoke"
+                                        BackgroundColor="{StaticResource PrimaryColor}"
+                                        TextColor="{StaticResource SecondaryColor}"
+                                        BorderColor="Black"
+                                        BorderWidth="0"
                                         WidthRequest="100"/>
 
 

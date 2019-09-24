@@ -71,10 +71,5 @@ namespace CarouselViewChallenge.Views
                 lastItem.Margin = marginBase;
             }
         }
-
-        private void CarouselView_Focused(object sender, FocusEventArgs e)
-        {
-
-        }
     }
 }
