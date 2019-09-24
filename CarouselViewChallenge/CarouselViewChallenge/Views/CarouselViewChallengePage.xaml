@@ -6,8 +6,67 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid BackgroundColor="#4682B4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Margin="25,15,25,10" Padding="10" Grid.Row="0">
+                <Label Text="Our Lifesaving Rules" HorizontalTextAlignment="Center" FontSize="29" TextColor="WhiteSmoke" Margin="0,0,0,10"/>
+                <Label Text="These Rules are in place to keep us safe and must never be broken." HorizontalTextAlignment="Center" FontSize="19" TextColor="WhiteSmoke" />
+            </StackLayout>
+
+            <CarouselView ItemsSource="{Binding Cards}" PeekAreaInsets="30" Grid.Row="1">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="#4682B4" >
+                            <Frame Padding="20"
+                               Margin="8,20,8,20"
+                               BorderColor="Transparent"
+                               CornerRadius="10"
+                               HasShadow="False"
+                               IsClippedToBounds="True"
+                               VerticalOptions="Center">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <ContentView Grid.Row="0">
+                                        <Label Text="{Binding Header}" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                    </ContentView>
+                                    <ContentView Grid.Row="1">
+                                        <ListView ItemsSource="{Binding CardDetails}" SeparatorVisibility="None"  HasUnevenRows="True">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <Grid >
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="Auto"/>
+                                                                <ColumnDefinition Width="*"/>
+                                                            </Grid.ColumnDefinitions>
+
+                                                            <Image Source="{Binding Icon}" HeightRequest="60" Grid.Column="0" Margin="10"/>
+                                                            <Label Text="{Binding Description}" Grid.Column="1" FontSize="Body" VerticalTextAlignment="Center"/>
+                                                        </Grid>
+                                                    </ViewCell>
+
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </ContentView>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <StackLayout Margin="25,20,25,20" Padding="20" Grid.Row="2">
+                <Label Text="Everyone Home Safe Every Day" HorizontalTextAlignment="Center" FontSize="24" TextColor="#FFF5F5F5" />
+            </StackLayout>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>
