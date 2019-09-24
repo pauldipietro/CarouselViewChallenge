@@ -4,20 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              mc:Ignorable="d"
-             BackgroundColor="#9dd7ef"
+             BackgroundColor="#e1f3fa"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
-        <Grid>
+        <Grid RowSpacing="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="45" />
+                <RowDefinition Height="20" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Text="Visit Portugal!" TextColor="#565656" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-            <CarouselView Grid.Row="1" ItemsSource="{Binding LocationsOfInterest}" PeekAreaInsets="30">
+            <Label Grid.Row="0" Text="Visit Portugal!" TextColor="#4d4d4d" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <Label Grid.Row="1" Text="The world is not in your books and maps; it's out there." TextColor="#777777" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" />
+            <CarouselView Grid.Row="2" ItemsSource="{Binding LocationsOfInterest}" PeekAreaInsets="30">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout BackgroundColor="Transparent">
-                            <Frame BorderColor="Gray" Margin="8" CornerRadius="6" Padding="15,10" HasShadow="True" HeightRequest="500" VerticalOptions="EndAndExpand">
+                        <StackLayout>
+                            <Frame BorderColor="#f5fbfd" Margin="8" CornerRadius="6" Padding="15,10" HasShadow="True" HeightRequest="500" VerticalOptions="EndAndExpand">
                                 <Grid Padding="5" RowSpacing="0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
@@ -31,7 +33,7 @@
 
                                     <StackLayout Grid.Row="1" Spacing="2">
                                         <Label Text="{Binding Name}" TextColor="DarkSlateGray" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                                        <Label FormattedText="{Binding Content}" FontSize="18" Margin="16"/>
+                                        <Label FormattedText="{Binding Content}" FontSize="16" Margin="4"/>
                                     </StackLayout>
 
                                     <Button CornerRadius="8" Grid.Row="2" TextColor="White" BackgroundColor="#297cbb" Text="Tickets &amp; tours" />

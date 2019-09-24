@@ -11,7 +11,7 @@ namespace CarouselViewChallenge.ViewModels
     {
         public string Name { get; set; }
         public string ImageURL { get; set; }
-        public FormattedString Content { get; set; }
+        public string Content { get; set; }
     };
 
     public class CarouselViewChallengePageViewModel : INotifyPropertyChanged
