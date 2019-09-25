@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -7,20 +8,25 @@
              x:Class="CarouselViewChallenge.Views.WelcomePage"
              xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
              Title="{Binding Title}">
-    <CarouselView ItemsSource="{Binding Sections}" PeekAreaInsets="50">
-        <CarouselView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout BackgroundColor="#cfd8dc">
-                    <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="450" VerticalOptions="CenterAndExpand">
-                        <StackLayout>
-                            <Label Text="{Binding Header}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                            <BoxView HeightRequest="2" BackgroundColor="DarkSlateGray"/>
-                            <Label FormattedText="{Binding Content}" FontSize="18" Margin="16"/>
-                            <Label Text="{Binding Emoji}" FontSize="128" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </DataTemplate>
-        </CarouselView.ItemTemplate>
-    </CarouselView>
+    <StackLayout>
+        <CarouselView ItemsSource="{Binding Sections}" PeekAreaInsets="50">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="#cfd8dc">
+                        <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="450"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Header}" FontSize="24" FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center" />
+                                <BoxView HeightRequest="2" BackgroundColor="DarkSlateGray" />
+                                <Label FormattedText="{Binding Content}" FontSize="18" Margin="16" />
+                                <Label Text="{Binding Emoji}" FontSize="128" HorizontalOptions="Center"
+                                       VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
 </ContentPage>
