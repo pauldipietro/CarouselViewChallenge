@@ -34,5 +34,6 @@
     <OnPlatform x:Key="MaterialDesignIcons"
                 x:TypeArguments="x:String"
                 Android="Fonts/materialdesignicons-webfont.ttf#Material Design Icons"
-                iOS="Fonts/materialdesignicons-webfont.ttf" />
+                iOS="Fonts/materialdesignicons-webfont.ttf" 
+                WinPhone="Assets/Fonts/materialdesignicons-webfont.ttf#Material Design Icons"/>
 </ResourceDictionary>

@@ -103,6 +103,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bmwlogowallpaper1.jpg" />
+    <Content Include="bmwvisionmnextconcep1.jpg" />
+    <Content Include="bmwvisionmnextconcep2.jpg" />
+    <Content Include="bmwvisionmnextconcep3.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -147,13 +151,37 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.819712-pre2" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms.PancakeView">
+      <Version>1.2.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarouselViewChallenge\CarouselViewChallenge.csproj">
       <Project>{A4F2D92A-6935-4F45-B655-CEC4616F90DF}</Project>
       <Name>CarouselViewChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\materialdesignicons-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\Roboto-Black.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\Roboto-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\Roboto-Light.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\Roboto-Medium.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\Roboto-Thin.ttf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
