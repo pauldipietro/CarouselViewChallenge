@@ -6,5 +6,17 @@
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.App">
     <Application.Resources>
+
+        <!--BackgroundGradients-->
+        <Color x:Key="BackgroundGradientStartColor">#E8D6CB</Color>
+        <Color x:Key="BackgroundGradientMidColor">#6683A9</Color>
+        <Color x:Key="BackgroundGradientEndColor">#192E4A</Color>
+
+
+        <!--CarouselGradients-->
+        <Color x:Key="CarouselGradientStartColor">#77abb7</Color>
+        <Color x:Key="CarouselGradientMidColor">#476d7c</Color>
+        <Color x:Key="CarouselGradientEndColor">#1d3e53</Color>
+
     </Application.Resources>
 </Application>

@@ -3,11 +3,129 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CarouselViewChallenge.ViewModels"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+    <ContentPage.BindingContext>
+        <local:CarouselViewChallengePageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <x:String x:Key="MountainImage">mountain_dark</x:String>
+
+            <Color x:Key="HeaderColor">#FFFFFF</Color>
+            <Color x:Key="ArrowColor">#768ea0</Color>
+            <Color x:Key="BorderColor">#d2d7dd</Color>
+            <Color x:Key="TagColor">#ffa318</Color>
+            <Color x:Key="TabSubTextColor">#FFFFFF</Color>
+            <Color x:Key="SubTextColor">#FFFFFF</Color>
+            <Color x:Key="TempLabelColor">#ffffff</Color>
+
+            <!--BackgroundGradients-->
+            <Color x:Key="BackgroundGradientStartColor">#E8D6CB</Color>
+            <Color x:Key="BackgroundGradientMidColor">#6683A9</Color>
+            <Color x:Key="BackgroundGradientEndColor">#192E4A</Color>
+            <!--Guage Gradients-->
+            <Color x:Key="GaugeGradientStartColor">#7A89B1</Color>
+            <Color x:Key="GaugeGradientEndColor">#FB7D80</Color>
+
+
+
+            <Color x:Key="PageBackgroundColor">LightGray</Color>
+            <Color x:Key="HeadingTextColor">Black</Color>
+            <Color x:Key="NormalTextColor">Black</Color>
+            <Style x:Key="LabelHeadingStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Padding" Value="10,0,0,0" />
+                <Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
+            </Style>
+            <Style x:Key="LabelTextStyle" TargetType="Label">
+
+                <Setter Property="FontSize" Value="Default"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Padding" Value="10,0" />
+                <Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <skia:SKCanvasView
+                x:Name="BackgroundGradient"
+                Grid.RowSpan="3"
+                 HorizontalOptions="Fill"
+                PaintSurface="BackgroundGradient_PaintSurface"
+                VerticalOptions="Fill" />
+
+
+            <CarouselView Grid.Row="1" ItemsSource="{Binding Sensors}" PeekAreaInsets="150">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand" Padding="12,0,32,0" Margin="0,0,0,0" >
+                            <Frame BackgroundColor="White" CornerRadius="20"  BorderColor="Black" Padding="0,0,0,0" Margin="0,0,0,0"  IsClippedToBounds="True" HasShadow="True">
+
+                                <Grid RowSpacing="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Margin="0,0,0,0" Padding="0,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="9*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1.5*" />
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="1*" />
+
+                                    </Grid.ColumnDefinitions>
+                                    <skia:SKCanvasView
+                                         x:Name="CarouselGradient"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                             Grid.RowSpan="4"
+                                             Grid.ColumnSpan="2"
+                                             HorizontalOptions="FillAndExpand"
+                                            Margin="0,0,0,0"
+                                             PaintSurface="CarouselGradient_PaintSurface"
+                                            VerticalOptions="Fill" />
+
+                                    <ffimageloading:CachedImage Grid.Row="0"  Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="2"
+                                                    
+			                Margin="0,0,0,10"
+			                DownsampleToViewSize="true"
+			                Source = "{Binding imageSrc}">
+                                        <ffimageloading:CachedImage.Transformations>
+                                            <fftransformations:CornersTransformation BottomLeftCornerSize="0" BottomRightCornerSize="0" TopLeftCornerSize="7" TopRightCornerSize="7" CornersTransformType="AllRounded" />
+
+                                        </ffimageloading:CachedImage.Transformations>
+                                    </ffimageloading:CachedImage>
+
+
+                                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding Name}" Style="{StaticResource LabelHeadingStyle}"></Label>
+                                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"  Text="{Binding TemperatureFormatted}"  Style="{StaticResource LabelTextStyle}"></Label>
+                                    <Label Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" Text="{Binding AvgTemperatureFormatted}"  Style="{StaticResource LabelTextStyle}"  ></Label>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
