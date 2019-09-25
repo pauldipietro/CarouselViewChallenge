@@ -7,6 +7,11 @@
              x:Class="CarouselViewChallenge.App">
     
     <Application.Resources>
-    
+        <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Material Design Icons" />
+            <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+        </OnPlatform>
+
+        <x:String x:Key="Play">&#xf10b;</x:String>
     </Application.Resources>
 </Application>

@@ -7,11 +7,13 @@
              x:Class="CarouselViewChallenge.Controls.CalendarCell">
     
   <ContentView.Content>
-      <Frame BorderColor="AliceBlue" >
-            <Grid>
-                <Label FontSize="Medium"
-                       HorizontalOptions="End" />
-            </Grid>
-        </Frame>
-  </ContentView.Content>
+        <Grid x:Name="background" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Margin="0,1">
+                <Label x:Name="date"
+                       FontSize="Micro"
+                       HorizontalOptions="End"
+                       VerticalOptions="Start"
+                       Margin="10"
+                       TextColor="Gray" />
+        </Grid>
+    </ContentView.Content>
 </ContentView>

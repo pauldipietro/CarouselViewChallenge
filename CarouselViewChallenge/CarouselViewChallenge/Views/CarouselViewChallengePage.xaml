@@ -4,36 +4,154 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             xmlns:custom="clr-namespace:CarouselViewChallenge.Controls"
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"             
              Visual="Material">
-    
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Days" TargetType="Label"  >
+                <Setter Property="FontSize" Value="Micro" />
+            </Style>
+            <Style x:Key="calCell" TargetType="Label" >
+                <Setter Property="FontSize" Value="Micro"/>
+                <Setter Property="HorizontalTextAlignment" Value="End"/>
+                <Setter Property="VerticalTextAlignment" Value="Start"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FlexLayout.Basis" Value="14.28%"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <CarouselView ItemsSource="{Binding Monkeys}" HeightRequest="125" NumberOfSideItems="1">
+        <StackLayout BackgroundColor="AliceBlue" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0,0,0,5">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="20, 10">
+                <Label x:Name="monthTitle" HorizontalOptions="StartAndExpand" FontSize="Small"/>
+                <Image x:Name="prevMonth" Source="Down" Rotation="90" HorizontalOptions="End" WidthRequest="20"/>
+                <Image x:Name="nextMonth" Source="Down" Rotation="-90" HorizontalOptions="End" WidthRequest="20" Margin="10, 0, 0, 0"/>
+            </StackLayout>
+
+            <BoxView BackgroundColor="LightGray" HeightRequest=".5"/>
+            <FlexLayout Direction="Row" JustifyContent="SpaceAround" Margin="0,5">
+                <Label Text="Sun" Style="{StaticResource Days}"/>
+                <Label Text="Mon" Style="{StaticResource Days}"/>
+                <Label Text="Tue" Style="{StaticResource Days}"/>
+                <Label Text="Wed" Style="{StaticResource Days}"/>
+                <Label Text="Thu" Style="{StaticResource Days}"/>
+                <Label Text="Fri" Style="{StaticResource Days}"/>
+                <Label Text="Sat" Style="{StaticResource Days}"/>
+            </FlexLayout>
+
+            <CarouselView
+                x:Name="Carousel"
+                ItemsSource="{Binding Months}"                
+                PositionChanged="Carousel_PositionChanged">
+                <CarouselView.ItemsLayout>
+                    <ListItemsLayout 
+                        Orientation="Horizontal"
+                        SnapPointsAlignment="Center"
+                        SnapPointsType="MandatorySingle"/>
+                </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="Black">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <Label Grid.Column="1"
-                            Text="{Binding Name}"
-                            FontAttributes="Bold"
-                            FontSize="14"/>
-                                <Label Grid.Row="1"
-                            Grid.Column="1"
-                            Text="{Binding Location}"
-                            FontAttributes="Italic"
-                            FontSize="12"
-                            VerticalOptions="End" />
-                            </Grid>
-                        </Frame>
+                        <FlexLayout x:Name="CalendarLayout" Wrap="Wrap" JustifyContent="Center" VerticalOptions="FillAndExpand" >
+                            <Label Style="{StaticResource calCell}" Text="{Binding c1}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c2}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c3}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c4}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c5}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c6}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c7}" />
+                          
+                            <Label Style="{StaticResource calCell}" Text="{Binding c8}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c9}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c10}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c11}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c12}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c13}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c14}" />
+
+                            <Label Style="{StaticResource calCell}" Text="{Binding c15}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c16}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c17}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c18}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c19}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c20}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c21}" />
+
+                            <Label Style="{StaticResource calCell}" Text="{Binding c22}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c23}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c24}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c25}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c26}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c27}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c28}" />
+
+                            <Label Style="{StaticResource calCell}" Text="{Binding c29}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c30}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c31}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c32}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c33}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c34}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c35}" />
+
+                            <Label Style="{StaticResource calCell}" Text="{Binding c36}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c37}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c38}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c39}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c40}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c41}" />
+                            <Label Style="{StaticResource calCell}" Text="{Binding c42}" />
+
+                            <!--<custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c1}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c2}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c3}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c4}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c5}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c6}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c7}"/>
+
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c8}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c9}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c10}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c11}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c12}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c13}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c14}"/>
+
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c15}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c16}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c17}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c18}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c19}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c20}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c21}"/>
+
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c22}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c23}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c24}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c25}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c26}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c27}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c28}"/>
+
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c29}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c30}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c31}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c32}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c33}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c34}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c35}"/>
+
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c36}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c37}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c38}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c39}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c40}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c41}"/>
+                            <custom:CalendarCell FlexLayout.Basis="14.28%" Date="{Binding c42}"/>-->
+                        </FlexLayout>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
