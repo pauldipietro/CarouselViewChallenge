@@ -1,13 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Label Text="test"></Label>
+            <CarouselView x:Name="cvArticles"
+                          FlowDirection="RightToLeft">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame IsClippedToBounds="False"
+                               HasShadow="False"
+                               Margin="5,3,5,3"
+                               Padding="0.1,5,0.1,0.1"
+                               BorderColor="Black"
+                               BackgroundColor="#f0f1f1">
+                            <StackLayout VerticalOptions="StartAndExpand"
+                                             Margin="0,0,0,15"
+                                             Padding="15,0,15,0">
+                                <Image Aspect="AspectFill"
+                                           Source="{Binding Image}">
+                                </Image>
+
+                                <Label Text="{Binding Article_title}"
+                                           TextColor="#5f5f5f"
+                                           FontSize="Title">
+                                </Label>
+
+                                <Label TextColor="#C82502"
+                                           Text="{Binding Category}"
+                                           FontSize="Caption">
+                                </Label>
+                                
+                                <ScrollView>
+                                    <Label FontAttributes="Bold"
+                                           Margin="7,10,7,0"
+                                           Text="{ Binding Content }">
+                                    </Label>
+                                </ScrollView>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

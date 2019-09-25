@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using CarouselViewChallenge.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,9 @@ namespace CarouselViewChallenge.Views
         public CarouselViewChallengePage()
         {
             InitializeComponent();
+            ArticleViewModel vm = new ArticleViewModel();
+            BindingContext = vm;
+            this.cvArticles.ItemsSource = vm.articles;
         }
     }
 }
