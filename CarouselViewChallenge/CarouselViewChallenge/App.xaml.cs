@@ -12,7 +12,8 @@ namespace CarouselViewChallenge
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+           // MainPage = new AppShell();
+            MainPage = new CarouselViewChallengePage();
         }
 
         protected override void OnStart()

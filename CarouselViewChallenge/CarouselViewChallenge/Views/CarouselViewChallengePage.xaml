@@ -4,10 +4,87 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             xmlns:viewmodel="clr-namespace:CarouselViewChallenge.ViewModels"
+             xmlns:local="clr-namespace:CarouselViewChallenge"
+             xmlns:movie="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <StackLayout>
+            <!--CarouselView x:Name="movieViewSource" HeightRequest="350" NumberOfSideItems="1"-->
+            <CarouselView x:Name="movieViewSource" >
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <movie:PancakeView                                                                 
+                                BackgroundGradientStartColor="#00e5ff"
+                                BackgroundGradientEndColor="#004ecb"
+                                BackgroundGradientAngle="90" 
+                            CornerRadius="0,60,60,0"
+                                Padding="6"     >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="130"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0"
+                                        Source="{Binding Poster}"
+                                        HeightRequest="420"
+                                        WidthRequest="140"
+                                        Aspect="AspectFit"                                        
+                                        VerticalOptions="Center" />
+                                <movie:PancakeView Grid.Column="0" Grid.Row="1" 
+                                        BorderColor="White" 
+                                        HasShadow="true" 
+                                        BorderDrawingStyle="Inside"                                        
+                                        BorderThickness="2"                                        
+                                        BackgroundGradientStartColor="#2E9AFE"
+                                        BackgroundGradientEndColor="#3A01DF"
+                                        BackgroundGradientAngle="0" 
+                                        CornerRadius="60,0,0,0"
+                                        Padding="6"   >
+                                    <StackLayout Padding="0,20,0,0" >
+                                        <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="18" />
+                                        <Label Text="{Binding Type}" FontAttributes="Italic" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="16"/>
+                                        <Label Text="{Binding Year}" FontAttributes="Italic" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="16"/>
+                                        </StackLayout>
+                                </movie:PancakeView>
+                            </Grid>
+                        </movie:PancakeView>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
+        <!--StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <ScrollView x:Name="scroll" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <CollectionView x:Name="movieViewSource">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                                <Grid Padding="2" ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image 
+                                        Source="{Binding Poster}"
+                                        HeightRequest="90"
+                                        WidthRequest="70"
+                                        Aspect="AspectFill"
+                                        VerticalOptions="Center" />
+                                    <StackLayout Grid.Column="1" VerticalOptions="Center" >
+                                        <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="20" />
+                                        <Label Text="{Binding Type}" FontAttributes="Italic" FontSize="16"/>
+                                        <Label Text="{Binding Year}" FontAttributes="Italic" FontSize="16"/>
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </StackLayout-->
     </ContentPage.Content>
 </ContentPage>
