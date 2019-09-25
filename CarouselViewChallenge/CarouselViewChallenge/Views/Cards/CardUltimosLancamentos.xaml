@@ -47,30 +47,30 @@
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                        <StackLayout BackgroundColor="White">
-                            <Grid Padding="0,4" RowSpacing="0" ColumnSpacing="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="6*" />
-                                    <ColumnDefinition Width="4*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
+                    <StackLayout BackgroundColor="White">
+                        <Grid Padding="0,4" RowSpacing="0" ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6*" />
+                                <ColumnDefinition Width="4*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="1" />
+                            </Grid.RowDefinitions>
 
-                                <Label Text="{Binding Descricao}" FontSize="Micro"
+                            <Label Text="{Binding Descricao}" FontSize="Micro"
                                        Style="{StaticResource LabelCampoTabela}" Grid.Column="0" Grid.Row="0"
                                        HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" />
-                                <Label Text="{Binding Data}" Style="{StaticResource LabelCampoTabela}"
+                            <Label Text="{Binding Data}" Style="{StaticResource LabelCampoTabela}"
                                        TextColor="Black" Grid.Column="0" Grid.Row="1"
                                        HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" />
-                                <Label Style="{StaticResource LabelCampoTabela}" FontSize="Micro"
+                            <Label Style="{StaticResource LabelCampoTabela}" FontSize="Micro"
                                        TextColor="{Binding CorTexto}" Grid.Column="1" Grid.RowSpan="2" Grid.Row="0"
                                        HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"
                                        Text="{Binding Valor, StringFormat='{0:C2}'}" />
-                            </Grid>
-
-                        </StackLayout>
+                        </Grid>
+                    </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

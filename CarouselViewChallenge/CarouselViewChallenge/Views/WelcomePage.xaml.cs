@@ -135,51 +135,7 @@ namespace CarouselViewChallenge.Views
                     Emoji = "🤔"
                 },
             };
-            var sb = new StringBuilder();
-            sb.Append("●");
-            for (int i = 1; i < VM.Sections.Count; i++)
-            {
-                sb.Append("○");
-            }
-
-            pontinhos.Text = sb.ToString();
             BindingContext = VM;
-        }
-
-        private void CarouselView_OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
-        {
-            var a = 1;
-        }
-
-        private void CarouselView_OnPositionChanged(object sender, PositionChangedEventArgs e)
-        {
-            if (BindingContext is WelcomePageViewModel vm)
-            {
-                var sb = new StringBuilder();
-                for (int i = 0; i < vm.Sections.Count; i++)
-                {
-                    if (i == e.CurrentPosition)
-                    {
-                        sb.Append("●");
-                        continue;
-                    }
-
-                    sb.Append("○");
-                }
-
-                pontinhos.Text = sb.ToString();
-            }
-        }
-
-        private void ItemsView_OnScrolled(object sender, ItemsViewScrolledEventArgs e)
-        {
-            Debug.WriteLine("HorizontalDelta: " + e.HorizontalDelta);
-            //Debug.WriteLine("VerticalDelta: " + e.VerticalDelta);
-            Debug.WriteLine("HorizontalOffset: " + e.HorizontalOffset);
-            //Debug.WriteLine("VerticalOffset: " + e.VerticalOffset);
-            //Debug.WriteLine("FirstVisibleItemIndex: " + e.FirstVisibleItemIndex);
-            //Debug.WriteLine("CenterItemIndex: " + e.CenterItemIndex);
-            //Debug.WriteLine("LastVisibleItemIndex: " + e.LastVisibleItemIndex);
         }
     }
 }

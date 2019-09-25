@@ -40,7 +40,7 @@ namespace CarouselViewChallenge.ViewModels
         {
             get
             {
-                return _dotSections;
+               return _dotSections;
             }
             set
             {
@@ -50,22 +50,6 @@ namespace CarouselViewChallenge.ViewModels
                     OnPropertyChanged(new PropertyChangedEventArgs("DotSections"));
                 }
             }
-        }
-
-        public void setCarrouselPosition(int pos)
-        {
-            var sb = new StringBuilder();
-            for (int i = 0; i < _sections.Count; i++)
-            {
-                if (i == pos)
-                {
-                    sb.Append("●");
-                    continue;
-                }
-                sb.Append("○");
-            }
-
-            DotSections = sb.ToString();
         }
 
         private void OnPropertyChanged(PropertyChangedEventArgs eventArgs)

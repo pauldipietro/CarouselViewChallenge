@@ -9,9 +9,7 @@
              xmlns:vm="clr-namespace:CarouselViewChallenge.ViewModels"
              Title="{Binding Title}">
     <StackLayout>
-        <CarouselView ItemsSource="{Binding Sections}" PeekAreaInsets="50"
-                      CurrentItemChanged="CarouselView_OnCurrentItemChanged"
-                      PositionChanged="CarouselView_OnPositionChanged" Scrolled="ItemsView_OnScrolled">
+        <CarouselView ItemsSource="{Binding Sections}" PeekAreaInsets="50">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="#cfd8dc">
@@ -22,7 +20,7 @@
                                        HorizontalTextAlignment="Center" />
                                 <BoxView HeightRequest="2" BackgroundColor="DarkSlateGray" />
                                 <Label FormattedText="{Binding Content}" FontSize="18" Margin="16" />
-                                <Label Text="{Binding Emoji}" FontSize="125" HorizontalOptions="Center"
+                                <Label Text="{Binding Emoji}" FontSize="128" HorizontalOptions="Center"
                                        VerticalOptions="CenterAndExpand" />
                             </StackLayout>
                         </Frame>
@@ -30,8 +28,5 @@
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Label x:Name="pontinhos" />
-        </StackLayout>
     </StackLayout>
 </ContentPage>
