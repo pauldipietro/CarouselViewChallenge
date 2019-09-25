@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CarouselViewChallenge.Styles.Fonts">
+    <!--Roboto-->
+    <OnPlatform x:Key="RobotoRegular"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Regular.ttf#Roboto"
+                iOS="Fonts/Roboto-Regular" />
+    <OnPlatform x:Key="RobotoLight"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Light.ttf#Roboto Light"
+                iOS="Fonts/Roboto-Light" />
+    <OnPlatform x:Key="RobotoBold"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Bold.ttf#Roboto Bold"
+                iOS="Fonts/Roboto-Bold" />
+    <OnPlatform x:Key="RobotoBlack"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Black.ttf#Roboto Black"
+                iOS="Fonts/Roboto-Black" />
+    <OnPlatform x:Key="RobotoMedium"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Medium.ttf#Roboto Medium"
+                iOS="Fonts/Roboto-Medium" />
+    <OnPlatform x:Key="RobotoThin"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Thin.ttf#Roboto Thin"
+                iOS="Fonts/Roboto-Thin" />
+    <!--MaterialDesignIcons-->
+    <OnPlatform x:Key="MaterialDesignIcons"
+                x:TypeArguments="x:String"
+                Android="Fonts/materialdesignicons-webfont.ttf#Material Design Icons"
+                iOS="Fonts/materialdesignicons-webfont.ttf" />
+</ResourceDictionary>

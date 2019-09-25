@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CarouselViewChallenge.ViewModels;
 
 namespace CarouselViewChallenge.Views
 {
@@ -15,6 +11,7 @@ namespace CarouselViewChallenge.Views
         public CarouselViewChallengePage()
         {
             InitializeComponent();
+            BindingContext = new CarouselViewChallengeViewModel();
         }
     }
 }
