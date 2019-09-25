@@ -3,7 +3,6 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace CarouselViewChallenge.Views
 {
@@ -21,7 +20,7 @@ namespace CarouselViewChallenge.Views
             {
                 new Section
                 {
-                    Header = "Thank you for participating in the CarouselView Challenge!",
+                    Header = "😈 Thank you for participating in the CarouselView Challenge!",
                     Content = new FormattedString
                     {
                         Spans =
@@ -36,7 +35,8 @@ namespace CarouselViewChallenge.Views
                                 FontAttributes = FontAttributes.Italic
                             }
                         }
-                    }
+                    },
+                    Emoji = "😈"
                 },
                 new Section
                 {

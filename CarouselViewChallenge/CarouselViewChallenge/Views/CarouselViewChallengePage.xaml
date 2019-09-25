@@ -3,11 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mediaPlayer="clr-namespace:Xamarians.MediaPlayer;assembly=Xamarians.MediaPlayer"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <CarouselView x:Name="MyCarousel" ItemsSource="{Binding Podcasts}" PeekAreaInsets="50" BackgroundColor="Black">
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout >
+                    <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="600" VerticalOptions="CenterAndExpand">
+                        <StackLayout>
+                            <Image Source="{Binding ImageUrl}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding BindingContext.GetEpisodes, Source={x:Reference Name=MyCarousel}}" 
+                                        CommandParameter="{Binding Url}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+        </CarouselView>
+        <CarouselView x:Name="MyCarouselChild" ItemsSource="{Binding Episodes}" PeekAreaInsets="50" BackgroundColor="#202020" >
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout >
+                            <Frame BorderColor="White" Margin="8" HasShadow="True" HeightRequest="200" WidthRequest="300" HorizontalOptions="Center">
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" FontSize="20" TextColor="Aqua"></Label>
+                                <Label Text="{Binding Description}" FontSize="14" TextColor="Aqua"></Label>
+                                    <Label Text="{Binding Duration}" TextColor="Aqua"></Label>
+                                     <Button Text="Play" Command="{Binding BindingContext.PlayCommand, Source={x:Reference Name=MyCarouselChild}}" 
+                                        CommandParameter="{Binding Url}" BackgroundColor="Orange"></Button>
+                                   
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        <mediaPlayer:VideoPlayer Source="{Binding PlayUrl}" AutoPlay="True" />
+    </StackLayout>
 </ContentPage>
