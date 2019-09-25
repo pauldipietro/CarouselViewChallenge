@@ -5,9 +5,82 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+    <ContentPage.Resources>
+        <Color x:Key="TextColor">Black</Color>
+        <Color x:Key="SecondaryColor">#B5B5B5</Color>
+        <Color x:Key="BackgroundColor">White</Color>
+        <Color x:Key="StarColor">#FFBF00</Color>
+        <Color x:Key="FavoriteColor">#FAACC1</Color>
+
+        <x:String x:Key="MagnifyingGlass">#xf349;</x:String>
+        <x:String x:Key="Star">#xf4ce;</x:String>
+        <x:String x:Key="HeartFilled">#xf2d1;</x:String>
+        <x:String x:Key="HeartOutline">#xf2d5;</x:String>
+
+        <x:Double x:Key="CornerRadius">22</x:Double>
+
+        <OnPlatform x:TypeArguments="x:String"
+                    Android="materialdesignicons-webfont.ttf#Material Design Icons"
+                    iOS="Material Design Icons"
+                    x:Key="MaterialFont" />
+
+        <Style TargetType="Button"
+               x:Key="MaterialButton">
+            <Setter Property="FontFamily" Value="{StaticResource MaterialFont}" />
+            <Setter Property="FontSize" Value="20.0" />
+            <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+        </Style>
+        <Style TargetType="Label" x:Key="TitleLabel">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="FontSize" Value="20.0" />
+        </Style>
+
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <CarouselView ItemsSource="{Binding Cities}" PeekAreaInsets="30">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="32">
+                        <Frame Padding="0"
+                               IsClippedToBounds="True"
+                               HasShadow="True">
+                            <Image Source="{Binding CityImage}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="320" />
+                        </Frame>
+                        <Frame HeightRequest="70"
+                               Margin="24,-64,24,0"
+                               Padding="20,12,16,12"
+                               BackgroundColor="White"
+                               CornerRadius="22"
+                               HasShadow="true">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0"
+                                             Margin="0">
+                                    <Label Text="{Binding CityName}"
+                                           Style="{StaticResource TitleLabel}" />
+                                    <Label Text="{Binding Country}"
+                                           FontSize="14"
+                                           TextColor="{StaticResource SecondaryColor}" />
+                                </StackLayout>
+                                <Button Text="{Binding FavoriteIcon}"
+                                        Command="{Binding ChangeFavoriteStatus}"
+                                        Style="{StaticResource MaterialButton}"
+                                        TextColor="{StaticResource FavoriteColor}"
+                                        Grid.Column="1" />
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </ContentPage.Content>
 </ContentPage>

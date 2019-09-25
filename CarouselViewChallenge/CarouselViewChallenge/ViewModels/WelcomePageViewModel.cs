@@ -14,9 +14,17 @@ namespace CarouselViewChallenge.ViewModels
         public string Emoji { get; set; }
     };
 
-    public class WelcomePageViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(PropertyChangedEventArgs eventArgs)
+        {
+            PropertyChanged?.Invoke(this, eventArgs);
+        }
+    }
+
+    public class WelcomePageViewModel : BaseViewModel
+    {
 
         private ObservableCollection<Section> _sections;
         public ObservableCollection<Section> Sections
@@ -35,9 +43,5 @@ namespace CarouselViewChallenge.ViewModels
             }
         }
 
-        private void OnPropertyChanged(PropertyChangedEventArgs eventArgs)
-        {
-            PropertyChanged?.Invoke(this, eventArgs);
-        }
     }
 }

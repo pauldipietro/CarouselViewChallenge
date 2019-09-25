@@ -6,12 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
