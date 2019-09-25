@@ -5,9 +5,59 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Modify"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+       <ScrollView Margin="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding Plant.Name}"  HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    
+                    <CarouselView ItemsSource="{Binding Plant.Images}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout BackgroundColor="LightGray">
+                                    <Frame BorderColor="#00857D" Margin="8" CornerRadius="6" HasShadow="True" VerticalOptions="CenterAndExpand">
+                                        <Image Source="{Binding .}"  Aspect="AspectFill"/>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <Label Text="种类" FontAttributes="Bold" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.Type}" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="花期" FontAttributes="Bold" Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.FlowerDate}" Grid.Row="3" Grid.Column="1"/>
+                    <Label Text="花色" FontAttributes="Bold" Grid.Row="4" Grid.Column="0"/>
+                    <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1" HeightRequest="21">
+                        <BoxView BackgroundColor="#e3051b" HeightRequest="18" WidthRequest="18" CornerRadius="6" Margin="1"
+                                               VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <BoxView BackgroundColor="#d12f02" HeightRequest="18" WidthRequest="18" CornerRadius="6" Margin="1"
+                                               VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <BoxView BackgroundColor="PaleVioletRed" HeightRequest="18" WidthRequest="18" CornerRadius="6" Margin="1"
+                                               VerticalOptions="Center" HorizontalOptions="Start"/>
+                    </StackLayout>
+                    <Label Text="果期" FontAttributes="Bold" Grid.Row="5" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.FruitDate}" Grid.Row="5" Grid.Column="1"/>
+                    <Label Text="耐寒区" FontAttributes="Bold" Grid.Row="6" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.HardinessZone}" Grid.Row="6" Grid.Column="1"/>
+                    <Label Text="{Binding Plant.Description}"  
+                           VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+                </Grid>
+       </ScrollView>
     </ContentPage.Content>
 </ContentPage>
