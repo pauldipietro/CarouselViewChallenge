@@ -1,13 +1,191 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+<ContentPage
+    x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <ScrollView Orientation="Vertical">
+            <Grid Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="230" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="120" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+
+                <SearchBar
+                    Grid.Row="0"
+                    BackgroundColor="#EFF0F2"
+                    Placeholder="Search Courses"
+                    VerticalOptions="FillAndExpand" />
+
+                <Label
+                    Grid.Row="1"
+                    CharacterSpacing="1"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="Popular Courses"
+                    TextColor="#100b36"
+                    VerticalTextAlignment="Center" />
+
+                <CarouselView
+                    Grid.Row="2"
+                    HorizontalScrollBarVisibility="Never"
+                    ItemsLayout="HorizontalList"
+                    ItemsSource="{Binding CorousalClassList}"
+                    PeekAreaInsets="20,0,40,0">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5">
+                                <pancake:PancakeView
+                                    BackgroundGradientAngle="135"
+                                    BackgroundGradientEndColor="{Binding GradientStartColor}"
+                                    BackgroundGradientStartColor="{Binding GradientEndColor}"
+                                    CornerRadius="10"
+                                    Elevation="1"
+                                    IsClippedToBounds="True"
+                                    WidthRequest="200">
+                                    <Grid Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="2*" />
+                                            <RowDefinition Height="1.2*" />
+                                        </Grid.RowDefinitions>
+                                        <ffimageloading:CachedImage
+                                            Grid.Row="0"
+                                            DownsampleToViewSize="true"
+                                            HorizontalOptions="Start"
+                                            Source="{Binding ImageUrl}"
+                                            VerticalOptions="Center"
+                                            WidthRequest="60" />
+                                        <Label
+                                            Grid.Row="1"
+                                            FontAttributes="Bold"
+                                            FontSize="25"
+                                            Text="{Binding Text}"
+                                            TextColor="White"
+                                            VerticalTextAlignment="Center" />
+                                        <StackLayout Grid.Row="2" Orientation="Horizontal">
+                                            <Label
+                                                FontSize="15"
+                                                HorizontalTextAlignment="Start"
+                                                Text="{Binding Count}"
+                                                TextColor="White"
+                                                VerticalTextAlignment="Center" />
+
+                                            <Frame
+                                                Margin="10"
+                                                Padding="5"
+                                                CornerRadius="15"
+                                                HorizontalOptions="EndAndExpand">
+
+                                                <Label
+                                                    FontAttributes="Bold"
+                                                    HorizontalTextAlignment="Center"
+                                                    Text="{Binding Amount}"
+                                                    WidthRequest="50" />
+                                            </Frame>
+                                        </StackLayout>
+                                    </Grid>
+
+                                </pancake:PancakeView>
+                            </Grid>
+
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+
+
+                </CarouselView>
+
+
+                <StackLayout Grid.Row="3" Orientation="Horizontal">
+                    <Label
+                        CharacterSpacing="1"
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        Text="Top Categories"
+                        TextColor="#040122"
+                        VerticalTextAlignment="Center" />
+
+                    <Label
+                        CharacterSpacing="0.6"
+                        FontSize="18"
+                        HorizontalOptions="EndAndExpand"
+                        Text="View All"
+                        TextColor="#372972"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+
+
+
+                <CollectionView
+                    Grid.Row="4"
+                    HorizontalScrollBarVisibility="Never"
+                    ItemsLayout="HorizontalList"
+                    ItemsSource="{Binding CategoryClassList}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5">
+                                <pancake:PancakeView
+                                    BackgroundGradientAngle="135"
+                                    BackgroundGradientEndColor="{Binding GradientStartColor}"
+                                    BackgroundGradientStartColor="{Binding GradientEndColor}"
+                                    CornerRadius="10"
+                                    Elevation="1"
+                                    IsClippedToBounds="True"
+                                    WidthRequest="150">
+                                    <Grid Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="2*" />
+                                            <RowDefinition Height="1.2*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <ffimageloading:CachedImage
+                                            Grid.Row="0"
+                                            DownsampleToViewSize="true"
+                                            HorizontalOptions="Start"
+                                            Source="{Binding ImageUrl}"
+                                            VerticalOptions="Center"
+                                            WidthRequest="60" />
+                                        <Label
+                                            Grid.Row="1"
+                                            CharacterSpacing="0.7"
+                                            FontAttributes="Bold"
+                                            FontSize="18"
+                                            Text="{Binding Text}"
+                                            TextColor="White"
+                                            VerticalTextAlignment="Center" />
+
+                                        <Label
+                                            Grid.Row="2"
+                                            FontSize="13"
+                                            Text="{Binding SubText}"
+                                            TextColor="White"
+                                            VerticalTextAlignment="Center" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+                            </Grid>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+
+                </CollectionView>
+
+
+
+            </Grid>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
