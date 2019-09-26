@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace CarouselViewChallenge.ViewModels
@@ -31,9 +33,13 @@ namespace CarouselViewChallenge.ViewModels
                     IsFavorite = false,
                 },
             };
+            Index = "1";
         }
 
         private ObservableCollection<City> _cities;
+        private City _currentCity;
+        private string _index;
+
         public ObservableCollection<City> Cities
         {
             get
@@ -49,9 +55,34 @@ namespace CarouselViewChallenge.ViewModels
                 }
             }
         }
+
+        public string Index
+        {
+            get => _index; set
+            {
+                _index = value;
+
+                OnPropertyChanged(nameof(Index));
+            }
+        }
+
+        public City CurrentCity
+        {
+            get
+            {
+                return _currentCity;
+            }
+            set
+            {
+                _currentCity = value;
+                var index = Cities.IndexOf(_currentCity);
+                Index = (index + 1).ToString();
+                OnPropertyChanged(nameof(CurrentCity));
+            }
+        }
     }
 
-    public class City : BaseViewModel
+    public class City : BaseViewModel, IEquatable<City>
     {
         private bool _isFavorite;
 
@@ -64,14 +95,42 @@ namespace CarouselViewChallenge.ViewModels
         public string CityName { get; set; }
         public string Country { get; set; }
         public string FavoriteIcon => IsFavorite ? "\uf2d1" : "\uf2d5";
-        public bool IsFavorite { get => _isFavorite; 
-            set 
-            { 
+        public bool IsFavorite
+        {
+            get => _isFavorite;
+            set
+            {
                 _isFavorite = value;
                 OnPropertyChanged(nameof(FavoriteIcon));
-            } 
+            }
         }
 
         public Command ChangeFavoriteStatus { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as City);
+        }
+
+        public bool Equals(City other)
+        {
+            return other != null &&
+                   CityImage == other.CityImage &&
+                   CityName == other.CityName &&
+                   Country == other.Country &&
+                   IsFavorite == other.IsFavorite &&
+                   EqualityComparer<Command>.Default.Equals(ChangeFavoriteStatus, other.ChangeFavoriteStatus);
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -870885539;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CityImage);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CityName);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Country);
+            hashCode = hashCode * -1521134295 + IsFavorite.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<Command>.Default.GetHashCode(ChangeFavoriteStatus);
+            return hashCode;
+        }
     }
 }

@@ -26,67 +26,83 @@
 
         <Style TargetType="Button"
                x:Key="MaterialButton">
-            <Setter Property="FontFamily" Value="{StaticResource MaterialFont}" />
-            <Setter Property="FontSize" Value="20.0" />
-            <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            <Setter Property="FontFamily"
+                    Value="{StaticResource MaterialFont}" />
+            <Setter Property="FontSize"
+                    Value="20.0" />
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource BackgroundColor}" />
         </Style>
-        <Style TargetType="Label" x:Key="TitleLabel">
-            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
-            <Setter Property="FontSize" Value="20.0" />
+        <Style TargetType="Label"
+               x:Key="TitleLabel">
+            <Setter Property="TextColor"
+                    Value="{StaticResource TextColor}" />
+            <Setter Property="FontSize"
+                    Value="20.0" />
         </Style>
 
     </ContentPage.Resources>
     <ContentPage.Content>
-        <CarouselView ItemsSource="{Binding Cities}" PeekAreaInsets="64">
-            <CarouselView.ItemsLayout>
-                <ListItemsLayout Orientation="Horizontal"
-                                 SnapPointsAlignment="Center"
-                                 SnapPointsType="MandatorySingle"
-                                 ItemSpacing="4" />
-            </CarouselView.ItemsLayout>
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout >
-                        <Frame Padding="0"
-                               IsClippedToBounds="True"
-                               HasShadow="True" Margin="8">
-                            <Image Source="{Binding CityImage}"
-                                   Aspect="AspectFill"
-                                   HeightRequest="320" />
-                        </Frame>
-                        <Frame HeightRequest="70"
-                               Margin="24,-64,24,0"
-                               Padding="20,12,16,12"
-                               BackgroundColor="White"
-                               CornerRadius="22"
-                               HasShadow="true">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto" />
-                                    <RowDefinition Height="auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="auto" />
-                                </Grid.ColumnDefinitions>
-                                <StackLayout Grid.Column="0"
-                                             Margin="0">
-                                    <Label Text="{Binding CityName}"
-                                           Style="{StaticResource TitleLabel}" />
-                                    <Label Text="{Binding Country}"
-                                           FontSize="14"
-                                           TextColor="{StaticResource SecondaryColor}" />
-                                </StackLayout>
-                                <Button Text="{Binding FavoriteIcon}"
-                                        Command="{Binding ChangeFavoriteStatus}"
-                                        Style="{StaticResource MaterialButton}"
-                                        TextColor="{StaticResource FavoriteColor}"
-                                        Grid.Column="1" />
-                            </Grid>
-                        </Frame>
-                    </StackLayout>
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <CarouselView ItemsSource="{Binding Cities}"
+                          PeekAreaInsets="0"
+                          CurrentItem="{Binding CurrentCity}">
+                <CarouselView.ItemsLayout>
+                    <ListItemsLayout Orientation="Horizontal"
+                                     SnapPointsAlignment="Center"
+                                     SnapPointsType="MandatorySingle"
+                                     ItemSpacing="4" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame Padding="0"
+                                   IsClippedToBounds="True"
+                                   HasShadow="True"
+                                   Margin="8">
+                                <Image Source="{Binding CityImage}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="320" />
+                            </Frame>
+                            <Frame HeightRequest="70"
+                                   Margin="24,-64,24,0"
+                                   Padding="20,12,16,12"
+                                   BackgroundColor="White"
+                                   CornerRadius="22"
+                                   HasShadow="true">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0"
+                                                 Margin="0">
+                                        <Label Text="{Binding CityName}"
+                                               Style="{StaticResource TitleLabel}" />
+                                        <Label Text="{Binding Country}"
+                                               FontSize="14"
+                                               TextColor="{StaticResource SecondaryColor}" />
+                                    </StackLayout>
+                                    <Button Text="{Binding FavoriteIcon}"
+                                            Command="{Binding ChangeFavoriteStatus}"
+                                            Style="{StaticResource MaterialButton}"
+                                            TextColor="{StaticResource FavoriteColor}"
+                                            Grid.Column="1" />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <Label Text="{Binding Index}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
