@@ -3,11 +3,161 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:CarouselViewChallenge.Converters"
              mc:Ignorable="d"
+             Title="Weather Information"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TemperatureConverter x:Key="TemperatureConverter"/>
+            <converters:WindConverter x:Key="WindConverter"/>
+            <converters:WindDirectionConverter x:Key="WindDirectionConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <CarouselView ItemsSource="{Binding Cities}" 
+                      PeekAreaInsets="50"
+                      Position="2"
+                      ItemsUpdatingScrollMode="KeepScrollOffset"
+                      x:Name="carouselView">
+
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" 
+                                   SnapPointsType="MandatorySingle"
+                                   SnapPointsAlignment="Center"
+                                   ItemSpacing="8"/>
+            </CarouselView.ItemsLayout>
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <pv:PancakeView HeightRequest="350"
+                                        WidthRequest="300"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        BackgroundGradientStartColor="#6DD5FA" 
+                                        BackgroundGradientEndColor="#2980B9" 
+                                        BackgroundGradientAngle="45" 
+                                        CornerRadius="10">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <ic:CircleImage Grid.Row="0"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="3"
+                                                Source="{Binding Image}" 
+                                                Aspect="AspectFill" 
+                                                WidthRequest="100"
+                                                HeightRequest="100"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center"
+                                                Margin="0,10,0,0"/>
+
+                                <Label Grid.Row="1" 
+                                       Grid.Column="0" 
+                                       Grid.ColumnSpan="3"
+                                       Text="{Binding Name}" 
+                                       TextColor="White" 
+                                       FontAttributes="Bold"
+                                       FontSize="Medium" 
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Name}"/>
+                                            <Span Text=" - "/>
+                                            <Span Text="{Binding Sys.Country}" TextColor="LightGray"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Grid.Row="2" 
+                                       Grid.Column="0" 
+                                       Text="{Binding Main.Temp, Converter={StaticResource TemperatureConverter}}" 
+                                       TextColor="Black" 
+                                       FontAttributes="Bold"
+                                       FontSize="Medium" 
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+
+                                <StackLayout Grid.Row="2"
+                                             Grid.Column="1"
+                                             Grid.ColumnSpan="2"
+                                             Orientation="Horizontal"
+                                             HorizontalOptions="EndAndExpand"
+                                             VerticalOptions="Center">
+                                    <Image Source="{Binding Weather.Icon}" 
+                                           WidthRequest="50"
+                                           HeightRequest="50"
+                                           VerticalOptions="Center"/>
+
+                                    <Label FontSize="Small" 
+                                           Text="{Binding Weather.Main}"
+                                           TextColor="DarkSlateBlue"
+                                           Margin="0,0,10,0"
+                                           VerticalOptions="Center"/>
+                                </StackLayout>
+
+                                <BoxView Grid.Row="3" 
+                                         Grid.Column="0" 
+                                         Grid.ColumnSpan="3" 
+                                         HeightRequest="2" 
+                                         Margin="2,0"
+                                         BackgroundColor="DarkSlateGray"/>
+
+                                <Label Grid.Row="4" 
+                                       Grid.Column="0" 
+                                       Grid.ColumnSpan="3"
+                                       FontSize="Small" 
+                                       Margin="5" 
+                                       VerticalOptions="CenterAndExpand">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Wind:   " TextColor="Wheat" FontAttributes="Bold"/>
+                                            <Span Text="{Binding Wind.Speed}" TextColor="LawnGreen"/>
+                                            <Span Text=" m/s, " TextColor="LawnGreen"/>
+                                            <Span Text="{Binding Wind.Deg, Converter={StaticResource WindDirectionConverter}}" TextColor="LawnGreen"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Grid.Row="5" 
+                                       Grid.Column="0" 
+                                       Grid.ColumnSpan="3"
+                                       FontSize="Small" 
+                                       Margin="5" 
+                                       VerticalOptions="CenterAndExpand">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Humidity:   " TextColor="Wheat" FontAttributes="Bold"/>
+                                            <Span Text="{Binding Main.Humidity}" TextColor="LawnGreen"/>
+                                            <Span Text=" %" TextColor="LawnGreen"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </Grid>
+                        </pv:PancakeView>
+                    </Grid>
+                    <!--</Frame>-->
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </ContentPage.Content>
 </ContentPage>
