@@ -1,0 +1,194 @@
+[
+  {
+    "coord": {
+      "lon": -0.13,
+      "lat": 51.51
+    },
+    "weather": {
+        "id": 300,
+        "main": "Drizzle",
+        "description": "light intensity drizzle",
+        "icon": "drizzle.png"
+    },
+    "base": "stations",
+    "main": {
+      "temp": 280.32,
+      "pressure": 1012,
+      "humidity": 81,
+      "temp_min": 279.15,
+      "temp_max": 281.15
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.1,
+      "deg": 80
+    },
+    "clouds": { "all": 90 },
+    "dt": 1485789600,
+    "sys": {
+      "type": 1,
+      "id": 5091,
+      "message": 0.0103,
+      "country": "GB",
+      "sunrise": 1485762037,
+      "sunset": 1485794875
+    },
+    "id": 2643743,
+    "name": "London",
+    "cod": 200,
+    "image":  "london.jpg"
+  },
+  {
+    "coord": {
+      "lon": 17.67,
+      "lat": 49.23
+    },
+    "weather": {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "icon": "rain.png"
+    },
+    "base": "stations",
+    "main": {
+      "temp": 288.52,
+      "pressure": 1008,
+      "humidity": 77,
+      "temp_min": 285.93,
+      "temp_max": 291.15
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 2.1,
+      "deg": 190
+    },
+    "clouds": { "all": 0 },
+    "dt": 1569434876,
+    "sys": {
+      "type": 1,
+      "id": 6842,
+      "message": 0.0081,
+      "country": "CZ",
+      "sunrise": 1569386365,
+      "sunset": 1569429774
+    },
+    "id": 3061369,
+    "name": "Zlin",
+    "cod": 200,
+    "image": "zlin.jpg"
+  },
+  {
+    "coord": {
+      "lon": -99.13,
+      "lat": 19.43
+    },
+    "weather": {
+      "id": 721,
+      "main": "Haze",
+      "description": "haze",
+      "icon": "haze.png"
+    },
+    "base": "stations",
+    "main": {
+      "temp": 295.66,
+      "pressure": 1027,
+      "humidity": 53,
+      "temp_min": 294.15,
+      "temp_max": 298.15
+    },
+    "visibility": 6437,
+    "wind": {
+      "speed": 2.6,
+      "deg": 60
+    },
+    "clouds": { "all": 40 },
+    "dt": 1569435136,
+    "sys": {
+      "type": 1,
+      "id": 7146,
+      "message": 0.0144,
+      "country": "MX",
+      "sunrise": 1569414355,
+      "sunset": 1569457834
+    },
+    "id": 3530597,
+    "name": "Mexico City",
+    "cod": 200,
+    "image": "mexicocity.jpg"
+  },
+  {
+    "coord": {
+      "lon": -82.45,
+      "lat": 27.1
+    },
+    "weather": {
+      "id": 802,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "clouds.png"
+    },
+    "base": "stations",
+    "main": {
+      "temp": 304.69,
+      "pressure": 1013,
+      "humidity": 52,
+      "temp_min": 303.15,
+      "temp_max": 306.15
+    },
+    "visibility": 16093,
+    "wind": {
+      "speed": 4.6,
+      "deg": 330
+    },
+    "clouds": { "all": 40 },
+    "dt": 1569435177,
+    "sys": {
+      "type": 1,
+      "id": 6184,
+      "message": 0.0093,
+      "country": "US",
+      "sunrise": 1569410370,
+      "sunset": 1569453814
+    },
+    "id": 4176380,
+    "name": "Venice",
+    "cod": 200,
+    "image": "venice.jpg"
+  },
+  {
+    "coord": {
+      "lon": 14.42,
+      "lat": 50.09
+    },
+    "weather": {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "cloudy.png"
+    },
+    "base": "stations",
+    "main": {
+      "temp": 287.83,
+      "pressure": 1009,
+      "humidity": 71,
+      "temp_min": 285.37,
+      "temp_max": 289.82
+    },
+    "visibility": 10000,
+    "wind": { "speed": 1 },
+    "clouds": { "all": 20 },
+    "dt": 1569435218,
+    "sys": {
+      "type": 1,
+      "id": 6848,
+      "message": 0.0084,
+      "country": "CZ",
+      "sunrise": 1569387146,
+      "sunset": 1569430552
+    },
+    "id": 3067696,
+    "name": "Prague",
+    "cod": 200,
+    "image": "prague.jpg"
+  }
+]
