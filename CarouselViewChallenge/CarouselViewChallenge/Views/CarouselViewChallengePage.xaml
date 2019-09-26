@@ -52,21 +52,21 @@
                                     <Span 
                                         Text="&#xf546;"
                                         FontSize="48"
-                                        TextColor="White"
+                                        TextColor="{StaticResource WhiteColor}"
                                         BackgroundColor="{StaticResource BMWMLightBlue}"
                                         FontFamily="{StaticResource MaterialDesignIcons}"/>
                                     <Span Text=" "/>
                                     <Span 
                                         Text="&#xf20d;"
                                         FontSize="48"
-                                        TextColor="White"
+                                        TextColor="{StaticResource WhiteColor}"
                                         BackgroundColor="{StaticResource BMWMDarkBlue}"
                                         FontFamily="{StaticResource MaterialDesignIcons}"/>
                                     <Span Text=" "/>
                                     <Span 
                                         Text="&#xf2fe;"
                                         FontSize="48"
-                                        TextColor="White"
+                                        TextColor="{StaticResource WhiteColor}"
                                         BackgroundColor="{StaticResource BMWMRed}"
                                         FontFamily="{StaticResource MaterialDesignIcons}"/>
                                 </FormattedString.Spans>
@@ -136,8 +136,8 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <Label Grid.Row="0" Text="Most Recent" TextColor="White" FontAttributes="Bold" Margin="12,0,0,0"/>
-                        <Label Grid.Row="0" Text="Show All" TextColor="White" HorizontalOptions="End" Margin="0,0,12,0"/>
+                        <Label Grid.Row="0" Text="Most Recent" TextColor="{StaticResource WhiteColor}" FontFamily="{StaticResource RobotoBold}" Margin="20,0,0,0"/>
+                        <Label Grid.Row="0" Text="Show All" TextColor="{StaticResource WhiteColor}" FontFamily="{StaticResource RobotoThin}" HorizontalTextAlignment="End"  Margin="0,0,20,0"/>
 
                         <CollectionView Grid.Row="1"
                                         ItemsSource="{Binding Items}"
@@ -154,16 +154,16 @@
                                             <Grid>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="20" />
-                                                    <RowDefinition Height="100"/>
+                                                    <RowDefinition Height="80"/>
                                                 </Grid.RowDefinitions>
                                                 <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="1*" />
+                                                    <ColumnDefinition Width="*" />
                                                     <ColumnDefinition Width="2*" />
                                                 </Grid.ColumnDefinitions>
 
                                                 <Image Grid.Row="0" Grid.RowSpan="2" Source="{Binding ImageUrl}" Aspect="Fill"/>
                                                 <Label  Grid.Row="0" Grid.Column="1" Text="{Binding Title}" Style="{StaticResource TitleTextStyle}"/>
-                                                <Label  Grid.Row="1" Grid.Column="1" MaxLines="6" Text="{Binding Description}" Style="{StaticResource DescriptionTextStyle}"/>
+                                                <Label  Grid.Row="1" Grid.Column="1" MaxLines="5" Text="{Binding Description}" Style="{StaticResource DescriptionTextStyle}"/>
                                             </Grid>
                                         </pancakeview:PancakeView>
                                     </Grid>
