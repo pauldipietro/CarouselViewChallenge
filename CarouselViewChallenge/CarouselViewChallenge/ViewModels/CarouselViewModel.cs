@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace CarouselViewChallenge.ViewModels
@@ -46,7 +45,7 @@ namespace CarouselViewChallenge.ViewModels
                 if (_cities != value)
                 {
                     _cities = value;
-                    OnPropertyChanged(new PropertyChangedEventArgs(nameof(Cities)));
+                    OnPropertyChanged(nameof(Cities));
                 }
             }
         }
@@ -69,7 +68,7 @@ namespace CarouselViewChallenge.ViewModels
             set 
             { 
                 _isFavorite = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(FavoriteIcon)));
+                OnPropertyChanged(nameof(FavoriteIcon));
             } 
         }
 

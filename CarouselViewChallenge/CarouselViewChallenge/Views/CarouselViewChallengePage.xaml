@@ -37,13 +37,19 @@
 
     </ContentPage.Resources>
     <ContentPage.Content>
-        <CarouselView ItemsSource="{Binding Cities}" PeekAreaInsets="30">
+        <CarouselView ItemsSource="{Binding Cities}" PeekAreaInsets="64">
+            <CarouselView.ItemsLayout>
+                <ListItemsLayout Orientation="Horizontal"
+                                 SnapPointsAlignment="Center"
+                                 SnapPointsType="MandatorySingle"
+                                 ItemSpacing="4" />
+            </CarouselView.ItemsLayout>
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Margin="32">
+                    <StackLayout >
                         <Frame Padding="0"
                                IsClippedToBounds="True"
-                               HasShadow="True">
+                               HasShadow="True" Margin="8">
                             <Image Source="{Binding CityImage}"
                                    Aspect="AspectFill"
                                    HeightRequest="320" />

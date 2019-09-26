@@ -17,9 +17,9 @@ namespace CarouselViewChallenge.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(PropertyChangedEventArgs eventArgs)
+        protected void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, eventArgs);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
@@ -38,7 +38,7 @@ namespace CarouselViewChallenge.ViewModels
                 if (_sections != value)
                 {
                     _sections = value;
-                    OnPropertyChanged(new PropertyChangedEventArgs("Sections"));
+                    OnPropertyChanged(nameof(Sections));
                 }
             }
         }
