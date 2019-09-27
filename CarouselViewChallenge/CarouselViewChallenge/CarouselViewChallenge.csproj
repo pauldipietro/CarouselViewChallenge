@@ -6,12 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.819712-pre2" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>

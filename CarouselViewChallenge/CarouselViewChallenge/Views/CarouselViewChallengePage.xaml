@@ -4,10 +4,61 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#cfd8dc">
-            <Label Text="You can use this page for the CarouselView Challenge!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+             xmlns:lottieForms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="CarouselViewChallenge.Views.CarouselViewChallengePage"
+             xmlns:iosSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iosSpecific:Page.UseSafeArea="True"
+             BackgroundColor="{Binding NextColor}"
+             x:Name="this">
+    <StackLayout Padding="20, 50" Spacing="30">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Stories"
+                   TextColor="{Binding PreviousColor}"
+                   HorizontalOptions="StartAndExpand" />
+            <Label Text="Skip"
+                   TextColor="{Binding PreviousColor}"
+                   HorizontalOptions="End" />
         </StackLayout>
-    </ContentPage.Content>
+        <CarouselView x:Name="carouselView"
+                      VerticalOptions="Center"
+                      Position="{Binding Position}"
+                      ItemsSource="{Binding Items}"
+                      HorizontalScrollBarVisibility="Never">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HeightRequest="200"
+                               WidthRequest="200"
+                               CornerRadius="40"
+                               HasShadow="False"
+                               Margin="0"
+                               Padding="0"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               BackgroundColor="{Binding SecondaryColor}">
+                            <lottieForms:AnimationView Animation="{Binding Icon}" 
+                                                       Loop="True"
+                                                       AutoPlay="True"                                                       
+                                                       VerticalOptions="FillAndExpand" 
+                                                       HorizontalOptions="FillAndExpand" />
+                        </Frame>
+                        <Label Text="{Binding Description}"
+                               FontSize="55"
+                               HorizontalTextAlignment="Center"
+                               TextColor="{Binding BindingContext.PreviousColor, Source={x:Reference this}}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <Button x:Name="button"
+                WidthRequest="100"
+                HeightRequest="100"
+                CornerRadius="50"         
+                Text=">"
+                FontAttributes="Bold"
+                Clicked="NextEventHandler"
+                TextColor="{Binding CurrentColor}"
+                BackgroundColor="{Binding PreviousColor}"
+                HorizontalOptions="End" />
+    </StackLayout>
 </ContentPage>
