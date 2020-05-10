@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using CarouselViewChallenge.ViewModels;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace CarouselViewChallenge.Views
@@ -15,6 +16,8 @@ namespace CarouselViewChallenge.Views
         public CarouselViewChallengePage()
         {
             InitializeComponent();
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+            BindingContext = new CarouselViewChallengePageViewModel();
         }
     }
 }

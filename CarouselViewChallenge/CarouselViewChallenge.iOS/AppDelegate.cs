@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Octane.Xamarin.Forms.VideoPlayer.iOS;
 using UIKit;
 
 namespace CarouselViewChallenge.iOS
@@ -24,6 +25,7 @@ namespace CarouselViewChallenge.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
+            FormsVideoPlayer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
